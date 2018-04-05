@@ -1,5 +1,5 @@
 {
-    "name": "Lifeformwp/php-pubg",
+    "name": "lifeformwp/php-pubg",
     "description": "PUBG API facade written with PHP 7.1",
     "keywords": ["pubg", "facade"],
     "type": "library",
