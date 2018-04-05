@@ -8,8 +8,15 @@ Requirements
 
 * PHP >= 7.1
 
+Installation
+============
+
+* run `composer require lifeformwp/php-pubg`
+
 Basic usage
 ============
+
+Use Lifeformwp\PHPPUBG\Manager() class with Guzzle Client and your API token.
 
 * getMatch([string, required]shard, [string, required]matchId) - returns array of data about match
 * getMatches([string, required]shard, [array, required]matchesIds) - returns array of arrays about matches
