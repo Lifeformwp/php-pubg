@@ -3,6 +3,10 @@
 namespace Lifeformwp\PHPPUBG;
 
 use GuzzleHttp\ClientInterface;
+use Lifeformwp\PHPPUBG\DTO\DTOInterface;
+use Lifeformwp\PHPPUBG\Provider\MatchDTOProvider;
+use Lifeformwp\PHPPUBG\Provider\PlayerDTOProvider;
+use Lifeformwp\PHPPUBG\Provider\PlayersDTOProvider;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -10,10 +14,14 @@ use Psr\Http\Message\ResponseInterface;
  *
  * @author Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG
+ * @since 1.0.0
  */
-final class Manager
+class Manager
 {
-    public const BASE_URL = 'https://api.playbattlegrounds.com/';
+    private const BASE_URL = 'https://api.playbattlegrounds.com/';
+    public const HYDRATE_MATCH = MatchDTOProvider::class;
+    public const HYDRATE_PLAYERS = PlayersDTOProvider::class;
+    public const HYDRATE_PLAYER = PlayerDTOProvider::class;
 
     /**
      * @var ClientInterface
@@ -26,6 +34,7 @@ final class Manager
 
     /**
      * Manager constructor.
+     *
      * @param ClientInterface $client
      * @param string $token
      */
@@ -36,11 +45,38 @@ final class Manager
     }
 
     /**
+     * @param ClientInterface $client
+     *
+     * @return Manager
+     * @since 1.1.0
+     */
+    public function setClient(ClientInterface $client): self
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * @param string $token
+     *
+     * @return Manager
+     * @since 1.1.0
+     */
+    public function setToken(string $token): self
+    {
+        $this->token = $token;
+
+        return $this;
+    }
+
+    /**
      * @param string $shard
      * @param string $matchId
      *
      * @return array
      * @throws ManagerException
+     * @since 1.0.0
      */
     public function getMatch(string $shard, string $matchId): array
     {
@@ -68,6 +104,7 @@ final class Manager
      * @param array $matchesIds
      *
      * @return array
+     * @since 1.0.0
      */
     public function getMatches(string $shard, array $matchesIds): array
     {
@@ -82,11 +119,47 @@ final class Manager
 
     /**
      * @param string $shard
+     * @param string $matchId
+     *
+     * @return array
+     * @since 1.1.0
+     */
+    public function getTelemetryByMatch(string $shard, string $matchId): array
+    {
+        $match = $this->getMatch($shard, $matchId);
+        $telemetryLink = $this->getTelemetryLink($match);
+
+        return $this->getTelemetry($telemetryLink);
+    }
+
+    /**
+     * @param array $data
+     *
+     * @return string
+     * @since 1.1.0
+     */
+    private function getTelemetryLink(array $data): string
+    {
+        $link = '';
+
+        foreach ($data['included'] as $item) {
+            if ($item['type'] === 'asset') {
+                $link = $item['attributes']['URL'];
+                break;
+            }
+        }
+
+        return $link;
+    }
+
+    /**
+     * @param string $shard
      * @param array|null $playerNames
      * @param array|null $playerIds
      *
      * @return array
      * @throws ManagerException
+     * @since 1.0.0
      */
     public function getPlayers(string $shard, ?array $playerNames = [], ?array $playerIds = []): array
     {
@@ -126,10 +199,40 @@ final class Manager
     }
 
     /**
+     * @param string $shard
+     * @param string $player
+     *
+     * @return array
+     * @throws ManagerException
+     * @since 1.1.0
+     */
+    public function getPlayer(string $shard, string $player): array
+    {
+        $url = self::BASE_URL . 'shards/' . $shard . '/players/' . $player;
+
+        try {
+            $response = $this->client
+                ->request('get',
+                    $url,
+                    [
+                        'headers' => [
+                            'Authorization' => 'Bearer ' . $this->token,
+                            'Accept' => 'application/vnd.api+json'
+                        ]
+                    ]);
+
+            return $this->processResponse($response);
+        } catch (\Throwable $throwable) {
+            throw new ManagerException($throwable->getMessage(), $throwable->getCode());
+        }
+    }
+
+    /**
      * @param string $telemetryUrl
      *
      * @return array
      * @throws ManagerException
+     * @since 1.0.0
      */
     public function getTelemetry(string $telemetryUrl): array
     {
@@ -153,6 +256,7 @@ final class Manager
     /**
      * @return array
      * @throws ManagerException
+     * @since 1.0.0
      */
     public function getStatus(): array
     {
@@ -176,10 +280,25 @@ final class Manager
     }
 
     /**
+     * @param array $data
+     * @param string $type
+     *
+     * @return DTOInterface
+     * @since 1.1.0
+     */
+    public function hydrate(array $data, string $type): DTOInterface
+    {
+        $hydration = new $type;
+
+        return $hydration->process($data);
+    }
+
+    /**
      * @param ResponseInterface $response
      *
      * @return mixed
      * @throws ManagerException
+     * @since 1.0.0
      */
     private function processResponse(ResponseInterface $response)
     {
