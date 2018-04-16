@@ -26,6 +26,10 @@ class MatchAttributes
     /**
      * @var null|string
      */
+    public $mapName;
+    /**
+     * @var null|string
+     */
     public $patchVersion;
     /**
      * @var null|string
@@ -50,6 +54,7 @@ class MatchAttributes
      * @param \DateTimeImmutable|null $createdAt
      * @param int|null $duration
      * @param null|string $gameMode
+     * @param null|string $mapName
      * @param null|string $patchVersion
      * @param null|string $shardId
      * @param null|string $stats
@@ -60,6 +65,7 @@ class MatchAttributes
         ?\DateTimeImmutable $createdAt,
         ?int $duration,
         ?string $gameMode,
+        ?string $mapName,
         ?string $patchVersion,
         ?string $shardId,
         ?string $stats,
@@ -69,6 +75,7 @@ class MatchAttributes
         $this->createdAt = $createdAt;
         $this->duration = $duration;
         $this->gameMode = $gameMode;
+        $this->mapName = $mapName;
         $this->patchVersion = $patchVersion;
         $this->shardId = $shardId;
         $this->stats = $stats;
@@ -87,6 +94,7 @@ class MatchAttributes
             new \DateTimeImmutable($data['createdAt']),
             $data['duration'],
             $data['gameMode'],
+            $data['mapName'],
             $data['patchVersion'],
             $data['shardId'],
             $data['stats'],

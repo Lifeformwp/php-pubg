@@ -1,7 +1,7 @@
-PHPPUBG - facade for PUBG Developer API
+PHPPUBG - wrapper for PUBG Developer API
 =======================
 
-Wrapper for PUBG API with DTO (Matches and Players/Player). There are numerous improvements planned in future, you can read about them in WIP section.
+Wrapper for PUBG API with DTO (Matches, Player/Players, Status), full test coverage, PHP 7.1, etc. There are numerous improvements planned in future, you can read about them in WIP section.
 
 Requirements
 ============
@@ -36,7 +36,7 @@ Available methods
 * getStatus() - returns array of data about API status
 * setClient([ClientInterface, required]client)
 * setToken([string, required]token)
-* hydrate([array, required]data, [string, required]type) - returns object from given array, possible types are: HYDRATE_MATCH, HYDRATE_PLAYERS and HYDRATE_PLAYER
+* hydrate([array, required]data, [string, required]type) - returns object from given array, possible types are: HYDRATE_MATCH, HYDRATE_PLAYERS, HYDRATE_PLAYER and HYDRATE_STATUS
 
 WIP
 ============

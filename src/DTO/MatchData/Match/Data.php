@@ -34,6 +34,7 @@ class Data
 
     /**
      * Data constructor.
+     *
      * @param null|string $type
      * @param null|string $id
      * @param MatchAttributes|null $attributes

@@ -64,7 +64,7 @@ class MatchDTOProvider implements ProviderInterface
     {
         $matchData = [
             'type' => $matchData['type'],
-            'id' => $matchData['type'],
+            'id' => $matchData['id'],
             'attributes' => $this->processMatchDataAttributes($matchData['attributes']),
             'relationships' => $this->processMatchDataRelationships($matchData['relationships']),
             'links' => $this->processMatchDataLinks($matchData['links'])

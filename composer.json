@@ -1,7 +1,7 @@
 {
     "name": "lifeformwp/php-pubg",
-    "description": "PUBG API facade written with PHP 7.1",
-    "keywords": ["pubg", "facade"],
+    "description": "PUBG API wrapper written in PHP 7.1",
+    "keywords": ["pubg", "wrapper", "php7"],
     "type": "library",
     "require": {
         "guzzlehttp/guzzle": "~6.0",
@@ -13,19 +13,19 @@
     "license": "MIT",
     "authors": [
         {
-          "name": "Serhii Kondratiuk",
-          "email": "vielon.indie@gmail.com"
+            "name": "Serhii Kondratiuk",
+            "email": "vielon.indie@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-          "Lifeformwp\\PHPPUBG\\": "src/"
+            "Lifeformwp\\PHPPUBG\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-          "Lifeformwp\\PHPPUBG\\Tests\\": "tests/"
+            "Lifeformwp\\PHPPUBG\\Tests\\": "tests/"
         }
     },
-    "version": "1.1.0"
+    "version": "1.2.0"
 }

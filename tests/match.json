@@ -1,0 +1,141 @@
+{
+  "data": {
+    "type": "match",
+    "id": "abe08f7e-3add-4fd6-9bcd-4aff88fc7adf",
+    "attributes": {
+      "createdAt": "2018-04-01T15:15:47Z",
+      "duration": 1859,
+      "gameMode": "squad",
+      "mapName": "",
+      "patchVersion": "",
+      "shardId": "pc-eu",
+      "stats": null,
+      "tags": null,
+      "titleId": "bluehole-pubg"
+    },
+    "relationships": {
+      "assets": {
+        "data": [
+          {
+            "type": "asset",
+            "id": "23d5c275-35c4-11e8-82d4-0a5864668509"
+          }
+        ]
+      },
+      "rosters": {
+        "data": [
+          {
+            "type": "roster",
+            "id": "f8f964d3-cd46-4e3d-a16f-2f6d37834821"
+          },
+          {
+            "type": "roster",
+            "id": "3155ae17-57ba-47cc-9f29-b276a237cd87"
+          }
+        ]
+      },
+      "rounds": {
+        "data": []
+      },
+      "spectators": {
+        "data": []
+      }
+    },
+    "links": {
+      "schema": "",
+      "self": "https://api.playbattlegrounds.com/shards/pc-eu/matches/abe08f7e-3add-4fd6-9bcd-4aff88fc7adf"
+    }
+  },
+  "included": [
+    {
+      "type": "participant",
+      "id": "86a9d8e6-07a4-46a2-804e-004298a6ce31",
+      "attributes": {
+        "actor": "",
+        "shardId": "pc-eu",
+        "stats": {
+          "DBNOs": 0,
+          "assists": 0,
+          "boosts": 0,
+          "damageDealt": 23.76,
+          "deathType": "byplayer",
+          "headshotKills": 0,
+          "heals": 0,
+          "killPlace": 51,
+          "killPoints": 1046,
+          "killPointsDelta": 0.4918649,
+          "killStreaks": 0,
+          "kills": 0,
+          "lastKillPoints": 0,
+          "lastWinPoints": 0,
+          "longestKill": 0,
+          "mostDamage": 0,
+          "name": "6Giordano9",
+          "playerId": "account.653bff9e5cee4a769ad110f4b5e2ba5b",
+          "revives": 0,
+          "rideDistance": 523.590759,
+          "roadKills": 0,
+          "teamKills": 0,
+          "timeSurvived": 1179,
+          "vehicleDestroys": 0,
+          "walkDistance": 1914.40479,
+          "weaponsAcquired": 0,
+          "winPlace": 11,
+          "winPoints": 1086,
+          "winPointsDelta": 14.5752478
+        }
+      }
+    },
+    {
+      "type": "asset",
+      "id": "23d5c275-35c4-11e8-82d4-0a5864668509",
+      "attributes": {
+        "URL": "https://telemetry-cdn.playbattlegrounds.com/bluehole-pubg/pc-eu/2018/04/01/15/48/23d5c275-35c4-11e8-82d4-0a5864668509-telemetry.json",
+        "createdAt": "2018-04-01T15:48:36Z",
+        "description": "",
+        "name": "telemetry"
+      }
+    },
+    {
+      "type": "roster",
+      "id": "b5735bb9-2935-4a09-b082-40cef6c21e7e",
+      "attributes": {
+        "shardId": "pc-eu",
+        "stats": {
+          "rank": 25,
+          "teamId": 16
+        },
+        "won": "false"
+      },
+      "relationships": {
+        "participants": {
+          "data": [
+            {
+              "type": "participant",
+              "id": "4c6a2b76-7024-4c8e-a5cc-34cafc46c39f"
+            },
+            {
+              "type": "participant",
+              "id": "71cd3b89-d896-4d62-a882-107c79933b24"
+            },
+            {
+              "type": "participant",
+              "id": "45ecace4-bbde-451e-b68b-b04df024dcc3"
+            },
+            {
+              "type": "participant",
+              "id": "8d2b2cdf-ef06-4229-907b-44081fd833e4"
+            }
+          ]
+        },
+        "team": {
+          "data": null
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.playbattlegrounds.com/shards/pc-eu/matches/abe08f7e-3add-4fd6-9bcd-4aff88fc7adf"
+  },
+  "meta": {}
+}
