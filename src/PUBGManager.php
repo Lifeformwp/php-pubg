@@ -7,23 +7,27 @@ use Lifeformwp\PHPPUBG\DTO\DTOInterface;
 use Lifeformwp\PHPPUBG\Provider\MatchDTOProvider;
 use Lifeformwp\PHPPUBG\Provider\PlayerDTOProvider;
 use Lifeformwp\PHPPUBG\Provider\PlayersDTOProvider;
+use Lifeformwp\PHPPUBG\Provider\SamplesDTOProvider;
 use Lifeformwp\PHPPUBG\Provider\StatusDTOProvider;
+use Lifeformwp\PHPPUBG\Provider\TelemetryDTOProvider;
 use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class PUBGManager
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG
- * @since 1.0.0
+ * @since   1.0.0
  */
 class PUBGManager
 {
-    private const BASE_URL = 'https://api.playbattlegrounds.com/';
-    public const HYDRATE_MATCH = MatchDTOProvider::class;
-    public const HYDRATE_PLAYERS = PlayersDTOProvider::class;
-    public const HYDRATE_PLAYER = PlayerDTOProvider::class;
-    public const HYDRATE_STATUS = StatusDTOProvider::class;
+    private const BASE_URL          = 'https://api.playbattlegrounds.com/';
+    public const  HYDRATE_MATCH     = MatchDTOProvider::class;
+    public const  HYDRATE_PLAYERS   = PlayersDTOProvider::class;
+    public const  HYDRATE_PLAYER    = PlayerDTOProvider::class;
+    public const  HYDRATE_STATUS    = StatusDTOProvider::class;
+    public const  HYDRATE_TELEMETRY = TelemetryDTOProvider::class;
+    public const  HYDRATE_SAMPLES   = SamplesDTOProvider::class;
 
     /**
      * @var ClientInterface
@@ -38,12 +42,12 @@ class PUBGManager
      * PUBGManager constructor.
      *
      * @param ClientInterface $client
-     * @param string $token
+     * @param string          $token
      */
     public function __construct(ClientInterface $client, string $token)
     {
         $this->client = $client;
-        $this->token = $token;
+        $this->token  = $token;
     }
 
     /**
@@ -91,7 +95,7 @@ class PUBGManager
                     [
                         'headers' => [
                             'Authorization' => 'Bearer ' . $this->token,
-                            'Accept' => 'application/vnd.api+json'
+                            'Accept'        => 'application/vnd.api+json'
                         ]
                     ]);
 
@@ -103,7 +107,7 @@ class PUBGManager
 
     /**
      * @param string $shard
-     * @param array $matchesIds
+     * @param array  $matchesIds
      *
      * @return array
      * @since 1.0.0
@@ -128,7 +132,7 @@ class PUBGManager
      */
     public function getTelemetryByMatch(string $shard, string $matchId): array
     {
-        $match = $this->getMatch($shard, $matchId);
+        $match         = $this->getMatch($shard, $matchId);
         $telemetryLink = $this->getTelemetryLink($match);
 
         return $this->getTelemetry($telemetryLink);
@@ -155,7 +159,7 @@ class PUBGManager
     }
 
     /**
-     * @param string $shard
+     * @param string     $shard
      * @param array|null $playerNames
      * @param array|null $playerIds
      *
@@ -166,8 +170,8 @@ class PUBGManager
     public function getPlayers(string $shard, ?array $playerNames = [], ?array $playerIds = []): array
     {
         $names = '';
-        $ids = '';
-        $url = self::BASE_URL . 'shards/' . $shard . '/players';
+        $ids   = '';
+        $url   = self::BASE_URL . 'shards/' . $shard . '/players';
 
         if (!empty($playerNames)) {
             $names = \implode(',', $playerNames);
@@ -184,12 +188,12 @@ class PUBGManager
                     [
                         'headers' => [
                             'Authorization' => 'Bearer ' . $this->token,
-                            'Accept' => 'application/vnd.api+json'
+                            'Accept'        => 'application/vnd.api+json'
                         ],
-                        'query' => [
+                        'query'   => [
                             'filter' => [
                                 'playerNames' => $names,
-                                'playerIds' => $ids
+                                'playerIds'   => $ids
                             ]
                         ]
                     ]);
@@ -219,7 +223,7 @@ class PUBGManager
                     [
                         'headers' => [
                             'Authorization' => 'Bearer ' . $this->token,
-                            'Accept' => 'application/vnd.api+json'
+                            'Accept'        => 'application/vnd.api+json'
                         ]
                     ]);
 
@@ -245,7 +249,7 @@ class PUBGManager
                     [
                         'headers' => [
                             'Authorization' => 'Bearer ' . $this->token,
-                            'Accept' => 'application/vnd.api+json'
+                            'Accept'        => 'application/vnd.api+json'
                         ]
                     ]);
 
@@ -271,7 +275,7 @@ class PUBGManager
                     [
                         'headers' => [
                             'Authorization' => 'Bearer ' . $this->token,
-                            'Accept' => 'application/vnd.api+json'
+                            'Accept'        => 'application/vnd.api+json'
                         ]
                     ]);
 
@@ -282,7 +286,33 @@ class PUBGManager
     }
 
     /**
-     * @param array $data
+     * @return array
+     * @throws PUBGManagerException
+     * @since 1.3.0
+     */
+    public function getSamples(): array
+    {
+        $url = self::BASE_URL . 'samples';
+
+        try {
+            $response = $this->client
+                ->request('get',
+                    $url,
+                    [
+                        'headers' => [
+                            'Authorization' => 'Bearer ' . $this->token,
+                            'Accept'        => 'application/vnd.api+json'
+                        ]
+                    ]);
+
+            return $this->processResponse($response);
+        } catch (\Throwable $throwable) {
+            throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
+        }
+    }
+
+    /**
+     * @param array  $data
      * @param string $type
      *
      * @return DTOInterface

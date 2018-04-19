@@ -1,7 +1,7 @@
 PHPPUBG - wrapper for PUBG Developer API
 =======================
 
-Wrapper for PUBG API with DTO (Matches, Player/Players, Status), full test coverage, PHP 7.1, etc. There are numerous improvements planned in future, you can read about them in WIP section.
+Wrapper for PUBG API with DTO (Matches, Player/Players, Status, Telemetry, Samples), full test coverage, PHP 7.1, etc.
 
 Requirements
 ============
@@ -28,20 +28,21 @@ Available methods
 ============
 
 * getMatch([string, required]shard, [string, required]matchId) - returns array of data about match
-* getMatches([string, required]shard, [array, required]matchesIds) - returns array of arrays about matches
 * getPlayers([string, required]shard, [array, not required]playerNames, [array, not required]playerIds) - returns array of data about players
 * getPlayer([string, required]shard, [string, required]playerId) - returns array of data about player
 * getTelemetry([string, required]shard, [string, required]matchId) - returns array of telemetry data from the match
-* getTelemetryByMatch([string, required]telemetryUrl) - returns array of data according to given telemetry url
 * getStatus() - returns array of data about API status
+* getSamples() - returns array of data about API status
+
+* getMatches([string, required]shard, [array, required]matchesIds) - returns array of arrays about matches
+* getTelemetryByMatch([string, required]telemetryUrl) - returns array of data according to given telemetry url
 * setClient([ClientInterface, required]client)
 * setToken([string, required]token)
-* hydrate([array, required]data, [string, required]type) - returns object from given array, possible types are: HYDRATE_MATCH, HYDRATE_PLAYERS, HYDRATE_PLAYER and HYDRATE_STATUS
+
+* hydrate([array, required]data, [string, required]type) - returns object from given array, possible values for type parameter are: HYDRATE_MATCH, HYDRATE_PLAYERS, HYDRATE_PLAYER, HYDRATE_STATUS, HYDRATE_TELEMETRY and HYDRATE_SAMPLES
 
 WIP
 ============
 
-* DTO for Telemetry
-* Proper tests
 * Documentation
 * More flexible behaviour

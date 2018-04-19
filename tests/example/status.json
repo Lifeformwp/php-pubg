@@ -1,0 +1,10 @@
+{
+  "data": {
+    "type": "status",
+    "id": "pubg-api",
+    "attributes": {
+      "releasedAt": "2018-04-11T15:32:57Z",
+      "version": "v8.4.0"
+    }
+  }
+}
