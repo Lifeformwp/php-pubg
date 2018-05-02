@@ -112,6 +112,28 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($this->jsonDecodeToArray($data), $match);
     }
 
+    public function testGetSeasons(): void
+    {
+        $token = 'token';
+        $data  = $this->getTestData('tests/example/seasons.json');
+
+        $client  = $this->mockClient($data, 200);
+        $manager = new PUBGManager($client, $token);
+        $seasons = $manager->getSeasons('pc-eu');
+        $this->assertEquals($this->jsonDecodeToArray($data), $seasons);
+    }
+
+    public function testGetSeasonDataForPlayer(): void
+    {
+        $token = 'token';
+        $data  = $this->getTestData('tests/example/season_for_player.json');
+
+        $client  = $this->mockClient($data, 200);
+        $manager = new PUBGManager($client, $token);
+        $seasons = $manager->getSeasonDataForPlayer('pc-na', 'account.d50fdc18fcad49c691d38466bed6f8fd', 'division.bro.official.2017-pre7');
+        $this->assertEquals($this->jsonDecodeToArray($data), $seasons);
+    }
+
     public function testGetStatus(): void
     {
         $token = 'token';
@@ -130,7 +152,7 @@ class PUBGManagerTest extends TestCase
 
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
-        $match   = $manager->getSamples();
+        $match   = $manager->getSamples('pc-na');
         $this->assertEquals($this->jsonDecodeToArray($data), $match);
     }
 
@@ -278,7 +300,7 @@ class PUBGManagerTest extends TestCase
 
         $client   = $this->mockClient($data, 200);
         $manager  = new PUBGManager($client, $token);
-        $status   = $manager->getSamples();
+        $status   = $manager->getSamples('pc-na');
         $obj = $manager->hydrate($status, PUBGManager::HYDRATE_SAMPLES);
         $this->assertSample($obj, $this->jsonDecodeToArray($data));
     }

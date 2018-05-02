@@ -3,6 +3,7 @@
 namespace Lifeformwp\PHPPUBG;
 
 use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\GuzzleException;
 use Lifeformwp\PHPPUBG\DTO\DTOInterface;
 use Lifeformwp\PHPPUBG\Provider\MatchDTOProvider;
 use Lifeformwp\PHPPUBG\Provider\PlayerDTOProvider;
@@ -89,17 +90,7 @@ class PUBGManager
         $url = self::BASE_URL . 'shards/' . $shard . '/matches/' . $matchId;
 
         try {
-            $response = $this->client
-                ->request('get',
-                    $url,
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer ' . $this->token,
-                            'Accept'        => 'application/vnd.api+json'
-                        ]
-                    ]);
-
-            return $this->processResponse($response);
+            return $this->request('get', $url);
         } catch (\Throwable $throwable) {
             throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
         }
@@ -181,24 +172,21 @@ class PUBGManager
             $ids = \implode(',', $playerIds);
         }
 
-        try {
-            $response = $this->client
-                ->request('get',
-                    $url,
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer ' . $this->token,
-                            'Accept'        => 'application/vnd.api+json'
-                        ],
-                        'query'   => [
-                            'filter' => [
-                                'playerNames' => $names,
-                                'playerIds'   => $ids
-                            ]
-                        ]
-                    ]);
+        $options = [
+            'headers' => [
+                'Authorization' => 'Bearer ' . $this->token,
+                'Accept'        => 'application/vnd.api+json'
+            ],
+            'query'   => [
+                'filter' => [
+                    'playerNames' => $names,
+                    'playerIds'   => $ids
+                ]
+            ]
+        ];
 
-            return $this->processResponse($response);
+        try {
+            return $this->request('get', $url, $options);
         } catch (\Throwable $throwable) {
             throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
         }
@@ -217,17 +205,7 @@ class PUBGManager
         $url = self::BASE_URL . 'shards/' . $shard . '/players/' . $player;
 
         try {
-            $response = $this->client
-                ->request('get',
-                    $url,
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer ' . $this->token,
-                            'Accept'        => 'application/vnd.api+json'
-                        ]
-                    ]);
-
-            return $this->processResponse($response);
+            return $this->request('get', $url);
         } catch (\Throwable $throwable) {
             throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
         }
@@ -243,17 +221,7 @@ class PUBGManager
     public function getTelemetry(string $telemetryUrl): array
     {
         try {
-            $response = $this->client
-                ->request('get',
-                    $telemetryUrl,
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer ' . $this->token,
-                            'Accept'        => 'application/vnd.api+json'
-                        ]
-                    ]);
-
-            return $this->processResponse($response);
+            return $this->request('get', $telemetryUrl);
         } catch (\Throwable $throwable) {
             throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
         }
@@ -269,46 +237,90 @@ class PUBGManager
         $url = self::BASE_URL . 'status';
 
         try {
-            $response = $this->client
-                ->request('get',
-                    $url,
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer ' . $this->token,
-                            'Accept'        => 'application/vnd.api+json'
-                        ]
-                    ]);
-
-            return $this->processResponse($response);
+            return $this->request('get', $url);
         } catch (\Throwable $throwable) {
             throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
         }
     }
 
     /**
+     * @param string $shard
+     *
      * @return array
      * @throws PUBGManagerException
      * @since 1.3.0
      */
-    public function getSamples(): array
+    public function getSamples(string $shard): array
     {
-        $url = self::BASE_URL . 'samples';
+        $url = self::BASE_URL . 'shards/' . $shard . '/samples';
 
         try {
-            $response = $this->client
-                ->request('get',
-                    $url,
-                    [
-                        'headers' => [
-                            'Authorization' => 'Bearer ' . $this->token,
-                            'Accept'        => 'application/vnd.api+json'
-                        ]
-                    ]);
-
-            return $this->processResponse($response);
+            return $this->request('get', $url);
         } catch (\Throwable $throwable) {
             throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
         }
+    }
+
+    /**
+     * @param string $shard
+     *
+     * @return array
+     * @throws PUBGManagerException
+     * @since 1.4.0
+     */
+    public function getSeasons(string $shard): array
+    {
+        $url = self::BASE_URL . 'shards/' . $shard . '/seasons';
+
+        try {
+            return $this->request('get', $url);
+        } catch (\Throwable $throwable) {
+            throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
+        }
+    }
+
+    /**
+     * @param string $method
+     * @param string $playerId
+     * @param string $seasonId
+     *
+     * @return array
+     * @throws PUBGManagerException
+     * @since 1.4.0
+     */
+    public function getSeasonDataForPlayer(string $shard, string $playerId, string $seasonId): array
+    {
+        $url = self::BASE_URL . 'shards/' . $shard . '/players/' . $playerId . '/seasons/' . $seasonId;
+
+        try {
+            return $this->request('get', $url);
+        } catch (\Throwable $throwable) {
+            throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
+        }
+    }
+
+    /**
+     * @param string $method
+     * @param string $url
+     * @param array|null $options
+     *
+     * @return array
+     * @throws GuzzleException
+     * @throws PUBGManagerException
+     * @since 1.4.0
+     */
+    private function request(string $method, string $url, ?array $options = []): array
+    {
+        $auth = [
+            'headers' => [
+                'Authorization' => 'Bearer ' . $this->token,
+                'Accept'        => 'application/vnd.api+json'
+            ]
+        ];
+        $options = empty($options) ? $auth : $options;
+        $response = $this->client->request($method, $url, $options);
+
+        return $this->processResponse($response);
     }
 
     /**

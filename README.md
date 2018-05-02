@@ -32,7 +32,9 @@ Available methods
 * getPlayer([string, required]shard, [string, required]playerId) - returns array of data about player
 * getTelemetry([string, required]shard, [string, required]matchId) - returns array of telemetry data from the match
 * getStatus() - returns array of data about API status
-* getSamples() - returns array of data about API status
+* getSamples([string, required]shard) - returns array of sample data
+* getSeasons([string, required]shard) - returns array of seasons data
+* getSeasonDataForPlayer([string, required]shard, [string, required]playerId, [string, required]seasonId) - returns array of season data for player
 
 * getMatches([string, required]shard, [array, required]matchesIds) - returns array of arrays about matches
 * getTelemetryByMatch([string, required]telemetryUrl) - returns array of data according to given telemetry url
