@@ -280,7 +280,7 @@ class PUBGManager
     }
 
     /**
-     * @param string $method
+     * @param string $shard
      * @param string $playerId
      * @param string $seasonId
      *
@@ -300,8 +300,8 @@ class PUBGManager
     }
 
     /**
-     * @param string $method
-     * @param string $url
+     * @param string     $method
+     * @param string     $url
      * @param array|null $options
      *
      * @return array
@@ -311,13 +311,13 @@ class PUBGManager
      */
     private function request(string $method, string $url, ?array $options = []): array
     {
-        $auth = [
+        $auth     = [
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->token,
                 'Accept'        => 'application/vnd.api+json'
             ]
         ];
-        $options = empty($options) ? $auth : $options;
+        $options  = empty($options) ? $auth : $options;
         $response = $this->client->request($method, $url, $options);
 
         return $this->processResponse($response);

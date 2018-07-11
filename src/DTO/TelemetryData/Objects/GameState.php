@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects;
 /**
  * Class GameState
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects
- * @since 1.3.0
+ * @since   1.3.0
  */
 class GameState
 {
@@ -59,17 +59,17 @@ class GameState
     /**
      * GameState constructor.
      *
-     * @param int|null $elapsedTime
-     * @param int|null $numAliveTeams
-     * @param int|null $numJoinPlayers
-     * @param int|null $numStartPlayers
-     * @param int|null $numAlivePlayers
+     * @param int|null      $elapsedTime
+     * @param int|null      $numAliveTeams
+     * @param int|null      $numJoinPlayers
+     * @param int|null      $numStartPlayers
+     * @param int|null      $numAlivePlayers
      * @param Location|null $safetyZonePosition
-     * @param float|null $safetyZoneRadius
+     * @param float|null    $safetyZoneRadius
      * @param Location|null $poisonGasWarningPosition
-     * @param float|null $poisonGasWarningRadius
+     * @param float|null    $poisonGasWarningRadius
      * @param Location|null $redZonePosition
-     * @param float|null $redZoneRadius
+     * @param float|null    $redZoneRadius
      */
     public function __construct(
         ?int $elapsedTime,
@@ -84,17 +84,17 @@ class GameState
         ?Location $redZonePosition,
         ?float $redZoneRadius
     ) {
-        $this->elapsedTime = $elapsedTime;
-        $this->numAliveTeams = $numAliveTeams;
-        $this->numJoinPlayers = $numJoinPlayers;
-        $this->numStartPlayers = $numStartPlayers;
-        $this->numAlivePlayers = $numAlivePlayers;
-        $this->safetyZonePosition = $safetyZonePosition;
-        $this->safetyZoneRadius = $safetyZoneRadius;
+        $this->elapsedTime              = $elapsedTime;
+        $this->numAliveTeams            = $numAliveTeams;
+        $this->numJoinPlayers           = $numJoinPlayers;
+        $this->numStartPlayers          = $numStartPlayers;
+        $this->numAlivePlayers          = $numAlivePlayers;
+        $this->safetyZonePosition       = $safetyZonePosition;
+        $this->safetyZoneRadius         = $safetyZoneRadius;
         $this->poisonGasWarningPosition = $poisonGasWarningPosition;
-        $this->poisonGasWarningRadius = $poisonGasWarningRadius;
-        $this->redZonePosition = $redZonePosition;
-        $this->redZoneRadius = $redZoneRadius;
+        $this->poisonGasWarningRadius   = $poisonGasWarningRadius;
+        $this->redZonePosition          = $redZonePosition;
+        $this->redZoneRadius            = $redZoneRadius;
     }
 
     /**

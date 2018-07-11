@@ -8,9 +8,9 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 /**
  * Class LogPlayerPosition
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogPlayerPosition
 {
@@ -31,10 +31,6 @@ class LogPlayerPosition
      */
     public $common;
     /**
-     * @var int|null
-     */
-    public $version;
-    /**
      * @var \DateTimeImmutable|null
      */
     public $date;
@@ -46,30 +42,27 @@ class LogPlayerPosition
     /**
      * LogPlayerPosition constructor.
      *
-     * @param Character|null $character
-     * @param int|null $elapsedTime
-     * @param int|null $numAlivePlayers
-     * @param Common|null $common
-     * @param int|null $version
+     * @param Character|null          $character
+     * @param int|null                $elapsedTime
+     * @param int|null                $numAlivePlayers
+     * @param Common|null             $common
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?Character $character,
         ?int $elapsedTime,
         ?int $numAlivePlayers,
         ?Common $common,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
-        $this->character = $character;
-        $this->elapsedTime = $elapsedTime;
+        $this->character       = $character;
+        $this->elapsedTime     = $elapsedTime;
         $this->numAlivePlayers = $numAlivePlayers;
-        $this->common = $common;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->common          = $common;
+        $this->date            = $date;
+        $this->type            = $type;
     }
 
     /**
@@ -84,7 +77,6 @@ class LogPlayerPosition
             $data['elapsedTime'],
             $data['numAlivePlayers'],
             Common::createFromResponse($data['common']),
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

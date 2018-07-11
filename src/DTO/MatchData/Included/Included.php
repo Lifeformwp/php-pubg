@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\MatchData\Included;
 /**
  * Class Included
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included
- * @since 1.1.0
+ * @since   1.1.0
  */
 class Included
 {
@@ -27,8 +27,8 @@ class Included
     /**
      * Included constructor.
      *
-     * @param Participant[]|[] $rosters
-     * @param Roster[]|[] $participants
+     * @param                    Participant []|[] $rosters
+     * @param                    Roster      []|[] $participants
      * @param IncludedAsset|null $asset
      */
     public function __construct(
@@ -36,9 +36,9 @@ class Included
         ?array $participants,
         IncludedAsset $asset
     ) {
-        $this->rosters = $rosters;
+        $this->rosters      = $rosters;
         $this->participants = $participants;
-        $this->asset = $asset;
+        $this->asset        = $asset;
     }
 
     /**

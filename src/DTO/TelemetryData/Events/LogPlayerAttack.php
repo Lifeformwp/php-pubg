@@ -10,9 +10,9 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Vehicle;
 /**
  * Class LogPlayerAttack
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogPlayerAttack
 {
@@ -41,10 +41,6 @@ class LogPlayerAttack
      */
     public $common;
     /**
-     * @var int|null
-     */
-    public $version;
-    /**
      * @var \DateTimeImmutable|null
      */
     public $date;
@@ -56,15 +52,14 @@ class LogPlayerAttack
     /**
      * LogPlayerAttack constructor.
      *
-     * @param int|null $attackId
-     * @param Character|null $attacker
-     * @param null|string $attackType
-     * @param Item|null $weapon
-     * @param Vehicle|null $vehicle
-     * @param Common|null $common
-     * @param int|null $version
+     * @param int|null                $attackId
+     * @param Character|null          $attacker
+     * @param null|string             $attackType
+     * @param Item|null               $weapon
+     * @param Vehicle|null            $vehicle
+     * @param Common|null             $common
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?int $attackId,
@@ -73,19 +68,17 @@ class LogPlayerAttack
         ?Item $weapon,
         ?Vehicle $vehicle,
         ?Common $common,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
-        $this->attackId = $attackId;
-        $this->attacker = $attacker;
+        $this->attackId   = $attackId;
+        $this->attacker   = $attacker;
         $this->attackType = $attackType;
-        $this->weapon = $weapon;
-        $this->vehicle = $vehicle;
-        $this->common = $common;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->weapon     = $weapon;
+        $this->vehicle    = $vehicle;
+        $this->common     = $common;
+        $this->date       = $date;
+        $this->type       = $type;
     }
 
     /**
@@ -102,7 +95,6 @@ class LogPlayerAttack
             Item::createFromResponse($data['weapon']),
             Vehicle::createFromResponse($data['vehicle']),
             Common::createFromResponse($data['common']),
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

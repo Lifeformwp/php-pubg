@@ -9,9 +9,9 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Item;
 /**
  * Class LogItemDrop
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogItemDrop
 {
@@ -28,10 +28,6 @@ class LogItemDrop
      */
     public $common;
     /**
-     * @var int|null
-     */
-    public $version;
-    /**
      * @var \DateTimeImmutable|null
      */
     public $date;
@@ -43,27 +39,24 @@ class LogItemDrop
     /**
      * LogItemDrop constructor.
      *
-     * @param Character|null $character
-     * @param Item|null $item
-     * @param Common|null $common
-     * @param int|null $version
+     * @param Character|null          $character
+     * @param Item|null               $item
+     * @param Common|null             $common
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?Character $character,
         ?Item $item,
         ?Common $common,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
         $this->character = $character;
-        $this->item = $item;
-        $this->common = $common;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->item      = $item;
+        $this->common    = $common;
+        $this->date      = $date;
+        $this->type      = $type;
     }
 
     /**
@@ -77,7 +70,6 @@ class LogItemDrop
             Character::createFromResponse($data['character']),
             Item::createFromResponse($data['item']),
             Common::createFromResponse($data['common']),
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

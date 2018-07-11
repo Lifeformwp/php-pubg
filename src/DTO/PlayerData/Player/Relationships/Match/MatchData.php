@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\PlayerData\Player\Relationships\Match;
 /**
  * Class MatchData
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\PlayerData\Player\Relationships\Match
- * @since 1.1.0
+ * @since   1.1.0
  */
 class MatchData
 {
@@ -31,7 +31,7 @@ class MatchData
         ?string $id
     ) {
         $this->type = $type;
-        $this->id = $id;
+        $this->id   = $id;
     }
 
     /**

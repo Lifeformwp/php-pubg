@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects;
 /**
  * Class ItemPackage
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects
- * @since 1.3.0
+ * @since   1.3.0
  */
 class ItemPackage
 {
@@ -27,9 +27,9 @@ class ItemPackage
     /**
      * ItemPackage constructor.
      *
-     * @param null|string $itemPackageId
+     * @param null|string   $itemPackageId
      * @param Location|null $location
-     * @param array|null $items
+     * @param array|null    $items
      */
     public function __construct(
         ?string $itemPackageId,
@@ -37,8 +37,8 @@ class ItemPackage
         ?array $items
     ) {
         $this->itemPackageId = $itemPackageId;
-        $this->location = $location;
-        $this->items = $items;
+        $this->location      = $location;
+        $this->items         = $items;
     }
 
     /**

@@ -198,6 +198,15 @@
       }
     },
     "relationships": {
+      "player": {
+        "data": {
+          "type": "player",
+          "id": "account.b3982540418d421f8cbf72705e49b1ad"
+        }
+      },
+      "matchesSolo": {
+        "data": []
+      },
       "matchesSoloFPP": {
         "data": []
       },
@@ -216,22 +225,13 @@
       "season": {
         "data": {
           "type": "season",
-          "id": "division.bro.official.2017-pre7"
+          "id": "division.bro.official.2017-beta"
         }
-      },
-      "player": {
-        "data": {
-          "type": "player",
-          "id": "account.d50fdc18fcad49c691d38466bed6f8fd"
-        }
-      },
-      "matchesSolo": {
-        "data": []
       }
     }
   },
   "links": {
-    "self": "https://api.playbattlegrounds.com/shards/pc-na/players/account.d50fdc18fcad49c691d38466bed6f8fd/seasons/division.bro.official.2017-pre7"
+    "self": "https://api.playbattlegrounds.com/shards/pc-eu/players/account.b3982540418d421f8cbf72705e49b1ad/seasons/division.bro.official.2017-beta"
   },
   "meta": {}
 }

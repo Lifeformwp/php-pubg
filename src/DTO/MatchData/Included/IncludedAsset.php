@@ -7,9 +7,9 @@ use Lifeformwp\PHPPUBG\DTO\MatchData\Included\Asset\AssetAttributes;
 /**
  * Class IncludedAsset
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included
- * @since 1.1.0
+ * @since   1.1.0
  */
 class IncludedAsset
 {
@@ -29,8 +29,8 @@ class IncludedAsset
     /**
      * IncludedAsset constructor.
      *
-     * @param string $type
-     * @param string $id
+     * @param string          $type
+     * @param string          $id
      * @param AssetAttributes $attributes
      */
     public function __construct(
@@ -38,8 +38,8 @@ class IncludedAsset
         string $id,
         AssetAttributes $attributes
     ) {
-        $this->type = $type;
-        $this->id = $id;
+        $this->type       = $type;
+        $this->id         = $id;
         $this->attributes = $attributes;
     }
 

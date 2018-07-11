@@ -9,9 +9,9 @@ use Lifeformwp\PHPPUBG\DTO\StatusData\Status\StatusAttributes;
 /**
  * Class StatusDTOProvider
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\Provider
- * @since 1.2.0
+ * @since   1.2.0
  */
 class StatusDTOProvider implements ProviderInterface
 {

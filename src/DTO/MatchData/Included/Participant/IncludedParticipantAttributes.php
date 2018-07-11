@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\MatchData\Included\Participant;
 /**
  * Class IncludedParticipantAttributes
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included\Participant
- * @since 1.1.0
+ * @since   1.1.0
  */
 class IncludedParticipantAttributes
 {
@@ -27,18 +27,18 @@ class IncludedParticipantAttributes
     /**
      * IncludedParticipantAttributes constructor.
      *
-     * @param null|string $actor
-     * @param null|string $shardId
+     * @param null|string           $actor
+     * @param null|string           $shardId
      * @param ParticipantStats|null $stats
      */
     public function __construct(
         ?string $actor,
         ?string $shardId,
         ?ParticipantStats $stats
-    ){
-        $this->actor = $actor;
+    ) {
+        $this->actor   = $actor;
         $this->shardId = $shardId;
-        $this->stats = $stats;
+        $this->stats   = $stats;
     }
 
     /**

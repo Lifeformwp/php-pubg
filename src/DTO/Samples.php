@@ -1,6 +1,7 @@
 <?php declare(strict_types=1);
 
 namespace Lifeformwp\PHPPUBG\DTO;
+
 use Lifeformwp\PHPPUBG\DTO\SamplesData\Sample\Data;
 
 /**
@@ -8,7 +9,7 @@ use Lifeformwp\PHPPUBG\DTO\SamplesData\Sample\Data;
  *
  * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO
- * @since 1.3.0
+ * @since   1.3.0
  */
 class Samples implements DTOInterface
 {

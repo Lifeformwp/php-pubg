@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\MatchData\Match\Relationships;
 /**
  * Class Rosters
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Match\Relationships
- * @since 1.1.0
+ * @since   1.1.0
  */
 class Rosters
 {

@@ -32,9 +32,9 @@ use Lifeformwp\PHPPUBG\DTO\MatchData\Match\MatchLinks;
 /**
  * Class MatchDTOProvider
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\Provider
- * @since 1.1.0
+ * @since   1.1.0
  */
 class MatchDTOProvider implements ProviderInterface
 {
@@ -46,10 +46,10 @@ class MatchDTOProvider implements ProviderInterface
     public function process(array $match): Match
     {
         $data = [
-            'data' => $this->processMatchData($match['data']),
+            'data'     => $this->processMatchData($match['data']),
             'included' => $this->processMatchIncluded($match['included']),
-            'links' => $this->processMatchLinks($match['links']),
-            'meta' => $this->processMatchMeta()
+            'links'    => $this->processMatchLinks($match['links']),
+            'meta'     => $this->processMatchMeta()
         ];
 
         return Match::createFromResponse($data);
@@ -63,11 +63,11 @@ class MatchDTOProvider implements ProviderInterface
     private function processMatchData(array $matchData): Data
     {
         $matchData = [
-            'type' => $matchData['type'],
-            'id' => $matchData['id'],
-            'attributes' => $this->processMatchDataAttributes($matchData['attributes']),
+            'type'          => $matchData['type'],
+            'id'            => $matchData['id'],
+            'attributes'    => $this->processMatchDataAttributes($matchData['attributes']),
             'relationships' => $this->processMatchDataRelationships($matchData['relationships']),
-            'links' => $this->processMatchDataLinks($matchData['links'])
+            'links'         => $this->processMatchDataLinks($matchData['links'])
         ];
 
         return Data::createFromResponse($matchData);
@@ -91,9 +91,9 @@ class MatchDTOProvider implements ProviderInterface
     private function processMatchDataRelationships(array $relationships): MatchRelationships
     {
         $data = [
-            'assets' => $this->processMatchDataRelationshipsAssets($relationships['assets']),
-            'rosters' => $this->processMatchDataRelationshipsRosters($relationships['rosters']),
-            'rounds' => $this->processMatchDataRelationshipsRounds(),
+            'assets'     => $this->processMatchDataRelationshipsAssets($relationships['assets']),
+            'rosters'    => $this->processMatchDataRelationshipsRosters($relationships['rosters']),
+            'rounds'     => $this->processMatchDataRelationshipsRounds(),
             'spectators' => $this->processMatchDataRelationshipsSpectators()
         ];
 
@@ -213,9 +213,9 @@ class MatchDTOProvider implements ProviderInterface
     private function processMatchIncludedRoster(array $roster): Roster
     {
         $data = [
-            'type' => $roster['type'],
-            'id' => $roster['id'],
-            'attributes' => $this->processMatchIncludedRosterAttributes($roster['attributes']),
+            'type'          => $roster['type'],
+            'id'            => $roster['id'],
+            'attributes'    => $this->processMatchIncludedRosterAttributes($roster['attributes']),
             'relationships' => $this->processMatchIncludedRosterRelationships($roster['relationships'])
         ];
 
@@ -231,8 +231,8 @@ class MatchDTOProvider implements ProviderInterface
     {
         $attributes = [
             'shardId' => $attributes['shardId'],
-            'stats' => $this->processMatchIncludedRosterAttributesStats($attributes['stats']),
-            'won' => $attributes['won']
+            'stats'   => $this->processMatchIncludedRosterAttributesStats($attributes['stats']),
+            'won'     => $attributes['won']
         ];
 
         return IncludedRosterAttributes::createFromResponse($attributes);
@@ -257,7 +257,7 @@ class MatchDTOProvider implements ProviderInterface
     {
         $relationships = [
             'participants' => $this->processMatchIncludedRosterRelationshipsParticipants($relationships['participants']),
-            'team' => $this->processMatchIncludedRosterRelationshipsTeam()
+            'team'         => $this->processMatchIncludedRosterRelationshipsTeam()
         ];
 
         return IncludedRelationships::createFromResponse($relationships);
@@ -305,8 +305,8 @@ class MatchDTOProvider implements ProviderInterface
     private function processMatchIncludedParticipant(array $participant): Participant
     {
         $data = [
-            'type' => $participant['type'],
-            'id' => $participant['id'],
+            'type'       => $participant['type'],
+            'id'         => $participant['id'],
             'attributes' => $this->processMatchIncludedParticipantAttributes($participant['attributes'])
         ];
 
@@ -322,9 +322,9 @@ class MatchDTOProvider implements ProviderInterface
     private function processMatchIncludedParticipantAttributes(array $attributes): IncludedParticipantAttributes
     {
         $data = [
-            'actor' => $attributes['actor'],
+            'actor'   => $attributes['actor'],
             'shardId' => $attributes['shardId'],
-            'stats' => $this->processMatchIncludedParticipantAttributesStats($attributes['stats'])
+            'stats'   => $this->processMatchIncludedParticipantAttributesStats($attributes['stats'])
         ];
 
         return IncludedParticipantAttributes::createFromResponse($data);
@@ -348,8 +348,8 @@ class MatchDTOProvider implements ProviderInterface
     private function processMatchIncludedAsset(array $asset): IncludedAsset
     {
         $data = [
-            'type' => $asset['type'],
-            'id' => $asset['id'],
+            'type'       => $asset['type'],
+            'id'         => $asset['id'],
             'attributes' => $this->processMatchIncludedAssetAttributes($asset['attributes'])
         ];
 

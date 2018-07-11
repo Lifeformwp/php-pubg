@@ -36,8 +36,8 @@
       "type": "season",
       "id": "division.bro.official.2017-pre4",
       "attributes": {
-        "isOffseason": false,
-        "isCurrentSeason": false
+        "isCurrentSeason": false,
+        "isOffseason": false
       }
     },
     {
@@ -84,8 +84,8 @@
       "type": "season",
       "id": "division.bro.official.2018-01",
       "attributes": {
-        "isOffseason": false,
-        "isCurrentSeason": false
+        "isCurrentSeason": false,
+        "isOffseason": false
       }
     },
     {
@@ -100,21 +100,45 @@
       "type": "season",
       "id": "division.bro.official.2018-03",
       "attributes": {
-        "isCurrentSeason": false,
-        "isOffseason": false
+        "isOffseason": false,
+        "isCurrentSeason": false
       }
     },
     {
       "type": "season",
       "id": "division.bro.official.2018-04",
       "attributes": {
+        "isCurrentSeason": false,
+        "isOffseason": false
+      }
+    },
+    {
+      "type": "season",
+      "id": "division.bro.official.2018-05",
+      "attributes": {
+        "isCurrentSeason": false,
+        "isOffseason": false
+      }
+    },
+    {
+      "type": "season",
+      "id": "division.bro.official.2018-06",
+      "attributes": {
+        "isOffseason": false,
+        "isCurrentSeason": false
+      }
+    },
+    {
+      "type": "season",
+      "id": "division.bro.official.2018-07",
+      "attributes": {
         "isCurrentSeason": true,
-        "isOffseason": true
+        "isOffseason": false
       }
     }
   ],
   "links": {
-    "self": "https://api.playbattlegrounds.com/shards/pc-na/seasons"
+    "self": "https://api.playbattlegrounds.com/shards/pc-eu/seasons"
   },
   "meta": {}
 }

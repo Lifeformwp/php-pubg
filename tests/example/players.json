@@ -2,49 +2,15 @@
   "data": [
     {
       "type": "player",
-      "id": "account.2481ec59aef6431e8984fc1bb10a6c3d",
-      "attributes": {
-        "createdAt": "2018-04-01T15:55:53Z",
-        "name": "Lifeformwp",
-        "patchVersion": "",
-        "shardId": "pc-eu",
-        "stats": null,
-        "titleId": "bluehole-pubg",
-        "updatedAt": "2018-04-02T19:47:35Z"
-      },
-      "relationships": {
-        "assets": {
-          "data": []
-        },
-        "matches": {
-          "data": [
-            {
-              "type": "match",
-              "id": "86fda510-ddda-440f-868f-b6f68f7c030d"
-            },
-            {
-              "type": "match",
-              "id": "31663b1f-1730-4f19-8e6f-ae4753c1cadd"
-            }
-          ]
-        }
-      },
-      "links": {
-        "schema": "",
-        "self": "https://api.playbattlegrounds.com/shards/pc-eu/players/account.2481ec59aef6431e8984fc1bb10a6c3d"
-      }
-    },
-    {
-      "type": "player",
       "id": "account.b3982540418d421f8cbf72705e49b1ad",
       "attributes": {
-        "createdAt": "2018-03-31T21:17:11Z",
-        "name": "MrEddyGordo",
+        "createdAt": "2018-05-22T21:19:27Z",
+        "updatedAt": "2018-05-22T21:19:27Z",
         "patchVersion": "",
-        "shardId": "pc-eu",
+        "name": "MrEddyGordo",
         "stats": null,
         "titleId": "bluehole-pubg",
-        "updatedAt": "2018-04-03T22:48:14Z"
+        "shardId": "pc-eu"
       },
       "relationships": {
         "assets": {
@@ -54,23 +20,107 @@
           "data": [
             {
               "type": "match",
-              "id": "eb2c70da-db61-4a26-a0d4-e62cb10297a8"
+              "id": "7e4320e8-a8cb-46e3-912e-3fe29c362920"
             },
             {
               "type": "match",
-              "id": "33a37c1e-ee3a-4149-96c9-86e0ab5aca27"
+              "id": "dcbde414-f1c1-4e92-aa37-9d773788f945"
+            },
+            {
+              "type": "match",
+              "id": "ce25722f-c907-40c2-89be-0c5cf770c53f"
+            },
+            {
+              "type": "match",
+              "id": "a83bc44d-74a5-4389-90a6-d2e3baae6908"
+            },
+            {
+              "type": "match",
+              "id": "dc687abe-6f58-46a6-b810-440464f1999d"
+            },
+            {
+              "type": "match",
+              "id": "52e4da23-0b29-4638-afa8-2274dec4cbb6"
+            },
+            {
+              "type": "match",
+              "id": "9201b9a7-289b-4c3b-9679-f925335c44e3"
+            },
+            {
+              "type": "match",
+              "id": "2a53f954-aa08-419a-ac5a-314c02144e12"
+            },
+            {
+              "type": "match",
+              "id": "5041b826-2151-45b9-a781-4de47be46918"
+            },
+            {
+              "type": "match",
+              "id": "5fe3cf43-3df6-4c37-887f-27d0a45ab230"
+            },
+            {
+              "type": "match",
+              "id": "69f0e64c-c991-4a93-9d66-9acf1a3486c5"
+            },
+            {
+              "type": "match",
+              "id": "af7565ed-9253-4f78-b776-1151345bd28d"
+            },
+            {
+              "type": "match",
+              "id": "8ff7b5c3-274a-4835-a068-08c2a82d38e4"
+            },
+            {
+              "type": "match",
+              "id": "a8b089a1-2214-48cc-93ba-eaddec715e2e"
+            },
+            {
+              "type": "match",
+              "id": "ec98c151-2cae-403c-9667-e9ec763d7819"
+            },
+            {
+              "type": "match",
+              "id": "289b85a9-2a6f-4d83-aa32-069a51fa3414"
+            },
+            {
+              "type": "match",
+              "id": "3ee25972-3415-40e8-8b60-10577281632e"
+            },
+            {
+              "type": "match",
+              "id": "74e1154a-6f30-40fc-9ddc-63f5cf1c9d21"
+            },
+            {
+              "type": "match",
+              "id": "5cfe23ed-5316-4f55-887b-9a3803542ac6"
+            },
+            {
+              "type": "match",
+              "id": "1b1dcc35-809f-497e-b520-dc735541fee9"
+            },
+            {
+              "type": "match",
+              "id": "92ae8515-47bf-4b92-a604-6c050cd62940"
+            },
+            {
+              "type": "match",
+              "id": "bb038ef9-0c4e-49f7-9398-236da9b61fc7"
+            },
+            {
+              "type": "match",
+              "id": "3dbe8657-91c6-407d-9b34-d3e9855b733a"
             }
           ]
         }
       },
       "links": {
-        "schema": "",
-        "self": "https://api.playbattlegrounds.com/shards/pc-eu/players/account.b3982540418d421f8cbf72705e49b1ad"
+        "self": "https://api.playbattlegrounds.com/shards/pc-eu/players/account.b3982540418d421f8cbf72705e49b1ad",
+        "schema": ""
       }
     }
   ],
   "links": {
-    "self": "https://api.playbattlegrounds.com/shards/pc-eu/players?filter[playerNames]=MrEddyGordo,Lifeformwp"
+    "self": "https://api.playbattlegrounds.com/shards/pc-eu/players?filter[playerIds]=account.b3982540418d421f8cbf72705e49b1ad"
   },
   "meta": {}
 }

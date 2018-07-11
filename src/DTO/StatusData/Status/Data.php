@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\StatusData\Status;
 /**
  * Class Data
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\StatusData\Status
- * @since 1.2.0
+ * @since   1.2.0
  */
 class Data
 {
@@ -27,8 +27,8 @@ class Data
     /**
      * Data constructor.
      *
-     * @param null|string $type
-     * @param null|string $id
+     * @param null|string      $type
+     * @param null|string      $id
      * @param StatusAttributes $attributes
      */
     public function __construct(
@@ -36,8 +36,8 @@ class Data
         ?string $id,
         StatusAttributes $attributes
     ) {
-        $this->type = $type;
-        $this->id = $id;
+        $this->type       = $type;
+        $this->id         = $id;
         $this->attributes = $attributes;
     }
 

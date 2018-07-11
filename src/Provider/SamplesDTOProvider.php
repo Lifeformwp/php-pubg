@@ -12,9 +12,9 @@ use Lifeformwp\PHPPUBG\DTO\SamplesData\Sample\SampleRelationships;
 /**
  * Class SamplesDTOProvider
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\Provider
- * @since 1.3.0
+ * @since   1.3.0
  */
 class SamplesDTOProvider implements ProviderInterface
 {
@@ -40,9 +40,9 @@ class SamplesDTOProvider implements ProviderInterface
     private function processSampleData(array $sampleData): Data
     {
         $sampleData = [
-            'type' => $sampleData['type'],
-            'id' => $sampleData['id'],
-            'attributes' => $this->processSampleDataAttributes($sampleData['attributes']),
+            'type'          => $sampleData['type'],
+            'id'            => $sampleData['id'],
+            'attributes'    => $this->processSampleDataAttributes($sampleData['attributes']),
             'relationships' => $this->processSampleDataRelationships($sampleData['relationships'])
         ];
 

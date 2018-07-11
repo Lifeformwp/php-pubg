@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\SamplesData\Sample\Relationships\Type;
 /**
  * Class MatchType
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\SamplesData\Sample\Relationships\Type
- * @since 1.3.0
+ * @since   1.3.0
  */
 class MatchType
 {
@@ -29,7 +29,7 @@ class MatchType
     public function __construct(?string $type, ?string $id)
     {
         $this->type = $type;
-        $this->id = $id;
+        $this->id   = $id;
     }
 
     /**

@@ -8,9 +8,9 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 /**
  * Class LogPlayerKill
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogPlayerKill
 {
@@ -35,6 +35,10 @@ class LogPlayerKill
      */
     public $damageCauserName;
     /**
+     * @var null|string
+     */
+    public $damageReason;
+    /**
      * @var float|null
      */
     public $distance;
@@ -42,10 +46,6 @@ class LogPlayerKill
      * @var Common|null
      */
     public $common;
-    /**
-     * @var int|null
-     */
-    public $version;
     /**
      * @var \DateTimeImmutable|null
      */
@@ -58,16 +58,16 @@ class LogPlayerKill
     /**
      * LogPlayerKill constructor.
      *
-     * @param int|null $attackId
-     * @param Character|null $killer
-     * @param Character|null $victim
-     * @param null|string $damageTypeCategory
-     * @param null|string $damageCauserName
-     * @param float|null $distance
-     * @param Common|null $common
-     * @param int|null $version
+     * @param int|null                $attackId
+     * @param Character|null          $killer
+     * @param Character|null          $victim
+     * @param null|string             $damageTypeCategory
+     * @param null|string             $damageCauserName
+     * @param null|string             $damageReason
+     * @param float|null              $distance
+     * @param Common|null             $common
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?int $attackId,
@@ -75,22 +75,22 @@ class LogPlayerKill
         ?Character $victim,
         ?string $damageTypeCategory,
         ?string $damageCauserName,
+        ?string $damageReason,
         ?float $distance,
         ?Common $common,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
-        $this->attackId = $attackId;
-        $this->killer = $killer;
-        $this->victim = $victim;
+        $this->attackId           = $attackId;
+        $this->killer             = $killer;
+        $this->victim             = $victim;
         $this->damageTypeCategory = $damageTypeCategory;
-        $this->damageCauserName = $damageCauserName;
-        $this->distance = $distance;
-        $this->common = $common;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->damageCauserName   = $damageCauserName;
+        $this->damageReason       = $damageReason;
+        $this->distance           = $distance;
+        $this->common             = $common;
+        $this->date               = $date;
+        $this->type               = $type;
     }
 
     /**
@@ -106,9 +106,9 @@ class LogPlayerKill
             Character::createFromResponse($data['victim']),
             $data['damageTypeCategory'],
             $data['damageCauserName'],
+            $data['damageReason'] ?? null,
             $data['distance'],
             Common::createFromResponse($data['common']),
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

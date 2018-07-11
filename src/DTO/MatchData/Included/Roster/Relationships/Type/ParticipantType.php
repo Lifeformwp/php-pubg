@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\MatchData\Included\Roster\Relationships\Type;
 /**
  * Class ParticipantType
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included\Roster\Relationships\Type
- * @since 1.1.0
+ * @since   1.1.0
  */
 class ParticipantType
 {
@@ -29,7 +29,7 @@ class ParticipantType
     public function __construct(?string $type, ?string $id)
     {
         $this->type = $type;
-        $this->id = $id;
+        $this->id   = $id;
     }
 
     /**

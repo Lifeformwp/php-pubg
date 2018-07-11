@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\PlayerData\Player;
 /**
  * Class PlayerLinks
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\PlayerData\DTO\Player
- * @since 1.1.0
+ * @since   1.1.0
  */
 class PlayerLinks
 {
@@ -31,7 +31,7 @@ class PlayerLinks
         ?string $self
     ) {
         $this->schema = $schema;
-        $this->self = $self;
+        $this->self   = $self;
     }
 
     /**

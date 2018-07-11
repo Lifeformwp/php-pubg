@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\SamplesData\Sample;
 /**
  * Class SampleLinks
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\SamplesData\Sample
- * @since 1.3.0
+ * @since   1.3.0
  */
 class SampleLinks
 {
@@ -31,7 +31,7 @@ class SampleLinks
         ?string $self
     ) {
         $this->schema = $schema;
-        $this->self = $self;
+        $this->self   = $self;
     }
 
     /**
