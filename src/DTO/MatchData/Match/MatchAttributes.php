@@ -43,6 +43,10 @@ class MatchAttributes
      * @var null|string
      */
     public $titleId;
+    /**
+     * @var bool|null
+     */
+    public $isCustomMatch;
 
     /**
      * MatchAttributes constructor.
@@ -55,6 +59,7 @@ class MatchAttributes
      * @param null|string             $stats
      * @param null|string             $tags
      * @param null|string             $titleId
+     * @param bool|null               $isCustomMatch
      */
     public function __construct(
         ?\DateTimeImmutable $createdAt,
@@ -64,7 +69,8 @@ class MatchAttributes
         ?string $shardId,
         ?string $stats,
         ?string $tags,
-        ?string $titleId
+        ?string $titleId,
+        ?bool $isCustomMatch
     ) {
         $this->createdAt = $createdAt;
         $this->duration  = $duration;
@@ -74,6 +80,7 @@ class MatchAttributes
         $this->stats     = $stats;
         $this->tags      = $tags;
         $this->titleId   = $titleId;
+        $this->isCustomMatch = $isCustomMatch;
     }
 
     /**
@@ -91,7 +98,8 @@ class MatchAttributes
             $data['shardId'],
             $data['stats'],
             $data['tags'],
-            $data['titleId']
+            $data['titleId'],
+            $data['isCustomMatch']
         );
     }
 }

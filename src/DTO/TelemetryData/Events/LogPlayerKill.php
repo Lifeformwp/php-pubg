@@ -35,7 +35,7 @@ class LogPlayerKill
      */
     public $damageCauserName;
     /**
-     * @var
+     * @var null|string
      */
     public $damageReason;
     /**

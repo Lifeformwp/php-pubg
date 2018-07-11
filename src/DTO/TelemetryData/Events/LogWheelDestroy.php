@@ -3,6 +3,7 @@
 namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Events;
 
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Character;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Vehicle;
 
 /**
@@ -34,28 +35,49 @@ class LogWheelDestroy
      * @var null|string
      */
     public $damageCauserName;
+    /**
+     * @var Common|null
+     */
+    public $common;
+    /**
+     * @var \DateTimeImmutable|null
+     */
+    public $date;
+    /**
+     * @var null|string
+     */
+    public $type;
 
     /**
      * LogWheelDestroy constructor.
      *
-     * @param int|null       $attackId
-     * @param Character|null $attacker
-     * @param Vehicle|null   $vehicle
-     * @param null|string    $damageTypeCategory
-     * @param null|string    $damageCauserName
+     * @param int|null                $attackId
+     * @param Character|null          $attacker
+     * @param Vehicle|null            $vehicle
+     * @param null|string             $damageTypeCategory
+     * @param null|string             $damageCauserName
+     * @param Common|null             $common
+     * @param \DateTimeImmutable|null $date
+     * @param null|string             $type
      */
     public function __construct(
         ?int $attackId,
         ?Character $attacker,
         ?Vehicle $vehicle,
         ?string $damageTypeCategory,
-        ?string $damageCauserName
+        ?string $damageCauserName,
+        ?Common $common,
+        ?\DateTimeImmutable $date,
+        ?string $type
     ) {
         $this->attackId           = $attackId;
         $this->attacker           = $attacker;
         $this->vehicle            = $vehicle;
         $this->damageTypeCategory = $damageTypeCategory;
         $this->damageCauserName   = $damageCauserName;
+        $this->common             = $common;
+        $this->date               = $date;
+        $this->type               = $type;
     }
 
     /**
@@ -70,7 +92,10 @@ class LogWheelDestroy
             Character::createFromResponse($data['attacker']),
             Vehicle::createFromResponse($data['vehicle']),
             $data['damageTypeCategory'],
-            $data['damageCauserName']
+            $data['damageCauserName'],
+            Common::createFromResponse($data['common']),
+            new \DateTimeImmutable($data['_D']),
+            $data['_T']
         );
     }
 }

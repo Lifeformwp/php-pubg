@@ -37,6 +37,7 @@ use Lifeformwp\PHPPUBG\DTO\SamplesData\Sample\SampleAttributes;
 use Lifeformwp\PHPPUBG\DTO\SamplesData\Sample\SampleRelationships;
 use Lifeformwp\PHPPUBG\DTO\Status;
 use Lifeformwp\PHPPUBG\DTO\StatusData\Status\StatusAttributes;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogArmorDestroy;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogCarePackageLand;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogCarePackageSpawn;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogGameStatePeriodic;
@@ -55,11 +56,16 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogPlayerCreate;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogPlayerKill;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogPlayerLogin;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogPlayerLogout;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogPlayerMakeGroggy;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogPlayerPosition;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogPlayerRevive;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogPlayerTakeDamage;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogSwimEnd;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogSwimStart;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogVehicleDestroy;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogVehicleLeave;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogVehicleRide;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\LogWheelDestroy;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Character;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\GameState;
@@ -218,6 +224,24 @@ class PUBGManagerTest extends TestCase
         $counter = 0;
         foreach ($objArray->events as $obj) {
             switch ($obj->type) {
+                case "LogArmorDestroy":
+                    $this->assertEventLogArmorDestroy($obj, $telemetryArray[$counter]);
+                    break;
+                case "LogPlayerMakeGroggy":
+                    $this->assertEventLogPlayerMakeGroggy($obj, $telemetryArray[$counter]);
+                    break;
+                case "LogPlayerRevive":
+                    $this->assertEventLogPlayerRevive($obj, $telemetryArray[$counter]);
+                    break;
+                case "LogSwimEnd":
+                    $this->assertEventLogSwimEnd($obj, $telemetryArray[$counter]);
+                    break;
+                case "LogSwimStart":
+                    $this->assertEventLogSwimStart($obj, $telemetryArray[$counter]);
+                    break;
+                case "LogWheelDestroy":
+                    $this->assertEventLogWheelDestroy($obj, $telemetryArray[$counter]);
+                    break;
                 case "LogCarePackageLand":
                     $this->assertEventLogCarePackageLand($obj, $telemetryArray[$counter]);
                     break;
@@ -310,6 +334,30 @@ class PUBGManagerTest extends TestCase
         $data = $this->jsonDecodeToArray($this->getTestData('tests/example/telemetry.json'));
         foreach ($data as $item) {
             switch ($item["_T"]) {
+                case "LogArmorDestroy":
+                    $obj = LogArmorDestroy::createFromResponse($item);
+                    $this->assertEventLogArmorDestroy($obj, $item);
+                    break;
+                case "LogPlayerMakeGroggy":
+                    $obj = LogPlayerMakeGroggy::createFromResponse($item);
+                    $this->assertEventLogPlayerMakeGroggy($obj, $item);
+                    break;
+                case "LogPlayerRevive":
+                    $obj = LogPlayerRevive::createFromResponse($item);
+                    $this->assertEventLogPlayerRevive($obj, $item);
+                    break;
+                case "LogSwimEnd":
+                    $obj = LogSwimEnd::createFromResponse($item);
+                    $this->assertEventLogSwimEnd($obj, $item);
+                    break;
+                case "LogSwimStart":
+                    $obj = LogSwimStart::createFromResponse($item);
+                    $this->assertEventLogSwimStart($obj, $item);
+                    break;
+                case "LogWheelDestroy":
+                    $obj = LogWheelDestroy::createFromResponse($item);
+                    $this->assertEventLogWheelDestroy($obj, $item);
+                    break;
                 case "LogCarePackageLand":
                     $obj = LogCarePackageLand::createFromResponse($item);
                     $this->assertEventLogCarePackageLand($obj, $item);
@@ -431,11 +479,11 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($data['data']['attributes']['duration'], $matchDataAttributes->duration);
         $this->assertEquals($data['data']['attributes']['gameMode'], $matchDataAttributes->gameMode);
         $this->assertEquals($data['data']['attributes']['mapName'], $matchDataAttributes->mapName);
-        $this->assertEquals($data['data']['attributes']['patchVersion'], $matchDataAttributes->patchVersion);
         $this->assertEquals($data['data']['attributes']['shardId'], $matchDataAttributes->shardId);
         $this->assertEquals($data['data']['attributes']['stats'], $matchDataAttributes->stats);
         $this->assertEquals($data['data']['attributes']['tags'], $matchDataAttributes->tags);
         $this->assertEquals($data['data']['attributes']['titleId'], $matchDataAttributes->titleId);
+        $this->assertEquals($data['data']['attributes']['isCustomMatch'], $matchDataAttributes->isCustomMatch);
 
         $matchDataRelationships = $matchData->relationships;
         $this->assertInstanceOf(Assets::class, $matchDataRelationships->assets);
@@ -521,6 +569,7 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($stats['revives'], $matchIncludedParticipantAttributesStats->revives);
         $this->assertEquals($stats['rideDistance'], $matchIncludedParticipantAttributesStats->rideDistance);
         $this->assertEquals($stats['roadKills'], $matchIncludedParticipantAttributesStats->roadKills);
+        $this->assertEquals($stats['swimDistance'], $matchIncludedParticipantAttributesStats->swimDistance);
         $this->assertEquals($stats['teamKills'], $matchIncludedParticipantAttributesStats->teamKills);
         $this->assertEquals($stats['timeSurvived'], $matchIncludedParticipantAttributesStats->timeSurvived);
         $this->assertEquals($stats['vehicleDestroys'], $matchIncludedParticipantAttributesStats->vehicleDestroys);
@@ -567,13 +616,11 @@ class PUBGManagerTest extends TestCase
         $this->assertInstanceOf(PlayerLinks::class, $playersData->links);
 
         $playersDataAttributes = $playersData->attributes;
-        $this->assertInstanceOf(\DateTimeImmutable::class, $playersDataAttributes->createdAt);
         $this->assertEquals($data['data'][0]['attributes']['name'], $playersDataAttributes->name);
         $this->assertEquals($data['data'][0]['attributes']['patchVersion'], $playersDataAttributes->patchVersion);
         $this->assertEquals($data['data'][0]['attributes']['shardId'], $playersDataAttributes->shardId);
         $this->assertEquals($data['data'][0]['attributes']['stats'], $playersDataAttributes->stats);
         $this->assertEquals($data['data'][0]['attributes']['titleId'], $playersDataAttributes->titleId);
-        $this->assertInstanceOf(\DateTimeImmutable::class, $playersDataAttributes->updatedAt);
 
         $playersDataRelationships = $playersData->relationships;
         $this->assertInstanceOf(\Lifeformwp\PHPPUBG\DTO\PlayerData\Player\Relationships\Assets::class, $playersDataRelationships->assets);
@@ -613,13 +660,11 @@ class PUBGManagerTest extends TestCase
         $this->assertInstanceOf(PlayerLinks::class, $playersData->links);
 
         $playersDataAttributes = $playersData->attributes;
-        $this->assertInstanceOf(\DateTimeImmutable::class, $playersDataAttributes->createdAt);
         $this->assertEquals($data['data']['attributes']['name'], $playersDataAttributes->name);
         $this->assertEquals($data['data']['attributes']['patchVersion'], $playersDataAttributes->patchVersion);
         $this->assertEquals($data['data']['attributes']['shardId'], $playersDataAttributes->shardId);
         $this->assertEquals($data['data']['attributes']['stats'], $playersDataAttributes->stats);
         $this->assertEquals($data['data']['attributes']['titleId'], $playersDataAttributes->titleId);
-        $this->assertInstanceOf(\DateTimeImmutable::class, $playersDataAttributes->updatedAt);
 
         $playersDataRelationships = $playersData->relationships;
         $this->assertInstanceOf(\Lifeformwp\PHPPUBG\DTO\PlayerData\Player\Relationships\Assets::class, $playersDataRelationships->assets);
@@ -688,10 +733,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -726,10 +768,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -773,10 +812,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -821,10 +857,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -869,10 +902,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -909,10 +939,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -949,10 +976,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -989,10 +1013,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1029,10 +1050,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1069,10 +1087,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1087,7 +1102,6 @@ class PUBGManagerTest extends TestCase
     {
         $this->assertEquals($data['MatchId'], $event->matchId);
         $this->assertEquals($data['PingQuality'], $event->pingQuality);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1118,10 +1132,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1136,6 +1147,8 @@ class PUBGManagerTest extends TestCase
     {
         $this->assertEquals($data['mapName'], $event->mapName);
         $this->assertEquals($data['weatherId'], $event->weatherId);
+        $this->assertEquals($data['isCustomGame'], $event->isCustomGame);
+        $this->assertEquals($data['isEventMode'], $event->isEventMode);
         $counter = 0;
         foreach ($event->characters as $character) {
             $this->assertInstanceOf(Character::class, $character);
@@ -1154,10 +1167,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1205,10 +1215,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1237,10 +1244,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1286,13 +1290,11 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($data['damageTypeCategory'], $event->damageTypeCategory);
         $this->assertEquals($data['damageCauserName'], $event->damageCauserName);
         $this->assertEquals($data['distance'], $event->distance);
+        $this->assertEquals($data['damageReason'], $event->damageReason);
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1305,16 +1307,11 @@ class PUBGManagerTest extends TestCase
      */
     private function assertEventLogPlayerLogin(LogPlayerLogin $event, array $data): void
     {
-        $this->assertEquals($data['result'], $event->result);
-        $this->assertEquals($data['errorMessage'], $event->errorMessage);
         $this->assertEquals($data['accountId'], $event->accountId);
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1331,10 +1328,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1366,10 +1360,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1419,10 +1410,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1464,10 +1452,7 @@ class PUBGManagerTest extends TestCase
 
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1501,12 +1486,12 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($data['vehicle']['healthPercent'], $attackerVehicle->healthPercent);
         $this->assertEquals($data['vehicle']['feulPercent'], $attackerVehicle->fuelPercent);
 
+        $this->assertEquals($data['rideDistance'], $event->rideDistance);
+        $this->assertEquals($data['seatIndex'], $event->seatIndex);
+
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
     }
@@ -1540,14 +1525,231 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($data['vehicle']['healthPercent'], $attackerVehicle->healthPercent);
         $this->assertEquals($data['vehicle']['feulPercent'], $attackerVehicle->fuelPercent);
 
+        $this->assertEquals($data['seatIndex'], $event->seatIndex);
+
         $common = $event->common;
         $this->assertInstanceOf(Common::class, $common);
-        $this->assertEquals($data['common']['matchId'], $common->matchId);
-        $this->assertEquals($data['common']['mapName'], $common->mapName);
         $this->assertEquals($data['common']['isGame'], $common->isGame);
-        $this->assertEquals($data['_V'], $event->version);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
+    }
+
+    /**
+     * @param LogArmorDestroy $event
+     * @param array           $data
+     *
+     * @since 1.4.0
+     */
+    private function assertEventLogArmorDestroy(LogArmorDestroy $event, array $data): void
+    {
+        $this->assertEquals($data['attackId'], $event->attackId);
+
+        $attacker = $event->attacker;
+        $this->assertInstanceOf(Character::class, $attacker);
+        $this->assertEquals($data['attacker']['name'], $attacker->name);
+        $this->assertEquals($data['attacker']['teamId'], $attacker->teamId);
+        $this->assertEquals($data['attacker']['health'], $attacker->health);
+
+        $attackerLocation = $attacker->location;
+        $this->assertInstanceOf(Location::class, $attackerLocation);
+        $this->assertEquals($data['attacker']['location']['x'], $attackerLocation->posX);
+        $this->assertEquals($data['attacker']['location']['y'], $attackerLocation->posY);
+        $this->assertEquals($data['attacker']['location']['z'], $attackerLocation->posZ);
+        $this->assertEquals($data['attacker']['ranking'], $attacker->ranking);
+        $this->assertEquals($data['attacker']['accountId'], $attacker->accountId);
+
+        $victim = $event->victim;
+        $this->assertInstanceOf(Character::class, $victim);
+        $this->assertEquals($data['victim']['name'], $victim->name);
+        $this->assertEquals($data['victim']['teamId'], $victim->teamId);
+        $this->assertEquals($data['victim']['health'], $victim->health);
+
+        $victimLocation = $victim->location;
+        $this->assertInstanceOf(Location::class, $victimLocation);
+        $this->assertEquals($data['victim']['location']['x'], $victimLocation->posX);
+        $this->assertEquals($data['victim']['location']['y'], $victimLocation->posY);
+        $this->assertEquals($data['victim']['location']['z'], $victimLocation->posZ);
+        $this->assertEquals($data['victim']['ranking'], $victim->ranking);
+        $this->assertEquals($data['victim']['accountId'], $victim->accountId);
+
+        $this->assertEquals($data['damageTypeCategory'], $event->damageTypeCategory);
+        $this->assertEquals($data['damageReason'], $event->damageReason);
+        $this->assertEquals($data['damageCauserName'], $event->damageCauserName);
+
+        $item = $event->item;
+        $this->assertInstanceOf(Item::class, $item);
+        $this->assertEquals($data['item']['itemId'], $item->itemId);
+        $this->assertEquals($data['item']['stackCount'], $item->stackCount);
+        $this->assertEquals($data['item']['category'], $item->category);
+        $this->assertEquals($data['item']['subCategory'], $item->subCategory);
+        $this->assertEquals($data['item']['attachedItems'], $item->attachedItems);
+
+        $this->assertEquals($data['distance'], $event->distance);
+    }
+
+    /**
+     * @param LogPlayerMakeGroggy $event
+     * @param array               $data
+     *
+     * @since 1.4.0
+     */
+    private function assertEventLogPlayerMakeGroggy(LogPlayerMakeGroggy $event, array $data): void
+    {
+        $this->assertEquals($data['attackId'], $event->attackId);
+
+        $attacker = $event->attacker;
+        $this->assertInstanceOf(Character::class, $attacker);
+        $this->assertEquals($data['attacker']['name'], $attacker->name);
+        $this->assertEquals($data['attacker']['teamId'], $attacker->teamId);
+        $this->assertEquals($data['attacker']['health'], $attacker->health);
+
+        $attackerLocation = $attacker->location;
+        $this->assertInstanceOf(Location::class, $attackerLocation);
+        $this->assertEquals($data['attacker']['location']['x'], $attackerLocation->posX);
+        $this->assertEquals($data['attacker']['location']['y'], $attackerLocation->posY);
+        $this->assertEquals($data['attacker']['location']['z'], $attackerLocation->posZ);
+        $this->assertEquals($data['attacker']['ranking'], $attacker->ranking);
+        $this->assertEquals($data['attacker']['accountId'], $attacker->accountId);
+
+        $victim = $event->victim;
+        $this->assertInstanceOf(Character::class, $victim);
+        $this->assertEquals($data['victim']['name'], $victim->name);
+        $this->assertEquals($data['victim']['teamId'], $victim->teamId);
+        $this->assertEquals($data['victim']['health'], $victim->health);
+
+        $victimLocation = $victim->location;
+        $this->assertInstanceOf(Location::class, $victimLocation);
+        $this->assertEquals($data['victim']['location']['x'], $victimLocation->posX);
+        $this->assertEquals($data['victim']['location']['y'], $victimLocation->posY);
+        $this->assertEquals($data['victim']['location']['z'], $victimLocation->posZ);
+        $this->assertEquals($data['victim']['ranking'], $victim->ranking);
+        $this->assertEquals($data['victim']['accountId'], $victim->accountId);
+
+        $this->assertEquals($data['damageTypeCategory'], $event->damageTypeCategory);
+        $this->assertEquals($data['damageCauserName'], $event->damageCauserName);
+        $this->assertEquals($data['distance'], $event->distance);
+        $this->assertEquals($data['isAttackerInVehicle'], $event->isAttackerInVehicle);
+        $this->assertEquals($data['dBNOId'], $event->dBNOId);
+    }
+
+    /**
+     * @param LogPlayerRevive $event
+     * @param array           $data
+     *
+     * @since 1.4.0
+     */
+    private function assertEventLogPlayerRevive(LogPlayerRevive $event, array $data): void
+    {
+        $reviver = $event->reviver;
+        $this->assertInstanceOf(Character::class, $reviver);
+        $this->assertEquals($data['reviver']['name'], $reviver->name);
+        $this->assertEquals($data['reviver']['teamId'], $reviver->teamId);
+        $this->assertEquals($data['reviver']['health'], $reviver->health);
+
+        $reviverLocation = $reviver->location;
+        $this->assertInstanceOf(Location::class, $reviverLocation);
+        $this->assertEquals($data['reviver']['location']['x'], $reviverLocation->posX);
+        $this->assertEquals($data['reviver']['location']['y'], $reviverLocation->posY);
+        $this->assertEquals($data['reviver']['location']['z'], $reviverLocation->posZ);
+        $this->assertEquals($data['reviver']['ranking'], $reviver->ranking);
+        $this->assertEquals($data['reviver']['accountId'], $reviver->accountId);
+
+        $victim = $event->victim;
+        $this->assertInstanceOf(Character::class, $victim);
+        $this->assertEquals($data['victim']['name'], $victim->name);
+        $this->assertEquals($data['victim']['teamId'], $victim->teamId);
+        $this->assertEquals($data['victim']['health'], $victim->health);
+
+        $victimLocation = $victim->location;
+        $this->assertInstanceOf(Location::class, $victimLocation);
+        $this->assertEquals($data['victim']['location']['x'], $victimLocation->posX);
+        $this->assertEquals($data['victim']['location']['y'], $victimLocation->posY);
+        $this->assertEquals($data['victim']['location']['z'], $victimLocation->posZ);
+        $this->assertEquals($data['victim']['ranking'], $victim->ranking);
+        $this->assertEquals($data['victim']['accountId'], $victim->accountId);
+    }
+
+    /**
+     * @param LogSwimEnd $event
+     * @param array      $data
+     *
+     * @since 1.4.0
+     */
+    private function assertEventLogSwimEnd(LogSwimEnd $event, array $data): void
+    {
+        $character = $event->character;
+        $this->assertInstanceOf(Character::class, $character);
+        $this->assertEquals($data['character']['name'], $character->name);
+        $this->assertEquals($data['character']['teamId'], $character->teamId);
+        $this->assertEquals($data['character']['health'], $character->health);
+
+        $characterLocation = $character->location;
+        $this->assertInstanceOf(Location::class, $characterLocation);
+        $this->assertEquals($data['character']['location']['x'], $characterLocation->posX);
+        $this->assertEquals($data['character']['location']['y'], $characterLocation->posY);
+        $this->assertEquals($data['character']['location']['z'], $characterLocation->posZ);
+        $this->assertEquals($data['character']['ranking'], $character->ranking);
+        $this->assertEquals($data['character']['accountId'], $character->accountId);
+
+        $this->assertEquals($data['swimDistance'], $event->swimDistance);
+    }
+
+    /**
+     * @param LogSwimStart $event
+     * @param array        $data
+     *
+     * @since 1.4.0
+     */
+    private function assertEventLogSwimStart(LogSwimStart $event, array $data): void
+    {
+        $character = $event->character;
+        $this->assertInstanceOf(Character::class, $character);
+        $this->assertEquals($data['character']['name'], $character->name);
+        $this->assertEquals($data['character']['teamId'], $character->teamId);
+        $this->assertEquals($data['character']['health'], $character->health);
+
+        $characterLocation = $character->location;
+        $this->assertInstanceOf(Location::class, $characterLocation);
+        $this->assertEquals($data['character']['location']['x'], $characterLocation->posX);
+        $this->assertEquals($data['character']['location']['y'], $characterLocation->posY);
+        $this->assertEquals($data['character']['location']['z'], $characterLocation->posZ);
+        $this->assertEquals($data['character']['ranking'], $character->ranking);
+        $this->assertEquals($data['character']['accountId'], $character->accountId);
+    }
+
+    /**
+     * @param LogWheelDestroy $event
+     * @param array           $data
+     *
+     * @since 1.4.0
+     */
+    private function assertEventLogWheelDestroy(LogWheelDestroy $event, array $data): void
+    {
+        $this->assertEquals($data['attackId'], $event->attackId);
+
+        $attacker = $event->attacker;
+        $this->assertInstanceOf(Character::class, $attacker);
+        $this->assertEquals($data['attacker']['name'], $attacker->name);
+        $this->assertEquals($data['attacker']['teamId'], $attacker->teamId);
+        $this->assertEquals($data['attacker']['health'], $attacker->health);
+
+        $attackerLocation = $attacker->location;
+        $this->assertInstanceOf(Location::class, $attackerLocation);
+        $this->assertEquals($data['attacker']['location']['x'], $attackerLocation->posX);
+        $this->assertEquals($data['attacker']['location']['y'], $attackerLocation->posY);
+        $this->assertEquals($data['attacker']['location']['z'], $attackerLocation->posZ);
+        $this->assertEquals($data['attacker']['ranking'], $attacker->ranking);
+        $this->assertEquals($data['attacker']['accountId'], $attacker->accountId);
+
+        $characterVehicle = $event->vehicle;
+        $this->assertInstanceOf(Vehicle::class, $characterVehicle);
+        $this->assertEquals($data['vehicle']['vehicleType'], $characterVehicle->vehicleType);
+        $this->assertEquals($data['vehicle']['vehicleId'], $characterVehicle->vehicleId);
+        $this->assertEquals($data['vehicle']['healthPercent'], $characterVehicle->healthPercent);
+        $this->assertEquals($data['vehicle']['feulPercent'], $characterVehicle->fuelPercent);
+
+        $this->assertEquals($data['damageTypeCategory'], $event->damageTypeCategory);
+        $this->assertEquals($data['damageCauserName'], $event->damageCauserName);
     }
 
     /**

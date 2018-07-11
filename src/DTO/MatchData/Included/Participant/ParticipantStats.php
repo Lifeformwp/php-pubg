@@ -96,6 +96,10 @@ class ParticipantStats
      */
     public $roadKills;
     /**
+     * @var float|null
+     */
+    public $swimDistance;
+    /**
      * @var int|null
      */
     public $teamKills;
@@ -152,6 +156,7 @@ class ParticipantStats
      * @param int|null    $revives
      * @param float|null  $rideDistance
      * @param int|null    $roadKills
+     * @param float|null  $swimDistance
      * @param int|null    $teamKills
      * @param float|null  $timeSurvived
      * @param int|null    $vehicleDestroys
@@ -183,6 +188,7 @@ class ParticipantStats
         ?int $revives,
         ?float $rideDistance,
         ?int $roadKills,
+        ?float $swimDistance,
         ?int $teamKills,
         ?float $timeSurvived,
         ?int $vehicleDestroys,
@@ -213,6 +219,7 @@ class ParticipantStats
         $this->revives         = $revives;
         $this->rideDistance    = $rideDistance;
         $this->roadKills       = $roadKills;
+        $this->swimDistance    = $swimDistance;
         $this->teamKills       = $teamKills;
         $this->timeSurvived    = $timeSurvived;
         $this->vehicleDestroys = $vehicleDestroys;
@@ -252,6 +259,7 @@ class ParticipantStats
             $data['revives'],
             $data['rideDistance'],
             $data['roadKills'],
+            $data['swimDistance'],
             $data['teamKills'],
             $data['timeSurvived'],
             $data['vehicleDestroys'],

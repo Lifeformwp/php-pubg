@@ -3,6 +3,7 @@
 namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Events;
 
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Character;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 
 /**
  * Class LogPlayerMakeGroggy
@@ -45,18 +46,33 @@ class LogPlayerMakeGroggy
      * @var int|null
      */
     public $dBNOId;
+    /**
+     * @var Common|null
+     */
+    public $common;
+    /**
+     * @var \DateTimeImmutable|null
+     */
+    public $date;
+    /**
+     * @var null|string
+     */
+    public $type;
 
     /**
      * LogPlayerMakeGroggy constructor.
      *
-     * @param int|null       $attackId
-     * @param Character|null $attacker
-     * @param Character|null $victim
-     * @param null|string    $damageTypeCategory
-     * @param null|string    $damageCauserName
-     * @param float|null     $distance
-     * @param bool|null      $isAttackerInVehicle
-     * @param int|null       $dBNOId
+     * @param int|null                $attackId
+     * @param Character|null          $attacker
+     * @param Character|null          $victim
+     * @param null|string             $damageTypeCategory
+     * @param null|string             $damageCauserName
+     * @param float|null              $distance
+     * @param bool|null               $isAttackerInVehicle
+     * @param int|null                $dBNOId
+     * @param Common|null             $common
+     * @param \DateTimeImmutable|null $date
+     * @param null|string             $type
      */
     public function __construct(
         ?int $attackId,
@@ -66,7 +82,10 @@ class LogPlayerMakeGroggy
         ?string $damageCauserName,
         ?float $distance,
         ?bool $isAttackerInVehicle,
-        ?int $dBNOId
+        ?int $dBNOId,
+        ?Common $common,
+        ?\DateTimeImmutable $date,
+        ?string $type
     ) {
         $this->attackId            = $attackId;
         $this->attacker            = $attacker;
@@ -76,6 +95,9 @@ class LogPlayerMakeGroggy
         $this->distance            = $distance;
         $this->isAttackerInVehicle = $isAttackerInVehicle;
         $this->dBNOId              = $dBNOId;
+        $this->common              = $common;
+        $this->date                = $date;
+        $this->type                = $type;
     }
 
     /**
@@ -93,7 +115,10 @@ class LogPlayerMakeGroggy
             $data['damageCauserName'],
             $data['distance'],
             $data['isAttackerInVehicle'],
-            $data['dBNOId']
+            $data['dBNOId'],
+            Common::createFromResponse($data['common']),
+            new \DateTimeImmutable($data['_D']),
+            $data['_T']
         );
     }
 }

@@ -3,6 +3,7 @@
 namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Events;
 
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Character;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Item;
 
 /**
@@ -46,18 +47,33 @@ class LogArmorDestroy
      * @var float|null
      */
     public $distance;
+    /**
+     * @var Common|null
+     */
+    public $common;
+    /**
+     * @var \DateTimeImmutable|null
+     */
+    public $date;
+    /**
+     * @var null|string
+     */
+    public $type;
 
     /**
      * LogArmorDestroy constructor.
      *
-     * @param int|null       $attackId
-     * @param Character|null $attacker
-     * @param Character|null $victim
-     * @param null|string    $damageTypeCategory
-     * @param null|string    $damageReason
-     * @param null|string    $damageCauserName
-     * @param Item|null      $item
-     * @param float|null     $distance
+     * @param int|null                $attackId
+     * @param Character|null          $attacker
+     * @param Character|null          $victim
+     * @param null|string             $damageTypeCategory
+     * @param null|string             $damageReason
+     * @param null|string             $damageCauserName
+     * @param Item|null               $item
+     * @param float|null              $distance
+     * @param Common|null             $common
+     * @param \DateTimeImmutable|null $date
+     * @param null|string             $type
      */
     public function __construct(
         ?int $attackId,
@@ -67,7 +83,10 @@ class LogArmorDestroy
         ?string $damageReason,
         ?string $damageCauserName,
         ?Item $item,
-        ?float $distance
+        ?float $distance,
+        ?Common $common,
+        ?\DateTimeImmutable $date,
+        ?string $type
     ) {
         $this->attackId           = $attackId;
         $this->attacker           = $attacker;
@@ -77,6 +96,9 @@ class LogArmorDestroy
         $this->damageCauserName   = $damageCauserName;
         $this->item               = $item;
         $this->distance           = $distance;
+        $this->common             = $common;
+        $this->date               = $date;
+        $this->type               = $type;
     }
 
     /**
@@ -94,7 +116,10 @@ class LogArmorDestroy
             $data['damageReason'],
             $data['damageCauserName'],
             Item::createFromResponse($data['item']),
-            $data['distance']
+            $data['distance'],
+            Common::createFromResponse($data['common']),
+            new \DateTimeImmutable($data['_D']),
+            $data['_T']
         );
     }
 }

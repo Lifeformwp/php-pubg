@@ -3,6 +3,7 @@
 namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Events;
 
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Character;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 
 /**
  * Class LogSwimStart
@@ -17,15 +18,29 @@ class LogSwimStart
      * @var Character|null
      */
     public $character;
-
     /**
-     * LogSwimStart constructor.
-     *
-     * @param Character|null $character
+     * @var Common|null
      */
-    public function __construct(?Character $character)
-    {
+    public $common;
+    /**
+     * @var \DateTimeImmutable|null
+     */
+    public $date;
+    /**
+     * @var null|string
+     */
+    public $type;
+
+    public function __construct(
+        ?Character $character,
+        ?Common $common,
+        ?\DateTimeImmutable $date,
+        ?string $type
+    ) {
         $this->character = $character;
+        $this->common    = $common;
+        $this->date      = $date;
+        $this->type      = $type;
     }
 
     /**
@@ -36,7 +51,10 @@ class LogSwimStart
     public static function createFromResponse(?array $data): self
     {
         return new self(
-            Character::createFromResponse($data['character'])
+            Character::createFromResponse($data['character']),
+            Common::createFromResponse($data['common']),
+            new \DateTimeImmutable($data['_D']),
+            $data['_T']
         );
     }
 }
