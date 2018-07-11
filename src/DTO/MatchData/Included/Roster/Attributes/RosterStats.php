@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\MatchData\Included\Roster\Attributes;
 /**
  * Class RosterStats
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included\Attributes
- * @since 1.1.0
+ * @since   1.1.0
  */
 class RosterStats
 {
@@ -28,7 +28,7 @@ class RosterStats
      */
     public function __construct(?int $rank, ?int $teamId)
     {
-        $this->rank = $rank;
+        $this->rank   = $rank;
         $this->teamId = $teamId;
     }
 

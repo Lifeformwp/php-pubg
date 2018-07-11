@@ -7,9 +7,9 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 /**
  * Class LogPlayerLogout
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogPlayerLogout
 {
@@ -22,10 +22,6 @@ class LogPlayerLogout
      */
     public $common;
     /**
-     * @var int|null
-     */
-    public $version;
-    /**
      * @var \DateTimeImmutable|null
      */
     public $date;
@@ -37,24 +33,21 @@ class LogPlayerLogout
     /**
      * LogPlayerLogout constructor.
      *
-     * @param null|string $accountId
-     * @param Common|null $common
-     * @param int|null $version
+     * @param null|string             $accountId
+     * @param Common|null             $common
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?string $accountId,
         ?Common $common,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
         $this->accountId = $accountId;
-        $this->common = $common;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->common    = $common;
+        $this->date      = $date;
+        $this->type      = $type;
     }
 
     /**
@@ -67,7 +60,6 @@ class LogPlayerLogout
         return new self(
             $data['accountId'],
             Common::createFromResponse($data['common']),
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

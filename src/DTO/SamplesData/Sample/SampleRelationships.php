@@ -7,9 +7,9 @@ use Lifeformwp\PHPPUBG\DTO\SamplesData\Sample\Relationships\Matches;
 /**
  * Class SampleRelationships
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\SamplesData\Sample
- * @since 1.3.0
+ * @since   1.3.0
  */
 class SampleRelationships
 {
@@ -21,11 +21,10 @@ class SampleRelationships
     /**
      * SampleRelationships constructor.
      *
-     * @param Matches|null     $matches
+     * @param Matches|null $matches
      */
-    public function __construct(
-        ?Matches $matches
-    ) {
+    public function __construct(?Matches $matches)
+    {
         $this->matches = $matches;
     }
 

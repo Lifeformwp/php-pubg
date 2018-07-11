@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects;
 /**
  * Class Vehicle
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects
- * @since 1.3.0
+ * @since   1.3.0
  */
 class Vehicle
 {
@@ -33,8 +33,8 @@ class Vehicle
      *
      * @param null|string $vehicleType
      * @param null|string $vehicleId
-     * @param float|null $healthPercent
-     * @param float|null $fuelPercent
+     * @param float|null  $healthPercent
+     * @param float|null  $fuelPercent
      */
     public function __construct(
         ?string $vehicleType,
@@ -42,20 +42,20 @@ class Vehicle
         ?float $healthPercent,
         ?float $fuelPercent
     ) {
-        $this->vehicleType = $vehicleType;
-        $this->vehicleId = $vehicleId;
+        $this->vehicleType   = $vehicleType;
+        $this->vehicleId     = $vehicleId;
         $this->healthPercent = $healthPercent;
-        $this->fuelPercent = $fuelPercent;
+        $this->fuelPercent   = $fuelPercent;
     }
 
     /**
-     * @param array $data
+     * @param array|null $data
      *
-     * @return Vehicle
+     * @return Vehicle|null
      */
-    public static function createFromResponse(array $data): self
+    public static function createFromResponse(?array $data): ?self
     {
-        return new self(
+        return $data === null ? $data : new self(
             $data['vehicleType'],
             $data['vehicleId'],
             $data['healthPercent'],

@@ -10,9 +10,9 @@ use Lifeformwp\PHPPUBG\DTO\MatchData\Match\Relationships\Spectators;
 /**
  * Class MatchRelationships
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Match
- * @since 1.1.0
+ * @since   1.1.0
  */
 class MatchRelationships
 {
@@ -36,9 +36,9 @@ class MatchRelationships
     /**
      * MatchRelationships constructor.
      *
-     * @param Assets|null $assets
-     * @param Rosters|null $rosters
-     * @param Rounds|null $rounds
+     * @param Assets|null     $assets
+     * @param Rosters|null    $rosters
+     * @param Rounds|null     $rounds
      * @param Spectators|null $spectators
      */
     public function __construct(
@@ -47,9 +47,9 @@ class MatchRelationships
         ?Rounds $rounds,
         ?Spectators $spectators
     ) {
-        $this->assets = $assets;
-        $this->rosters = $rosters;
-        $this->rounds = $rounds;
+        $this->assets     = $assets;
+        $this->rosters    = $rosters;
+        $this->rounds     = $rounds;
         $this->spectators = $spectators;
     }
 

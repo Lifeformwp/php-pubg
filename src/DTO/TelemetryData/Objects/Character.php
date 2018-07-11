@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects;
 /**
  * Class Character
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects
- * @since 1.3.0
+ * @since   1.3.0
  */
 class Character
 {
@@ -39,12 +39,12 @@ class Character
     /**
      * Character constructor.
      *
-     * @param null|string $name
-     * @param int|null $teamId
-     * @param float|null $health
+     * @param null|string   $name
+     * @param int|null      $teamId
+     * @param float|null    $health
      * @param Location|null $location
-     * @param int|null $ranking
-     * @param null|string $accountId
+     * @param int|null      $ranking
+     * @param null|string   $accountId
      */
     public function __construct(
         ?string $name,
@@ -54,22 +54,22 @@ class Character
         ?int $ranking,
         ?string $accountId
     ) {
-        $this->name = $name;
-        $this->teamId = $teamId;
-        $this->health = $health;
-        $this->location = $location;
-        $this->ranking = $ranking;
+        $this->name      = $name;
+        $this->teamId    = $teamId;
+        $this->health    = $health;
+        $this->location  = $location;
+        $this->ranking   = $ranking;
         $this->accountId = $accountId;
     }
 
     /**
-     * @param array $data
+     * @param array|null $data
      *
-     * @return Character
+     * @return Character|null
      */
-    public static function createFromResponse(array $data): self
+    public static function createFromResponse(?array $data): ?self
     {
-        return new self(
+        return $data === null ? $data : new self(
             $data['name'],
             $data['teamId'],
             $data['health'],

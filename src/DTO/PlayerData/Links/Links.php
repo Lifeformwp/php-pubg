@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\PlayerData\Links;
 /**
  * Class Links
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchEndpoint\Links
- * @since 1.1.0
+ * @since   1.1.0
  */
 class Links
 {

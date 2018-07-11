@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\StatusData\Status;
 /**
  * Class StatusAttributes
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\StatusData\Status
- * @since 1.2.0
+ * @since   1.2.0
  */
 class StatusAttributes
 {
@@ -24,14 +24,14 @@ class StatusAttributes
      * StatusAttributes constructor.
      *
      * @param \DateTimeImmutable|null $releasedAt
-     * @param null|string $version
+     * @param null|string             $version
      */
     public function __construct(
         ?\DateTimeImmutable $releasedAt,
         ?string $version
     ) {
         $this->releasedAt = $releasedAt;
-        $this->version = $version;
+        $this->version    = $version;
     }
 
     /**

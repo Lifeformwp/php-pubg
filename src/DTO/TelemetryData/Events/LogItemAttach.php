@@ -9,9 +9,9 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Item;
 /**
  * Class LogItemAttach
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogItemAttach
 {
@@ -32,10 +32,6 @@ class LogItemAttach
      */
     public $common;
     /**
-     * @var int|null
-     */
-    public $version;
-    /**
      * @var \DateTimeImmutable|null
      */
     public $date;
@@ -47,30 +43,27 @@ class LogItemAttach
     /**
      * LogItemAttach constructor.
      *
-     * @param Character|null $character
-     * @param Item|null $parentItem
-     * @param Item|null $childItem
-     * @param Common|null $common
-     * @param int|null $version
+     * @param Character|null          $character
+     * @param Item|null               $parentItem
+     * @param Item|null               $childItem
+     * @param Common|null             $common
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?Character $character,
         ?Item $parentItem,
         ?Item $childItem,
         ?Common $common,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
-        $this->character = $character;
+        $this->character  = $character;
         $this->parentItem = $parentItem;
-        $this->childItem = $childItem;
-        $this->common = $common;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->childItem  = $childItem;
+        $this->common     = $common;
+        $this->date       = $date;
+        $this->type       = $type;
     }
 
     /**
@@ -85,7 +78,6 @@ class LogItemAttach
             Item::createFromResponse($data['parentItem']),
             Item::createFromResponse($data['childItem']),
             Common::createFromResponse($data['common']),
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

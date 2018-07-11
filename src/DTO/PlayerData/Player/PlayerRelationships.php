@@ -8,9 +8,9 @@ use Lifeformwp\PHPPUBG\DTO\PlayerData\Player\Relationships\Matches;
 /**
  * Class PlayerRelationships
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\PlayerData\Player
- * @since 1.1.0
+ * @since   1.1.0
  */
 class PlayerRelationships
 {
@@ -26,14 +26,14 @@ class PlayerRelationships
     /**
      * PlayerRelationships constructor.
      *
-     * @param Assets|null $assets
+     * @param Assets|null  $assets
      * @param Matches|null $matches
      */
     public function __construct(
         ?Assets $assets,
         ?Matches $matches
     ) {
-        $this->assets = $assets;
+        $this->assets  = $assets;
         $this->matches = $matches;
     }
 

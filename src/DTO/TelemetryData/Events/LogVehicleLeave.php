@@ -9,9 +9,9 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Vehicle;
 /**
  * Class LogVehicleLeave
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogVehicleLeave
 {
@@ -24,13 +24,17 @@ class LogVehicleLeave
      */
     public $vehicle;
     /**
-     * @var Common|null
+     * @var float|null
      */
-    public $common;
+    public $rideDistance;
     /**
      * @var int|null
      */
-    public $version;
+    public $seatIndex;
+    /**
+     * @var Common|null
+     */
+    public $common;
     /**
      * @var \DateTimeImmutable|null
      */
@@ -43,27 +47,30 @@ class LogVehicleLeave
     /**
      * LogVehicleLeave constructor.
      *
-     * @param Character|null $character
-     * @param Vehicle|null $vehicle
-     * @param Common|null $common
-     * @param int|null $version
+     * @param Character|null          $character
+     * @param Vehicle|null            $vehicle
+     * @param float|null              $rideDistance
+     * @param int|null                $seatIndex
+     * @param Common|null             $common
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?Character $character,
         ?Vehicle $vehicle,
+        ?float $rideDistance,
+        ?int $seatIndex,
         ?Common $common,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
-        $this->character = $character;
-        $this->vehicle = $vehicle;
-        $this->common = $common;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->character    = $character;
+        $this->vehicle      = $vehicle;
+        $this->rideDistance = $rideDistance;
+        $this->seatIndex    = $seatIndex;
+        $this->common       = $common;
+        $this->date         = $date;
+        $this->type         = $type;
     }
 
     /**
@@ -76,8 +83,9 @@ class LogVehicleLeave
         return new self(
             Character::createFromResponse($data['character']),
             Vehicle::createFromResponse($data['vehicle']),
+            $data['rideDistance'],
+            $data['seatIndex'],
             Common::createFromResponse($data['common']),
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

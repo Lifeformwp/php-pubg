@@ -7,9 +7,9 @@ use Lifeformwp\PHPPUBG\DTO\MatchData\Included\Roster\Attributes\RosterStats;
 /**
  * Class IncludedRosterAttributes
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included\Roster
- * @since 1.1.0
+ * @since   1.1.0
  */
 class IncludedRosterAttributes
 {
@@ -29,9 +29,9 @@ class IncludedRosterAttributes
     /**
      * IncludedRosterAttributes constructor.
      *
-     * @param null|string $shardId
+     * @param null|string      $shardId
      * @param RosterStats|null $stats
-     * @param null|string $won
+     * @param null|string      $won
      */
     public function __construct(
         ?string $shardId,
@@ -39,8 +39,8 @@ class IncludedRosterAttributes
         ?string $won
     ) {
         $this->shardId = $shardId;
-        $this->stats = $stats;
-        $this->won = $won;
+        $this->stats   = $stats;
+        $this->won     = $won;
     }
 
     /**

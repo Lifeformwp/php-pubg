@@ -7,9 +7,9 @@ use Lifeformwp\PHPPUBG\DTO\Telemetry;
 /**
  * Class TelemetryDTOProvider
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\Provider
- * @since 1.3.0
+ * @since   1.3.0
  */
 class TelemetryDTOProvider implements ProviderInterface
 {
@@ -23,7 +23,7 @@ class TelemetryDTOProvider implements ProviderInterface
         $result = [];
 
         foreach ($telemetries as $telemetry) {
-            $class = "Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\\" . $telemetry["_T"];
+            $class              = "Lifeformwp\PHPPUBG\DTO\TelemetryData\Events\\" . $telemetry["_T"];
             $result['events'][] = $class::createFromResponse($telemetry);
         }
 

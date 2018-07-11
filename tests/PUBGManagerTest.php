@@ -209,10 +209,10 @@ class PUBGManagerTest extends TestCase
         $token = 'token';
         $data  = $this->getTestData('tests/example/telemetry.json');
 
-        $client   = $this->mockClient($data, 200);
-        $manager  = new PUBGManager($client, $token);
-        $status   = $manager->getTelemetry('https://api.playbattlegrounds.com/shards/pc-eu/matches/abe08f7e-3add-4fd6-9bcd-4aff88fc7adf');
-        $objArray = $manager->hydrate($status, PUBGManager::HYDRATE_TELEMETRY);
+        $client         = $this->mockClient($data, 200);
+        $manager        = new PUBGManager($client, $token);
+        $status         = $manager->getTelemetry('https://api.playbattlegrounds.com/shards/pc-eu/matches/abe08f7e-3add-4fd6-9bcd-4aff88fc7adf');
+        $objArray       = $manager->hydrate($status, PUBGManager::HYDRATE_TELEMETRY);
         $telemetryArray = $this->jsonDecodeToArray($this->getTestData('tests/example/telemetry.json'));
 
         $counter = 0;
@@ -298,10 +298,10 @@ class PUBGManagerTest extends TestCase
         $token = 'token';
         $data  = $this->getTestData('tests/example/samples.json');
 
-        $client   = $this->mockClient($data, 200);
-        $manager  = new PUBGManager($client, $token);
-        $status   = $manager->getSamples('pc-na');
-        $obj = $manager->hydrate($status, PUBGManager::HYDRATE_SAMPLES);
+        $client  = $this->mockClient($data, 200);
+        $manager = new PUBGManager($client, $token);
+        $status  = $manager->getSamples('pc-na');
+        $obj     = $manager->hydrate($status, PUBGManager::HYDRATE_SAMPLES);
         $this->assertSample($obj, $this->jsonDecodeToArray($data));
     }
 
@@ -1551,8 +1551,8 @@ class PUBGManagerTest extends TestCase
     }
 
     /**
-     * @param Samples        $sample
-     * @param array          $data
+     * @param Samples $sample
+     * @param array   $data
      *
      * @since 1.3.0
      */

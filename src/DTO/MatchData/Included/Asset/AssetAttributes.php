@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\MatchData\Included\Asset;
 /**
  * Class AssetAttributes
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included\Asset
- * @since 1.1.0
+ * @since   1.1.0
  */
 class AssetAttributes
 {
@@ -31,21 +31,21 @@ class AssetAttributes
     /**
      * AssetAttributes constructor.
      *
-     * @param null|string $URL
+     * @param null|string             $URL
      * @param \DateTimeImmutable|null $createdAt
-     * @param null|string $description
-     * @param null|string $name
+     * @param null|string             $description
+     * @param null|string             $name
      */
     public function __construct(
         ?string $URL,
         ?\DateTimeImmutable $createdAt,
         ?string $description,
         ?string $name
-    ){
-        $this->URL = $URL;
-        $this->createdAt = $createdAt;
+    ) {
+        $this->URL         = $URL;
+        $this->createdAt   = $createdAt;
         $this->description = $description;
-        $this->name = $name;
+        $this->name        = $name;
     }
 
     /**

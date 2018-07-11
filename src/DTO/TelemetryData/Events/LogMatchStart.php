@@ -2,15 +2,16 @@
 
 namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Events;
 
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\BlueZoneCustomOption;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Character;
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
 
 /**
  * Class LogMatchStart
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogMatchStart
 {
@@ -27,13 +28,29 @@ class LogMatchStart
      */
     public $characters;
     /**
-     * @var Common|null
+     * @var null|string
      */
-    public $common;
+    public $cameraViewBehaviour;
     /**
      * @var int|null
      */
-    public $version;
+    public $teamSize;
+    /**
+     * @var bool|null
+     */
+    public $isCustomGame;
+    /**
+     * @var bool|null
+     */
+    public $isEventMode;
+    /**
+     * @var array|[]
+     */
+    public $blueZoneCustomOptions;
+    /**
+     * @var Common|null
+     */
+    public $common;
     /**
      * @var \DateTimeImmutable|null
      */
@@ -46,30 +63,42 @@ class LogMatchStart
     /**
      * LogMatchStart constructor.
      *
-     * @param null|string $mapName
-     * @param null|string $weatherId
-     * @param array|null $characters
-     * @param Common|null $common
-     * @param int|null $version
+     * @param null|string             $mapName
+     * @param null|string             $weatherId
+     * @param array|null              $characters
+     * @param null|string             $cameraViewBehaviour
+     * @param int|null                $teamSize
+     * @param bool|null               $isCustomGame
+     * @param bool|null               $isEventMode
+     * @param array|[]                $blueZoneCustomOptions
+     * @param Common|null             $common
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?string $mapName,
         ?string $weatherId,
         ?array $characters,
+        ?string $cameraViewBehaviour,
+        ?int $teamSize,
+        ?bool $isCustomGame,
+        ?bool $isEventMode,
+        ?array $blueZoneCustomOptions,
         ?Common $common,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
-        $this->mapName = $mapName;
-        $this->weatherId = $weatherId;
-        $this->characters = $characters;
-        $this->common = $common;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->mapName               = $mapName;
+        $this->weatherId             = $weatherId;
+        $this->characters            = $characters;
+        $this->cameraViewBehaviour   = $cameraViewBehaviour;
+        $this->teamSize              = $teamSize;
+        $this->isCustomGame          = $isCustomGame;
+        $this->isEventMode           = $isEventMode;
+        $this->blueZoneCustomOptions = $blueZoneCustomOptions;
+        $this->common                = $common;
+        $this->date                  = $date;
+        $this->type                  = $type;
     }
 
     /**
@@ -85,12 +114,24 @@ class LogMatchStart
             $characters[] = Character::createFromResponse($item);
         }
 
+        $blueZoneCustomOptions = [];
+
+        $options = \json_decode($data['blueZoneCustomOptions'], true);
+
+        foreach ($options as $option) {
+            $blueZoneCustomOptions[] = BlueZoneCustomOption::createFromResponse($option);
+        }
+
         return new self(
             $data['mapName'],
             $data['weatherId'],
             $characters,
+            $data['cameraViewBehaviour'],
+            $data['teamSize'],
+            $data['isCustomGame'] ?? null,
+            $data['isEventMode'] ?? null,
+            $blueZoneCustomOptions,
             Common::createFromResponse($data['common']),
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\MatchData\Match;
 /**
  * Class MatchAttributes
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Match
- * @since 1.1.0
+ * @since   1.1.0
  */
 class MatchAttributes
 {
@@ -30,10 +30,6 @@ class MatchAttributes
     /**
      * @var null|string
      */
-    public $patchVersion;
-    /**
-     * @var null|string
-     */
     public $shardId;
     /**
      * @var null|string
@@ -52,35 +48,32 @@ class MatchAttributes
      * MatchAttributes constructor.
      *
      * @param \DateTimeImmutable|null $createdAt
-     * @param int|null $duration
-     * @param null|string $gameMode
-     * @param null|string $mapName
-     * @param null|string $patchVersion
-     * @param null|string $shardId
-     * @param null|string $stats
-     * @param null|string $tags
-     * @param null|string $titleId
+     * @param int|null                $duration
+     * @param null|string             $gameMode
+     * @param null|string             $mapName
+     * @param null|string             $shardId
+     * @param null|string             $stats
+     * @param null|string             $tags
+     * @param null|string             $titleId
      */
     public function __construct(
         ?\DateTimeImmutable $createdAt,
         ?int $duration,
         ?string $gameMode,
         ?string $mapName,
-        ?string $patchVersion,
         ?string $shardId,
         ?string $stats,
         ?string $tags,
         ?string $titleId
     ) {
         $this->createdAt = $createdAt;
-        $this->duration = $duration;
-        $this->gameMode = $gameMode;
-        $this->mapName = $mapName;
-        $this->patchVersion = $patchVersion;
-        $this->shardId = $shardId;
-        $this->stats = $stats;
-        $this->tags = $tags;
-        $this->titleId = $titleId;
+        $this->duration  = $duration;
+        $this->gameMode  = $gameMode;
+        $this->mapName   = $mapName;
+        $this->shardId   = $shardId;
+        $this->stats     = $stats;
+        $this->tags      = $tags;
+        $this->titleId   = $titleId;
     }
 
     /**
@@ -95,7 +88,6 @@ class MatchAttributes
             $data['duration'],
             $data['gameMode'],
             $data['mapName'],
-            $data['patchVersion'],
             $data['shardId'],
             $data['stats'],
             $data['tags'],

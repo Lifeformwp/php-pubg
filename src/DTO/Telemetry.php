@@ -7,7 +7,7 @@ namespace Lifeformwp\PHPPUBG\DTO;
  *
  * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO
- * @since 1.3.0
+ * @since   1.3.0
  */
 class Telemetry implements DTOInterface
 {

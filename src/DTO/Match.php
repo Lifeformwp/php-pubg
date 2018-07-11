@@ -10,9 +10,9 @@ use Lifeformwp\PHPPUBG\DTO\MatchData\Links\Links;
 /**
  * Class Match
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO
- * @since 1.1.0
+ * @since   1.1.0
  */
 class Match implements DTOInterface
 {
@@ -36,10 +36,10 @@ class Match implements DTOInterface
     /**
      * Match constructor.
      *
-     * @param Data|null $data
+     * @param Data|null     $data
      * @param Included|null $included
-     * @param Links|null $links
-     * @param Meta|null $meta
+     * @param Links|null    $links
+     * @param Meta|null     $meta
      */
     public function __construct(
         ?Data $data,
@@ -47,10 +47,10 @@ class Match implements DTOInterface
         ?Links $links,
         ?Meta $meta
     ) {
-        $this->data = $data;
+        $this->data     = $data;
         $this->included = $included;
-        $this->links = $links;
-        $this->meta = $meta;
+        $this->links    = $links;
+        $this->meta     = $meta;
     }
 
     /**

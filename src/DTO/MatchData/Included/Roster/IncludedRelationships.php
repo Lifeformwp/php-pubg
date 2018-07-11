@@ -8,9 +8,9 @@ use Lifeformwp\PHPPUBG\DTO\MatchData\Included\Roster\Relationships\Team;
 /**
  * Class IncludedRelationships
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included\Roster
- * @since 1.1.0
+ * @since   1.1.0
  */
 class IncludedRelationships
 {
@@ -27,12 +27,12 @@ class IncludedRelationships
      * IncludedRelationships constructor.
      *
      * @param Participants|null $participants
-     * @param Team|null $team
+     * @param Team|null         $team
      */
     public function __construct(?Participants $participants, ?Team $team)
     {
         $this->participants = $participants;
-        $this->team = $team;
+        $this->team         = $team;
     }
 
     /**

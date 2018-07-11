@@ -9,9 +9,9 @@ use Lifeformwp\PHPPUBG\DTO\PlayerData\Player\Data;
 /**
  * Class Players
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO
- * @since 1.1.0
+ * @since   1.1.0
  */
 class Players implements DTOInterface
 {
@@ -33,16 +33,16 @@ class Players implements DTOInterface
      *
      * @param Data|[] $data
      * @param Links|null $links
-     * @param Meta|null $meta
+     * @param Meta|null  $meta
      */
     public function __construct(
         ?array $data,
         ?Links $links,
         ?Meta $meta
     ) {
-        $this->data = $data;
+        $this->data  = $data;
         $this->links = $links;
-        $this->meta = $meta;
+        $this->meta  = $meta;
     }
 
     /**

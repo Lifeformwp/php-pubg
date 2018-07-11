@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\MatchData\Included\Participant;
 /**
  * Class ParticipantStats
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included\Participant
- * @since 1.1.0
+ * @since   1.1.0
  */
 class ParticipantStats
 {
@@ -131,35 +131,35 @@ class ParticipantStats
     /**
      * ParticipantStats constructor.
      *
-     * @param $DBNOs
-     * @param $assists
-     * @param $boosts
-     * @param $damageDealt
-     * @param $deathType
-     * @param $headshotKills
-     * @param $heals
-     * @param $killPlace
-     * @param $killPoints
-     * @param $killPointsDelta
-     * @param $killStreaks
-     * @param $kills
-     * @param $lastKillPoints
-     * @param $lastWinPoints
-     * @param $longestKill
-     * @param $mostDamage
-     * @param $name
-     * @param $playerId
-     * @param $revives
-     * @param $rideDistance
-     * @param $roadKills
-     * @param $teamKills
-     * @param $timeSurvived
-     * @param $vehicleDestroys
-     * @param $walkDistance
-     * @param $weaponsAcquired
-     * @param $winPlace
-     * @param $winPoints
-     * @param $winPointsDelta
+     * @param int|null    $DBNOs
+     * @param int|null    $assists
+     * @param int|null    $boosts
+     * @param float|null  $damageDealt
+     * @param null|string $deathType
+     * @param int|null    $headshotKills
+     * @param int|null    $heals
+     * @param int|null    $killPlace
+     * @param int|null    $killPoints
+     * @param float|null  $killPointsDelta
+     * @param int|null    $killStreaks
+     * @param int|null    $kills
+     * @param int|null    $lastKillPoints
+     * @param int|null    $lastWinPoints
+     * @param float|null  $longestKill
+     * @param int|null    $mostDamage
+     * @param null|string $name
+     * @param null|string $playerId
+     * @param int|null    $revives
+     * @param float|null  $rideDistance
+     * @param int|null    $roadKills
+     * @param int|null    $teamKills
+     * @param float|null  $timeSurvived
+     * @param int|null    $vehicleDestroys
+     * @param float|null  $walkDistance
+     * @param int|null    $weaponsAcquired
+     * @param int|null    $winPlace
+     * @param int|null    $winPoints
+     * @param float|null  $winPointsDelta
      */
     public function __construct(
         ?int $DBNOs,
@@ -176,7 +176,7 @@ class ParticipantStats
         ?int $kills,
         ?int $lastKillPoints,
         ?int $lastWinPoints,
-        ?int $longestKill,
+        ?float $longestKill,
         ?int $mostDamage,
         ?string $name,
         ?string $playerId,
@@ -184,7 +184,7 @@ class ParticipantStats
         ?float $rideDistance,
         ?int $roadKills,
         ?int $teamKills,
-        ?int $timeSurvived,
+        ?float $timeSurvived,
         ?int $vehicleDestroys,
         ?float $walkDistance,
         ?int $weaponsAcquired,
@@ -192,35 +192,35 @@ class ParticipantStats
         ?int $winPoints,
         ?float $winPointsDelta
     ) {
-        $this->DBNOs = $DBNOs;
-        $this->assists = $assists;
-        $this->boosts = $boosts;
-        $this->damageDealt = $damageDealt;
-        $this->deathType = $deathType;
-        $this->headshotKills = $headshotKills;
-        $this->heals = $heals;
-        $this->killPlace = $killPlace;
-        $this->killPoints = $killPoints;
+        $this->DBNOs           = $DBNOs;
+        $this->assists         = $assists;
+        $this->boosts          = $boosts;
+        $this->damageDealt     = $damageDealt;
+        $this->deathType       = $deathType;
+        $this->headshotKills   = $headshotKills;
+        $this->heals           = $heals;
+        $this->killPlace       = $killPlace;
+        $this->killPoints      = $killPoints;
         $this->killPointsDelta = $killPointsDelta;
-        $this->killStreaks = $killStreaks;
-        $this->kills = $kills;
-        $this->lastKillPoints = $lastKillPoints;
-        $this->lastWinPoints = $lastWinPoints;
-        $this->longestKill = $longestKill;
-        $this->mostDamage = $mostDamage;
-        $this->name = $name;
-        $this->playerId = $playerId;
-        $this->revives = $revives;
-        $this->rideDistance = $rideDistance;
-        $this->roadKills = $roadKills;
-        $this->teamKills = $teamKills;
-        $this->timeSurvived = $timeSurvived;
+        $this->killStreaks     = $killStreaks;
+        $this->kills           = $kills;
+        $this->lastKillPoints  = $lastKillPoints;
+        $this->lastWinPoints   = $lastWinPoints;
+        $this->longestKill     = $longestKill;
+        $this->mostDamage      = $mostDamage;
+        $this->name            = $name;
+        $this->playerId        = $playerId;
+        $this->revives         = $revives;
+        $this->rideDistance    = $rideDistance;
+        $this->roadKills       = $roadKills;
+        $this->teamKills       = $teamKills;
+        $this->timeSurvived    = $timeSurvived;
         $this->vehicleDestroys = $vehicleDestroys;
-        $this->walkDistance = $walkDistance;
+        $this->walkDistance    = $walkDistance;
         $this->weaponsAcquired = $weaponsAcquired;
-        $this->winPlace = $winPlace;
-        $this->winPoints = $winPoints;
-        $this->winPointsDelta = $winPointsDelta;
+        $this->winPlace        = $winPlace;
+        $this->winPoints       = $winPoints;
+        $this->winPointsDelta  = $winPointsDelta;
     }
 
     /**

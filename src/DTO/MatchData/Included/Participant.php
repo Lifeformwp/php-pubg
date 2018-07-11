@@ -7,9 +7,9 @@ use Lifeformwp\PHPPUBG\DTO\MatchData\Included\Participant\IncludedParticipantAtt
 /**
  * Class Participant
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included
- * @since 1.1.0
+ * @since   1.1.0
  */
 class Participant
 {
@@ -29,8 +29,8 @@ class Participant
     /**
      * Participant constructor.
      *
-     * @param null|string $type
-     * @param null|string $id
+     * @param null|string                        $type
+     * @param null|string                        $id
      * @param IncludedParticipantAttributes|null $attributes
      */
     public function __construct(
@@ -38,8 +38,8 @@ class Participant
         ?string $id,
         ?IncludedParticipantAttributes $attributes
     ) {
-        $this->type = $type;
-        $this->id = $id;
+        $this->type       = $type;
+        $this->id         = $id;
         $this->attributes = $attributes;
     }
 

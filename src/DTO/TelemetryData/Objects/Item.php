@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects;
 /**
  * Class Item
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects
- * @since 1.3.0
+ * @since   1.3.0
  */
 class Item
 {
@@ -36,10 +36,10 @@ class Item
      * Item constructor.
      *
      * @param null|string $itemId
-     * @param int|null $stackCount
+     * @param int|null    $stackCount
      * @param null|string $category
      * @param null|string $subCategory
-     * @param array|null $attachedItems
+     * @param array|null  $attachedItems
      */
     public function __construct(
         ?string $itemId,
@@ -48,10 +48,10 @@ class Item
         ?string $subCategory,
         ?array $attachedItems
     ) {
-        $this->itemId = $itemId;
-        $this->stackCount = $stackCount;
-        $this->category = $category;
-        $this->subCategory = $subCategory;
+        $this->itemId        = $itemId;
+        $this->stackCount    = $stackCount;
+        $this->category      = $category;
+        $this->subCategory   = $subCategory;
         $this->attachedItems = $attachedItems;
     }
 

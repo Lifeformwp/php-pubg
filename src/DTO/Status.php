@@ -7,9 +7,9 @@ use Lifeformwp\PHPPUBG\DTO\StatusData\Status\Data;
 /**
  * Class Status
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO
- * @since 1.2.0
+ * @since   1.2.0
  */
 class Status implements DTOInterface
 {

@@ -8,9 +8,9 @@ use Lifeformwp\PHPPUBG\DTO\MatchData\Included\Roster\IncludedRelationships;
 /**
  * Class Roster
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\MatchData\Included
- * @since 1.1.0
+ * @since   1.1.0
  */
 class Roster
 {
@@ -34,10 +34,10 @@ class Roster
     /**
      * Roster constructor.
      *
-     * @param null|string $type
-     * @param null|string $id
+     * @param null|string                   $type
+     * @param null|string                   $id
      * @param IncludedRosterAttributes|null $attributes
-     * @param IncludedRelationships|null $relationships
+     * @param IncludedRelationships|null    $relationships
      */
     public function __construct(
         ?string $type,
@@ -45,9 +45,9 @@ class Roster
         ?IncludedRosterAttributes $attributes,
         ?IncludedRelationships $relationships
     ) {
-        $this->type = $type;
-        $this->id = $id;
-        $this->attributes = $attributes;
+        $this->type          = $type;
+        $this->id            = $id;
+        $this->attributes    = $attributes;
         $this->relationships = $relationships;
     }
 

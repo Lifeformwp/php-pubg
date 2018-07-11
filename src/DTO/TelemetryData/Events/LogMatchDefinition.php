@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Events;
 /**
  * Class LogMatchDefinition
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since 1.3.0
+ * @since   1.3.0
  */
 class LogMatchDefinition
 {
@@ -20,10 +20,6 @@ class LogMatchDefinition
      */
     public $pingQuality;
     /**
-     * @var int|null
-     */
-    public $version;
-    /**
      * @var \DateTimeImmutable|null
      */
     public $date;
@@ -35,24 +31,21 @@ class LogMatchDefinition
     /**
      * LogMatchDefinition constructor.
      *
-     * @param null|string $matchId
-     * @param null|string $pingQuality
-     * @param int|null $version
+     * @param null|string             $matchId
+     * @param null|string             $pingQuality
      * @param \DateTimeImmutable|null $date
-     * @param null|string $type
+     * @param null|string             $type
      */
     public function __construct(
         ?string $matchId,
         ?string $pingQuality,
-        ?int $version,
         ?\DateTimeImmutable $date,
         ?string $type
     ) {
-        $this->matchId = $matchId;
+        $this->matchId     = $matchId;
         $this->pingQuality = $pingQuality;
-        $this->version = $version;
-        $this->date = $date;
-        $this->type = $type;
+        $this->date        = $date;
+        $this->type        = $type;
     }
 
     /**
@@ -65,7 +58,6 @@ class LogMatchDefinition
         return new self(
             $data['MatchId'],
             $data['PingQuality'],
-            $data['_V'],
             new \DateTimeImmutable($data['_D']),
             $data['_T']
         );

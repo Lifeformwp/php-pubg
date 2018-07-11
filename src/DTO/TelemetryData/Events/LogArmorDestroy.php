@@ -3,16 +3,16 @@
 namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Events;
 
 use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Character;
-use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Common;
+use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Item;
 
 /**
- * Class LogPlayerTakeDamage
+ * Class LogArmorDestroy
  *
  * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since   1.3.0
+ * @since   1.4.0
  */
-class LogPlayerTakeDamage
+class LogArmorDestroy
 {
     /**
      * @var int|null
@@ -35,39 +35,29 @@ class LogPlayerTakeDamage
      */
     public $damageReason;
     /**
-     * @var float|null
-     */
-    public $damage;
-    /**
      * @var null|string
      */
     public $damageCauserName;
     /**
-     * @var Common|null
+     * @var Item|null
      */
-    public $common;
+    public $item;
     /**
-     * @var \DateTimeImmutable|null
+     * @var float|null
      */
-    public $date;
-    /**
-     * @var null|string
-     */
-    public $type;
+    public $distance;
 
     /**
-     * LogPlayerTakeDamage constructor.
+     * LogArmorDestroy constructor.
      *
-     * @param int|null                $attackId
-     * @param Character|null          $attacker
-     * @param Character|null          $victim
-     * @param null|string             $damageTypeCategory
-     * @param null|string             $damageReason
-     * @param float|null              $damage
-     * @param null|string             $damageCauserName
-     * @param Common|null             $common
-     * @param \DateTimeImmutable|null $date
-     * @param null|string             $type
+     * @param int|null       $attackId
+     * @param Character|null $attacker
+     * @param Character|null $victim
+     * @param null|string    $damageTypeCategory
+     * @param null|string    $damageReason
+     * @param null|string    $damageCauserName
+     * @param Item|null      $item
+     * @param float|null     $distance
      */
     public function __construct(
         ?int $attackId,
@@ -75,30 +65,26 @@ class LogPlayerTakeDamage
         ?Character $victim,
         ?string $damageTypeCategory,
         ?string $damageReason,
-        ?float $damage,
         ?string $damageCauserName,
-        ?Common $common,
-        ?\DateTimeImmutable $date,
-        ?string $type
+        ?Item $item,
+        ?float $distance
     ) {
         $this->attackId           = $attackId;
         $this->attacker           = $attacker;
         $this->victim             = $victim;
         $this->damageTypeCategory = $damageTypeCategory;
         $this->damageReason       = $damageReason;
-        $this->damage             = $damage;
         $this->damageCauserName   = $damageCauserName;
-        $this->common             = $common;
-        $this->date               = $date;
-        $this->type               = $type;
+        $this->item               = $item;
+        $this->distance           = $distance;
     }
 
     /**
-     * @param array $data
+     * @param array|null $data
      *
-     * @return LogPlayerTakeDamage
+     * @return LogArmorDestroy
      */
-    public static function createFromResponse(array $data): self
+    public static function createFromResponse(?array $data): self
     {
         return new self(
             $data['attackId'],
@@ -106,11 +92,9 @@ class LogPlayerTakeDamage
             Character::createFromResponse($data['victim']),
             $data['damageTypeCategory'],
             $data['damageReason'],
-            $data['damage'],
             $data['damageCauserName'],
-            Common::createFromResponse($data['common']),
-            new \DateTimeImmutable($data['_D']),
-            $data['_T']
+            Item::createFromResponse($data['item']),
+            $data['distance']
         );
     }
 }

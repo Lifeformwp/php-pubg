@@ -16,9 +16,9 @@ use Lifeformwp\PHPPUBG\DTO\PlayerData\Player\Relationships\Matches;
 /**
  * Class PlayersDTOProvider
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\Provider
- * @since 1.1.0
+ * @since   1.1.0
  */
 class PlayersDTOProvider implements ProviderInterface
 {
@@ -36,9 +36,9 @@ class PlayersDTOProvider implements ProviderInterface
         }
 
         $player = [
-            'data' => $data,
+            'data'  => $data,
             'links' => $this->processPlayerLinks($player['links']),
-            'meta' => $this->processPlayerMeta($player['meta'])
+            'meta'  => $this->processPlayerMeta($player['meta'])
         ];
 
         return Players::createFromResponse($player);
@@ -51,9 +51,9 @@ class PlayersDTOProvider implements ProviderInterface
      */
     private function processPlayerData(array $data): Data
     {
-        $data['attributes'] = $this->processPlayerDataAttributes($data['attributes']);
+        $data['attributes']    = $this->processPlayerDataAttributes($data['attributes']);
         $data['relationships'] = $this->processPlayerDataRelationships($data['relationships']);
-        $data['links'] = $this->processPlayerDataLinks($data['links']);
+        $data['links']         = $this->processPlayerDataLinks($data['links']);
 
         return Data::createFromResponse($data);
     }
@@ -75,7 +75,7 @@ class PlayersDTOProvider implements ProviderInterface
      */
     private function processPlayerDataRelationships(array $relationships): PlayerRelationships
     {
-        $relationships['assets'] = $this->processPlayerDataRelationshipsAssets($relationships['assets']);
+        $relationships['assets']  = $this->processPlayerDataRelationshipsAssets($relationships['assets']);
         $relationships['matches'] = $this->processPlayerDataRelationshipsMatches($relationships['matches']);
 
         return PlayerRelationships::createFromResponse($relationships);

@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\PlayerData\Player;
 /**
  * Class Data
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\PlayerData\Player
- * @since 1.1.0
+ * @since   1.1.0
  */
 class Data
 {
@@ -35,11 +35,11 @@ class Data
     /**
      * Data constructor.
      *
-     * @param null|string $type
-     * @param null|string $id
-     * @param PlayerAttributes|null $attributes
+     * @param null|string              $type
+     * @param null|string              $id
+     * @param PlayerAttributes|null    $attributes
      * @param PlayerRelationships|null $relationships
-     * @param PlayerLinks|null $links
+     * @param PlayerLinks|null         $links
      */
     public function __construct(
         ?string $type,
@@ -48,11 +48,11 @@ class Data
         ?PlayerRelationships $relationships,
         ?PlayerLinks $links
     ) {
-        $this->type = $type;
-        $this->id = $id;
-        $this->attributes = $attributes;
+        $this->type          = $type;
+        $this->id            = $id;
+        $this->attributes    = $attributes;
         $this->relationships = $relationships;
-        $this->links = $links;
+        $this->links         = $links;
     }
 
     /**

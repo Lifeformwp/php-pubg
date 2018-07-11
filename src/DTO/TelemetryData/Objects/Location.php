@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects;
 /**
  * Class Location
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects
- * @since 1.3.0
+ * @since   1.3.0
  */
 class Location
 {

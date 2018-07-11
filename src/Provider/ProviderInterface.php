@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\Provider;
 /**
  * Interface ProviderInterface
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\Provider
- * @since 1.1.0
+ * @since   1.1.0
  */
 interface ProviderInterface
 {

@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\SamplesData\Sample;
 /**
  * Class Data
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\SamplesData\Sample
- * @since 1.3.0
+ * @since   1.3.0
  */
 class Data
 {
@@ -42,9 +42,9 @@ class Data
         ?SampleAttributes $attributes,
         ?SampleRelationships $relationships
     ) {
-        $this->type = $type;
-        $this->id = $id;
-        $this->attributes = $attributes;
+        $this->type          = $type;
+        $this->id            = $id;
+        $this->attributes    = $attributes;
         $this->relationships = $relationships;
     }
 

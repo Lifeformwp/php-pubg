@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO\SamplesData\Sample;
 /**
  * Class SampleAttributes
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\SamplesData\Sample
- * @since 1.3.0
+ * @since   1.3.0
  */
 class SampleAttributes
 {
@@ -28,8 +28,8 @@ class SampleAttributes
      * SampleAttributes constructor.
      *
      * @param \DateTimeImmutable|null $createdAt
-     * @param null|string $shardId
-     * @param null|string $titleId
+     * @param null|string             $shardId
+     * @param null|string             $titleId
      */
     public function __construct(
         ?\DateTimeImmutable $createdAt,
@@ -37,8 +37,8 @@ class SampleAttributes
         ?string $titleId
     ) {
         $this->createdAt = $createdAt;
-        $this->shardId = $shardId;
-        $this->titleId = $titleId;
+        $this->shardId   = $shardId;
+        $this->titleId   = $titleId;
     }
 
     /**

@@ -5,9 +5,9 @@ namespace Lifeformwp\PHPPUBG\DTO;
 /**
  * Interface DTOInterface
  *
- * @author Serhii Kondratiuk <vielon.indie@gmail.com>
+ * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO
- * @since 1.1.0
+ * @since   1.1.0
  */
 interface DTOInterface
 {
