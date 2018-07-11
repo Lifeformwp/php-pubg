@@ -1538,7 +1538,7 @@ class PUBGManagerTest extends TestCase
      * @param LogArmorDestroy $event
      * @param array           $data
      *
-     * @since 1.4.0
+     * @since 1.5.0
      */
     private function assertEventLogArmorDestroy(LogArmorDestroy $event, array $data): void
     {
@@ -1591,7 +1591,7 @@ class PUBGManagerTest extends TestCase
      * @param LogPlayerMakeGroggy $event
      * @param array               $data
      *
-     * @since 1.4.0
+     * @since 1.5.0
      */
     private function assertEventLogPlayerMakeGroggy(LogPlayerMakeGroggy $event, array $data): void
     {
@@ -1636,7 +1636,7 @@ class PUBGManagerTest extends TestCase
      * @param LogPlayerRevive $event
      * @param array           $data
      *
-     * @since 1.4.0
+     * @since 1.5.0
      */
     private function assertEventLogPlayerRevive(LogPlayerRevive $event, array $data): void
     {
@@ -1673,7 +1673,7 @@ class PUBGManagerTest extends TestCase
      * @param LogSwimEnd $event
      * @param array      $data
      *
-     * @since 1.4.0
+     * @since 1.5.0
      */
     private function assertEventLogSwimEnd(LogSwimEnd $event, array $data): void
     {
@@ -1698,7 +1698,7 @@ class PUBGManagerTest extends TestCase
      * @param LogSwimStart $event
      * @param array        $data
      *
-     * @since 1.4.0
+     * @since 1.5.0
      */
     private function assertEventLogSwimStart(LogSwimStart $event, array $data): void
     {
@@ -1721,7 +1721,7 @@ class PUBGManagerTest extends TestCase
      * @param LogWheelDestroy $event
      * @param array           $data
      *
-     * @since 1.4.0
+     * @since 1.5.0
      */
     private function assertEventLogWheelDestroy(LogWheelDestroy $event, array $data): void
     {

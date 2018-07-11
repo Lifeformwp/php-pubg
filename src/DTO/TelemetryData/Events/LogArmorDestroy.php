@@ -11,7 +11,7 @@ use Lifeformwp\PHPPUBG\DTO\TelemetryData\Objects\Item;
  *
  * @author  Serhii Kondratiuk <vielon.indie@gmail.com>
  * @package Lifeformwp\PHPPUBG\DTO\TelemetryData\Events
- * @since   1.4.0
+ * @since   1.5.0
  */
 class LogArmorDestroy
 {
