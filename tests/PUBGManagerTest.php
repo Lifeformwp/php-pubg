@@ -162,6 +162,25 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($this->jsonDecodeToArray($data), $match);
     }
 
+    public function testGetTournaments(): void
+    {
+        $token = 'token';
+        $data  = $this->getTestData('tests/example/tournaments.json');
+        $client  = $this->mockClient($data, 200);
+        $manager = new PUBGManager($client, $token);
+        $match   = $manager->getTournaments();
+        $this->assertEquals($this->jsonDecodeToArray($data), $match);
+    }
+    public function testGetTournament(): void
+    {
+        $token = 'token';
+        $data  = $this->getTestData('tests/example/tournament.json');
+        $client  = $this->mockClient($data, 200);
+        $manager = new PUBGManager($client, $token);
+        $match   = $manager->getTournament('cis-pgiq18');
+        $this->assertEquals($this->jsonDecodeToArray($data), $match);
+    }
+
     public function testGetMatchDTO(): void
     {
         $token = 'token';

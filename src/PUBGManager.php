@@ -300,6 +300,37 @@ class PUBGManager
     }
 
     /**
+     * @return array
+     * @throws PUBGManagerException
+     * @since 1.6.0
+     */
+    public function getTournaments(): array
+    {
+        $url = self::BASE_URL . 'tournaments';
+        try {
+            return $this->request('get', $url);
+        } catch (\Throwable $throwable) {
+            throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
+        }
+    }
+    /**
+     * @param string $tournamentId
+     *
+     * @return array
+     * @throws PUBGManagerException
+     * @since 1.6.0
+     */
+    public function getTournament(string $tournamentId): array
+    {
+        $url = self::BASE_URL . 'tournaments/' . $tournamentId;
+        try {
+            return $this->request('get', $url);
+        } catch (\Throwable $throwable) {
+            throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
+        }
+    }
+
+    /**
      * @param string     $method
      * @param string     $url
      * @param array|null $options
