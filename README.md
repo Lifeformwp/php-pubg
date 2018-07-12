@@ -35,6 +35,8 @@ Available methods
 * getSamples([string, required]shard) - returns array of sample data
 * getSeasons([string, required]shard) - returns array of seasons data
 * getSeasonDataForPlayer([string, required]shard, [string, required]playerId, [string, required]seasonId) - returns array of season data for player
+* getTournaments() - returns array of data about tournaments
+* getTournament([string, required]tournamentId) - returns array of data about tournament
 
 * getMatches([string, required]shard, [array, required]matchesIds) - returns array of arrays about matches
 * getTelemetryByMatch([string, required]telemetryUrl) - returns array of data according to given telemetry url

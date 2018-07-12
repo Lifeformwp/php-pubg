@@ -1,0 +1,469 @@
+{
+  "data": {
+    "type": "tournament",
+    "id": "cis-pgiq18",
+    "relationships": {
+      "matches": {
+        "data": [
+          {
+            "type": "match",
+            "id": "71bb2a7c-0084-42fd-a4c6-f53c9985243b"
+          },
+          {
+            "type": "match",
+            "id": "dc00a665-3792-404a-ad6a-152beca18b78"
+          },
+          {
+            "type": "match",
+            "id": "8f603d89-c7e6-4bf8-bc8d-b11af0cd6e42"
+          },
+          {
+            "type": "match",
+            "id": "3b56bf4c-564d-4f99-b58d-acf886ae83b3"
+          },
+          {
+            "type": "match",
+            "id": "0ba645bd-4acc-4081-8931-9f3c31fafa5b"
+          },
+          {
+            "type": "match",
+            "id": "c08c68e1-fd69-433f-a227-47ad2284bbe1"
+          },
+          {
+            "type": "match",
+            "id": "f8824198-eb69-4a36-bf6d-11383179853c"
+          },
+          {
+            "type": "match",
+            "id": "a30123c1-2dfe-438e-9c59-04a7e49af5f0"
+          },
+          {
+            "type": "match",
+            "id": "0a580be8-556c-483b-8e20-9b9d50a622e6"
+          },
+          {
+            "type": "match",
+            "id": "e8c7c8a9-8eb9-4d62-a095-fe0c75784758"
+          },
+          {
+            "type": "match",
+            "id": "9d6e7231-0bb5-404c-a7db-9ff155fe393b"
+          },
+          {
+            "type": "match",
+            "id": "970590da-f6a2-4ebb-9679-2e1a8037c9e6"
+          },
+          {
+            "type": "match",
+            "id": "2cc1d54e-11df-450e-bf70-85b1e10fd0ce"
+          },
+          {
+            "type": "match",
+            "id": "d0ca0a31-901a-49eb-a398-78ed95a1264f"
+          },
+          {
+            "type": "match",
+            "id": "c0d41e67-f174-47a8-8f8f-63d9ad477ce8"
+          },
+          {
+            "type": "match",
+            "id": "a45ee47c-e59c-4ee5-aeda-0a482d9737bb"
+          },
+          {
+            "type": "match",
+            "id": "9b565fbb-ae76-4788-a004-cb381866c9c9"
+          },
+          {
+            "type": "match",
+            "id": "02f2e795-8c52-4955-8bd1-c44980895ec0"
+          },
+          {
+            "type": "match",
+            "id": "a390566d-04ce-4e80-9cf4-be8fcf7ec0f2"
+          },
+          {
+            "type": "match",
+            "id": "358aae5c-00fa-41fe-aacb-bd4769813600"
+          },
+          {
+            "type": "match",
+            "id": "1da286d7-934c-4a72-8536-810a508056ce"
+          },
+          {
+            "type": "match",
+            "id": "d0ef38e3-1255-4fe0-9203-f8795417bea7"
+          },
+          {
+            "type": "match",
+            "id": "2b0f33d2-7489-4244-96ff-a461b5042c83"
+          },
+          {
+            "type": "match",
+            "id": "27d83188-8ec6-4920-9e23-69599ed0b9b6"
+          },
+          {
+            "type": "match",
+            "id": "bb739e91-31f7-4bbb-ac65-a1f1cd78b696"
+          },
+          {
+            "type": "match",
+            "id": "c4e4c3df-0e7e-4747-8a1e-f19327a17f6a"
+          },
+          {
+            "type": "match",
+            "id": "cec8cbb5-711c-4eff-8984-7c881d39cdfb"
+          },
+          {
+            "type": "match",
+            "id": "db77f52d-34f1-46f8-b2f2-3988391cda34"
+          },
+          {
+            "type": "match",
+            "id": "81769b81-2abe-42e4-8be7-1f2d5d372f27"
+          },
+          {
+            "type": "match",
+            "id": "055abcba-c646-4ab7-af9b-115d8d9693b2"
+          },
+          {
+            "type": "match",
+            "id": "e0be4e39-30e0-4d0c-838b-4d1517311a52"
+          },
+          {
+            "type": "match",
+            "id": "71112ea6-5f38-44c7-b2ff-95091f98e4ae"
+          },
+          {
+            "type": "match",
+            "id": "57f435b3-41b5-435e-b00f-f5963a5e3b8f"
+          },
+          {
+            "type": "match",
+            "id": "d3ec705e-0501-4355-b779-1051d9f3440e"
+          },
+          {
+            "type": "match",
+            "id": "e49cf00b-9e92-4308-99ca-dbacae18c4f5"
+          },
+          {
+            "type": "match",
+            "id": "3e21daca-a743-4ac5-b37a-dad61cf279f7"
+          },
+          {
+            "type": "match",
+            "id": "7c35c042-44c7-4a0b-abb2-1baa45c39dd9"
+          },
+          {
+            "type": "match",
+            "id": "f883fde0-fc33-4336-a605-51e4c11b47c9"
+          },
+          {
+            "type": "match",
+            "id": "c877f24e-686f-4d22-ac1e-c6f2dcd1071c"
+          },
+          {
+            "type": "match",
+            "id": "18a1568b-f894-4439-8697-83ab607ceaaa"
+          },
+          {
+            "type": "match",
+            "id": "a086fdb0-c92a-443f-aca2-cbcdb05f3609"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "match",
+      "id": "0ba645bd-4acc-4081-8931-9f3c31fafa5b",
+      "attributes": {
+        "createdAt": "2018-06-24T14:05:27Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "c0d41e67-f174-47a8-8f8f-63d9ad477ce8",
+      "attributes": {
+        "createdAt": "2018-06-23T19:14:57Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "9b565fbb-ae76-4788-a004-cb381866c9c9",
+      "attributes": {
+        "createdAt": "2018-06-23T15:07:18Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "1da286d7-934c-4a72-8536-810a508056ce",
+      "attributes": {
+        "createdAt": "2018-06-22T18:20:23Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "cec8cbb5-711c-4eff-8984-7c881d39cdfb",
+      "attributes": {
+        "createdAt": "2018-06-22T12:10:49Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "81769b81-2abe-42e4-8be7-1f2d5d372f27",
+      "attributes": {
+        "createdAt": "2018-06-21T17:02:23Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "a086fdb0-c92a-443f-aca2-cbcdb05f3609",
+      "attributes": {
+        "createdAt": "2018-06-20T16:10:11Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "dc00a665-3792-404a-ad6a-152beca18b78",
+      "attributes": {
+        "createdAt": "2018-06-24T17:07:38Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "8f603d89-c7e6-4bf8-bc8d-b11af0cd6e42",
+      "attributes": {
+        "createdAt": "2018-06-24T16:11:37Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "e8c7c8a9-8eb9-4d62-a095-fe0c75784758",
+      "attributes": {
+        "createdAt": "2018-06-24T10:05:35Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "9d6e7231-0bb5-404c-a7db-9ff155fe393b",
+      "attributes": {
+        "createdAt": "2018-06-24T09:52:31Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "d0ef38e3-1255-4fe0-9203-f8795417bea7",
+      "attributes": {
+        "createdAt": "2018-06-22T17:16:46Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "c877f24e-686f-4d22-ac1e-c6f2dcd1071c",
+      "attributes": {
+        "createdAt": "2018-06-21T08:12:11Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "18a1568b-f894-4439-8697-83ab607ceaaa",
+      "attributes": {
+        "createdAt": "2018-06-20T19:19:14Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "c08c68e1-fd69-433f-a227-47ad2284bbe1",
+      "attributes": {
+        "createdAt": "2018-06-24T12:36:42Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "0a580be8-556c-483b-8e20-9b9d50a622e6",
+      "attributes": {
+        "createdAt": "2018-06-24T10:13:57Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "970590da-f6a2-4ebb-9679-2e1a8037c9e6",
+      "attributes": {
+        "createdAt": "2018-06-24T09:36:58Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "2b0f33d2-7489-4244-96ff-a461b5042c83",
+      "attributes": {
+        "createdAt": "2018-06-22T16:10:49Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "bb739e91-31f7-4bbb-ac65-a1f1cd78b696",
+      "attributes": {
+        "createdAt": "2018-06-22T14:08:18Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "71112ea6-5f38-44c7-b2ff-95091f98e4ae",
+      "attributes": {
+        "createdAt": "2018-06-21T14:11:02Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "7c35c042-44c7-4a0b-abb2-1baa45c39dd9",
+      "attributes": {
+        "createdAt": "2018-06-21T09:44:31Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "f883fde0-fc33-4336-a605-51e4c11b47c9",
+      "attributes": {
+        "createdAt": "2018-06-21T08:48:12Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "2cc1d54e-11df-450e-bf70-85b1e10fd0ce",
+      "attributes": {
+        "createdAt": "2018-06-24T09:19:17Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "3e21daca-a743-4ac5-b37a-dad61cf279f7",
+      "attributes": {
+        "createdAt": "2018-06-21T09:45:29Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "3b56bf4c-564d-4f99-b58d-acf886ae83b3",
+      "attributes": {
+        "createdAt": "2018-06-24T15:09:44Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "a45ee47c-e59c-4ee5-aeda-0a482d9737bb",
+      "attributes": {
+        "createdAt": "2018-06-23T18:19:37Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "db77f52d-34f1-46f8-b2f2-3988391cda34",
+      "attributes": {
+        "createdAt": "2018-06-21T18:05:36Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "055abcba-c646-4ab7-af9b-115d8d9693b2",
+      "attributes": {
+        "createdAt": "2018-06-21T16:05:06Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "57f435b3-41b5-435e-b00f-f5963a5e3b8f",
+      "attributes": {
+        "createdAt": "2018-06-21T13:06:19Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "71bb2a7c-0084-42fd-a4c6-f53c9985243b",
+      "attributes": {
+        "createdAt": "2018-06-24T18:04:59Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "a30123c1-2dfe-438e-9c59-04a7e49af5f0",
+      "attributes": {
+        "createdAt": "2018-06-24T10:22:00Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "02f2e795-8c52-4955-8bd1-c44980895ec0",
+      "attributes": {
+        "createdAt": "2018-06-23T14:04:15Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "27d83188-8ec6-4920-9e23-69599ed0b9b6",
+      "attributes": {
+        "createdAt": "2018-06-22T15:09:53Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "c4e4c3df-0e7e-4747-8a1e-f19327a17f6a",
+      "attributes": {
+        "createdAt": "2018-06-22T12:57:45Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "e0be4e39-30e0-4d0c-838b-4d1517311a52",
+      "attributes": {
+        "createdAt": "2018-06-21T15:08:26Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "e49cf00b-9e92-4308-99ca-dbacae18c4f5",
+      "attributes": {
+        "createdAt": "2018-06-21T10:37:46Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "f8824198-eb69-4a36-bf6d-11383179853c",
+      "attributes": {
+        "createdAt": "2018-06-24T10:32:02Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "d0ca0a31-901a-49eb-a398-78ed95a1264f",
+      "attributes": {
+        "createdAt": "2018-06-23T20:08:19Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "a390566d-04ce-4e80-9cf4-be8fcf7ec0f2",
+      "attributes": {
+        "createdAt": "2018-06-23T12:56:14Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "358aae5c-00fa-41fe-aacb-bd4769813600",
+      "attributes": {
+        "createdAt": "2018-06-23T12:13:09Z"
+      }
+    },
+    {
+      "type": "match",
+      "id": "d3ec705e-0501-4355-b779-1051d9f3440e",
+      "attributes": {
+        "createdAt": "2018-06-21T12:06:31Z"
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.playbattlegrounds.com/tournaments/cis-pgiq18"
+  },
+  "meta": {}
+}

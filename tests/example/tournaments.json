@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "type": "tournament",
+      "id": "eu-pgiq18",
+      "attributes": {
+        "createdAt": "2018-06-28T13:17:16Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "sea-pgiq18",
+      "attributes": {
+        "createdAt": "2018-06-23T05:42:32Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "oc-pgiq18",
+      "attributes": {
+        "createdAt": "2018-06-22T00:00:00Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "sea-th-q18",
+      "attributes": {
+        "createdAt": "2018-06-21T09:47:44Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "cis-pgiq18",
+      "attributes": {
+        "createdAt": "2018-06-20T16:46:33Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "kr-pss18s2",
+      "attributes": {
+        "createdAt": "2018-06-17T03:40:44Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "ct-mpl18s1",
+      "attributes": {
+        "createdAt": "2018-06-15T09:29:17Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "kr-apl18s2",
+      "attributes": {
+        "createdAt": "2018-06-15T07:21:54Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "jp-pjs18s1",
+      "attributes": {
+        "createdAt": "2018-06-14T14:22:21Z"
+      }
+    },
+    {
+      "type": "tournament",
+      "id": "kr-pwm18s1",
+      "attributes": {
+        "createdAt": "2018-06-13T15:38:29Z"
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.playbattlegrounds.com/tournaments"
+  },
+  "meta": {}
+}
