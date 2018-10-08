@@ -47,6 +47,10 @@ class MatchAttributes
      * @var bool|null
      */
     public $isCustomMatch;
+    /**
+     * @var null|string
+     */
+    public $seasonState;
 
     /**
      * MatchAttributes constructor.
@@ -60,6 +64,7 @@ class MatchAttributes
      * @param null|string             $tags
      * @param null|string             $titleId
      * @param bool|null               $isCustomMatch
+     * @param null|string             $seasonState
      */
     public function __construct(
         ?\DateTimeImmutable $createdAt,
@@ -70,17 +75,19 @@ class MatchAttributes
         ?string $stats,
         ?string $tags,
         ?string $titleId,
-        ?bool $isCustomMatch
+        ?bool $isCustomMatch,
+        ?string $seasonState
     ) {
-        $this->createdAt = $createdAt;
-        $this->duration  = $duration;
-        $this->gameMode  = $gameMode;
-        $this->mapName   = $mapName;
-        $this->shardId   = $shardId;
-        $this->stats     = $stats;
-        $this->tags      = $tags;
-        $this->titleId   = $titleId;
+        $this->createdAt     = $createdAt;
+        $this->duration      = $duration;
+        $this->gameMode      = $gameMode;
+        $this->mapName       = $mapName;
+        $this->shardId       = $shardId;
+        $this->stats         = $stats;
+        $this->tags          = $tags;
+        $this->titleId       = $titleId;
         $this->isCustomMatch = $isCustomMatch;
+        $this->seasonState   = $seasonState;
     }
 
     /**
@@ -99,7 +106,8 @@ class MatchAttributes
             $data['stats'],
             $data['tags'],
             $data['titleId'],
-            $data['isCustomMatch']
+            $data['isCustomMatch'],
+            $data['seasonState']
         );
     }
 }

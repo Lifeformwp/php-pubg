@@ -46,14 +46,6 @@ class ParticipantStats
     /**
      * @var int|null
      */
-    public $killPoints;
-    /**
-     * @var
-     */
-    public $killPointsDelta;
-    /**
-     * @var int|null
-     */
     public $killStreaks;
     /**
      * @var int|null
@@ -126,11 +118,7 @@ class ParticipantStats
     /**
      * @var int|null
      */
-    public $winPoints;
-    /**
-     * @var float|null
-     */
-    public $winPointsDelta;
+    public $rankPoints;
 
     /**
      * ParticipantStats constructor.
@@ -143,8 +131,6 @@ class ParticipantStats
      * @param int|null    $headshotKills
      * @param int|null    $heals
      * @param int|null    $killPlace
-     * @param int|null    $killPoints
-     * @param float|null  $killPointsDelta
      * @param int|null    $killStreaks
      * @param int|null    $kills
      * @param int|null    $lastKillPoints
@@ -163,8 +149,7 @@ class ParticipantStats
      * @param float|null  $walkDistance
      * @param int|null    $weaponsAcquired
      * @param int|null    $winPlace
-     * @param int|null    $winPoints
-     * @param float|null  $winPointsDelta
+     * @param int|null    $rankPoints
      */
     public function __construct(
         ?int $DBNOs,
@@ -175,8 +160,6 @@ class ParticipantStats
         ?int $headshotKills,
         ?int $heals,
         ?int $killPlace,
-        ?int $killPoints,
-        ?float $killPointsDelta,
         ?int $killStreaks,
         ?int $kills,
         ?int $lastKillPoints,
@@ -195,8 +178,7 @@ class ParticipantStats
         ?float $walkDistance,
         ?int $weaponsAcquired,
         ?int $winPlace,
-        ?int $winPoints,
-        ?float $winPointsDelta
+        ?int $rankPoints
     ) {
         $this->DBNOs           = $DBNOs;
         $this->assists         = $assists;
@@ -206,8 +188,6 @@ class ParticipantStats
         $this->headshotKills   = $headshotKills;
         $this->heals           = $heals;
         $this->killPlace       = $killPlace;
-        $this->killPoints      = $killPoints;
-        $this->killPointsDelta = $killPointsDelta;
         $this->killStreaks     = $killStreaks;
         $this->kills           = $kills;
         $this->lastKillPoints  = $lastKillPoints;
@@ -226,8 +206,7 @@ class ParticipantStats
         $this->walkDistance    = $walkDistance;
         $this->weaponsAcquired = $weaponsAcquired;
         $this->winPlace        = $winPlace;
-        $this->winPoints       = $winPoints;
-        $this->winPointsDelta  = $winPointsDelta;
+        $this->rankPoints      = $rankPoints;
     }
 
     /**
@@ -246,8 +225,6 @@ class ParticipantStats
             $data['headshotKills'],
             $data['heals'],
             $data['killPlace'],
-            $data['killPoints'],
-            $data['killPointsDelta'],
             $data['killStreaks'],
             $data['kills'],
             $data['lastKillPoints'],
@@ -266,8 +243,7 @@ class ParticipantStats
             $data['walkDistance'],
             $data['weaponsAcquired'],
             $data['winPlace'],
-            $data['winPoints'],
-            $data['winPointsDelta']
+            $data['rankPoints']
         );
     }
 }

@@ -502,6 +502,7 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($data['data']['attributes']['stats'], $matchDataAttributes->stats);
         $this->assertEquals($data['data']['attributes']['tags'], $matchDataAttributes->tags);
         $this->assertEquals($data['data']['attributes']['titleId'], $matchDataAttributes->titleId);
+        $this->assertEquals($data['data']['attributes']['seasonState'], $matchDataAttributes->seasonState);
         $this->assertEquals($data['data']['attributes']['isCustomMatch'], $matchDataAttributes->isCustomMatch);
 
         $matchDataRelationships = $matchData->relationships;
@@ -575,8 +576,6 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($stats['headshotKills'], $matchIncludedParticipantAttributesStats->headshotKills);
         $this->assertEquals($stats['heals'], $matchIncludedParticipantAttributesStats->heals);
         $this->assertEquals($stats['killPlace'], $matchIncludedParticipantAttributesStats->killPlace);
-        $this->assertEquals($stats['killPoints'], $matchIncludedParticipantAttributesStats->killPoints);
-        $this->assertEquals($stats['killPointsDelta'], $matchIncludedParticipantAttributesStats->killPointsDelta);
         $this->assertEquals($stats['killStreaks'], $matchIncludedParticipantAttributesStats->killStreaks);
         $this->assertEquals($stats['kills'], $matchIncludedParticipantAttributesStats->kills);
         $this->assertEquals($stats['lastKillPoints'], $matchIncludedParticipantAttributesStats->lastKillPoints);
@@ -586,6 +585,7 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($stats['name'], $matchIncludedParticipantAttributesStats->name);
         $this->assertEquals($stats['playerId'], $matchIncludedParticipantAttributesStats->playerId);
         $this->assertEquals($stats['revives'], $matchIncludedParticipantAttributesStats->revives);
+        $this->assertEquals($stats['rankPoints'], $matchIncludedParticipantAttributesStats->rankPoints);
         $this->assertEquals($stats['rideDistance'], $matchIncludedParticipantAttributesStats->rideDistance);
         $this->assertEquals($stats['roadKills'], $matchIncludedParticipantAttributesStats->roadKills);
         $this->assertEquals($stats['swimDistance'], $matchIncludedParticipantAttributesStats->swimDistance);
@@ -595,8 +595,7 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($stats['walkDistance'], $matchIncludedParticipantAttributesStats->walkDistance);
         $this->assertEquals($stats['weaponsAcquired'], $matchIncludedParticipantAttributesStats->weaponsAcquired);
         $this->assertEquals($stats['winPlace'], $matchIncludedParticipantAttributesStats->winPlace);
-        $this->assertEquals($stats['winPoints'], $matchIncludedParticipantAttributesStats->winPoints);
-        $this->assertEquals($stats['winPointsDelta'], $matchIncludedParticipantAttributesStats->winPointsDelta);
+        $this->assertEquals($stats['rankPoints'], $matchIncludedParticipantAttributesStats->rankPoints);
 
         $matchIncludedAsset = $matchIncluded->asset;
         $this->assertInstanceOf(IncludedAsset::class, $matchIncludedAsset);
@@ -1123,6 +1122,7 @@ class PUBGManagerTest extends TestCase
         $this->assertEquals($data['PingQuality'], $event->pingQuality);
         $this->assertInstanceOf(\DateTimeImmutable::class, $event->date);
         $this->assertEquals($data['_T'], $event->type);
+        $this->assertEquals($data['SeasonState'], $event->seasonState);
     }
 
     /**
