@@ -27,6 +27,10 @@ class LogMatchDefinition
      * @var null|string
      */
     public $type;
+    /**
+     * @var null|string
+     */
+    public $seasonState;
 
     /**
      * LogMatchDefinition constructor.
@@ -35,17 +39,20 @@ class LogMatchDefinition
      * @param null|string             $pingQuality
      * @param \DateTimeImmutable|null $date
      * @param null|string             $type
+     * @param null|string             $seasonState
      */
     public function __construct(
         ?string $matchId,
         ?string $pingQuality,
         ?\DateTimeImmutable $date,
-        ?string $type
+        ?string $type,
+        ?string $seasonState
     ) {
         $this->matchId     = $matchId;
         $this->pingQuality = $pingQuality;
         $this->date        = $date;
         $this->type        = $type;
+        $this->seasonState = $seasonState;
     }
 
     /**
@@ -59,7 +66,8 @@ class LogMatchDefinition
             $data['MatchId'],
             $data['PingQuality'],
             new \DateTimeImmutable($data['_D']),
-            $data['_T']
+            $data['_T'],
+            $data['SeasonState']
         );
     }
 }

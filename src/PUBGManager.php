@@ -55,7 +55,9 @@ class PUBGManager
      * @param ClientInterface $client
      *
      * @return PUBGManager
-     * @since 1.1.0
+     * @since      1.1.0
+     *
+     * @deprecated The setClient method is deprecated and will be removed in version 1.8.0 of lifeformwp/php-pubg.
      */
     public function setClient(ClientInterface $client): self
     {
@@ -68,7 +70,9 @@ class PUBGManager
      * @param string $token
      *
      * @return PUBGManager
-     * @since 1.1.0
+     * @since      1.1.0
+     *
+     * @deprecated The setToken method is deprecated and will be removed in version 1.8.0 of lifeformwp/php-pubg.
      */
     public function setToken(string $token): self
     {
@@ -313,6 +317,7 @@ class PUBGManager
             throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
         }
     }
+
     /**
      * @param string $tournamentId
      *

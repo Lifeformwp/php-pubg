@@ -2,15 +2,15 @@
   "data": [
     {
       "type": "player",
-      "id": "account.b3982540418d421f8cbf72705e49b1ad",
+      "id": "account.d50fdc18fcad49c691d38466bed6f8fd",
       "attributes": {
-        "createdAt": "2018-05-22T21:19:27Z",
-        "updatedAt": "2018-05-22T21:19:27Z",
+        "createdAt": "2018-10-08T13:33:38Z",
+        "updatedAt": "2018-10-08T13:33:38Z",
         "patchVersion": "",
-        "name": "MrEddyGordo",
+        "name": "shroud",
         "stats": null,
         "titleId": "bluehole-pubg",
-        "shardId": "pc-eu"
+        "shardId": "pc-na"
       },
       "relationships": {
         "assets": {
@@ -20,107 +20,115 @@
           "data": [
             {
               "type": "match",
-              "id": "7e4320e8-a8cb-46e3-912e-3fe29c362920"
+              "id": "da6ea12d-486d-4d3b-b27a-657a82bc49cc"
             },
             {
               "type": "match",
-              "id": "dcbde414-f1c1-4e92-aa37-9d773788f945"
+              "id": "01ed4357-cfa3-4a97-9a2d-157e58ed2b09"
             },
             {
               "type": "match",
-              "id": "ce25722f-c907-40c2-89be-0c5cf770c53f"
+              "id": "4dd633d2-f2f5-48c3-8c18-d347adae16ff"
             },
             {
               "type": "match",
-              "id": "a83bc44d-74a5-4389-90a6-d2e3baae6908"
+              "id": "38097f29-b0dd-43ec-80c1-aaef1f910085"
             },
             {
               "type": "match",
-              "id": "dc687abe-6f58-46a6-b810-440464f1999d"
+              "id": "572156f8-ad29-4245-912e-205e69978856"
             },
             {
               "type": "match",
-              "id": "52e4da23-0b29-4638-afa8-2274dec4cbb6"
+              "id": "73be8c38-283a-4642-a101-22199dccaaf7"
             },
             {
               "type": "match",
-              "id": "9201b9a7-289b-4c3b-9679-f925335c44e3"
+              "id": "dc76880f-3fc3-4226-b4d0-34727d3eca16"
             },
             {
               "type": "match",
-              "id": "2a53f954-aa08-419a-ac5a-314c02144e12"
+              "id": "21007e8f-2d22-47aa-b588-4820d212be8d"
             },
             {
               "type": "match",
-              "id": "5041b826-2151-45b9-a781-4de47be46918"
+              "id": "29f21813-5357-4fc3-b6bb-935ae349323a"
             },
             {
               "type": "match",
-              "id": "5fe3cf43-3df6-4c37-887f-27d0a45ab230"
+              "id": "02a88f28-4da4-4b45-b920-b75f2ba54011"
             },
             {
               "type": "match",
-              "id": "69f0e64c-c991-4a93-9d66-9acf1a3486c5"
+              "id": "6f06fdd0-34f9-4401-b6cc-a99e9745806d"
             },
             {
               "type": "match",
-              "id": "af7565ed-9253-4f78-b776-1151345bd28d"
+              "id": "6158900a-dda0-48d2-b7eb-6ede85ddef7f"
             },
             {
               "type": "match",
-              "id": "8ff7b5c3-274a-4835-a068-08c2a82d38e4"
+              "id": "442af35c-6078-477d-8d47-89c12680725c"
             },
             {
               "type": "match",
-              "id": "a8b089a1-2214-48cc-93ba-eaddec715e2e"
+              "id": "04425c6b-2d33-44cc-ba60-420a4dcc55ce"
             },
             {
               "type": "match",
-              "id": "ec98c151-2cae-403c-9667-e9ec763d7819"
+              "id": "41480579-68db-4125-9213-4bf946245c01"
             },
             {
               "type": "match",
-              "id": "289b85a9-2a6f-4d83-aa32-069a51fa3414"
+              "id": "ef4036e5-5486-4fc9-97d9-b68c5defa4f3"
             },
             {
               "type": "match",
-              "id": "3ee25972-3415-40e8-8b60-10577281632e"
+              "id": "3de20712-5112-45aa-a958-9749415d2d8a"
             },
             {
               "type": "match",
-              "id": "74e1154a-6f30-40fc-9ddc-63f5cf1c9d21"
+              "id": "66ddb971-8033-4068-b84e-783b0960e1a7"
             },
             {
               "type": "match",
-              "id": "5cfe23ed-5316-4f55-887b-9a3803542ac6"
+              "id": "a8eb29d0-b9eb-44bb-88e8-c07ce16426ba"
             },
             {
               "type": "match",
-              "id": "1b1dcc35-809f-497e-b520-dc735541fee9"
+              "id": "0a1ae62c-e263-4a87-a9db-72d14baa4251"
             },
             {
               "type": "match",
-              "id": "92ae8515-47bf-4b92-a604-6c050cd62940"
+              "id": "2c3d7471-9394-4815-af7b-5f2208d5220c"
             },
             {
               "type": "match",
-              "id": "bb038ef9-0c4e-49f7-9398-236da9b61fc7"
+              "id": "6c1aa348-d1b4-4ee5-a0aa-7b7981e878a8"
             },
             {
               "type": "match",
-              "id": "3dbe8657-91c6-407d-9b34-d3e9855b733a"
+              "id": "659420b1-2f47-413d-93ed-b8eb397f3592"
+            },
+            {
+              "type": "match",
+              "id": "13a7f35a-8eea-45c0-873b-f756dc379d79"
+            },
+            {
+              "type": "match",
+              "id": "ce8fdae8-8dad-4c02-bbfe-a6f7cd5a5b80"
             }
           ]
         }
       },
       "links": {
-        "self": "https://api.playbattlegrounds.com/shards/pc-eu/players/account.b3982540418d421f8cbf72705e49b1ad",
+        "self": "https://api.playbattlegrounds.com/shards/pc-na/players/account.d50fdc18fcad49c691d38466bed6f8fd",
         "schema": ""
       }
     }
   ],
   "links": {
-    "self": "https://api.playbattlegrounds.com/shards/pc-eu/players?filter[playerIds]=account.b3982540418d421f8cbf72705e49b1ad"
+    "self": "https://api.playbattlegrounds.com/shards/pc-na/players?filter[playerNames]=shroud"
   },
   "meta": {}
 }
