@@ -1,0 +1,2222 @@
+{
+  "data": {
+    "type": "leaderboard",
+    "id": "f6b246dc-7121-4f50-a7e8-3c02025b7ed3",
+    "attributes": {
+      "gameMode": "duo",
+      "shardId": "steam"
+    },
+    "relationships": {
+      "players": {
+        "data": [
+          {
+            "type": "player",
+            "id": "account.26db97f21b1a4551bd43a8a0ed4d6857"
+          },
+          {
+            "type": "player",
+            "id": "account.118abecf49e5479b90b78a6ec27c1582"
+          },
+          {
+            "type": "player",
+            "id": "account.526011d13b474e9199bfe47b488a5a78"
+          },
+          {
+            "type": "player",
+            "id": "account.ef67682103ab405cbc1dece21fbdb622"
+          },
+          {
+            "type": "player",
+            "id": "account.46e6a0f3b810450aa4cf0e2d6629a4ea"
+          },
+          {
+            "type": "player",
+            "id": "account.b488a7def5a54350a122d1ffceaa8087"
+          },
+          {
+            "type": "player",
+            "id": "account.520fa6ec698b4c5198e8b68085c14047"
+          },
+          {
+            "type": "player",
+            "id": "account.29b4d9eff014414c962f6ab894dd2a2c"
+          },
+          {
+            "type": "player",
+            "id": "account.35858b33a87e4ec5b889d992afed2cf8"
+          },
+          {
+            "type": "player",
+            "id": "account.aeedac74fef84c37bb0248922174f9f3"
+          },
+          {
+            "type": "player",
+            "id": "account.f99630bb983641e1b298a591a0008003"
+          },
+          {
+            "type": "player",
+            "id": "account.31c46e0e70b64e0f80a63fe6be583cd8"
+          },
+          {
+            "type": "player",
+            "id": "account.53435ca1d5694e65ac543c577a3c1eba"
+          },
+          {
+            "type": "player",
+            "id": "account.84b23a43501b40118b2c6ef089a253d6"
+          },
+          {
+            "type": "player",
+            "id": "account.de551384f81e494e94c62c7b3bdabaa7"
+          },
+          {
+            "type": "player",
+            "id": "account.d294e84f1bd84e8fabeb3f693ec63b1b"
+          },
+          {
+            "type": "player",
+            "id": "account.a3ca149382064a9eb7855daa3275ea99"
+          },
+          {
+            "type": "player",
+            "id": "account.75c1ae2d1e534e5f90e0e8aa5bafc230"
+          },
+          {
+            "type": "player",
+            "id": "account.a215a1a027a845be8443eede2e2e65b3"
+          },
+          {
+            "type": "player",
+            "id": "account.002bc56cdcc747eeb3f7c8c0b2d93fac"
+          },
+          {
+            "type": "player",
+            "id": "account.9943036675aa4a3b9e6e402c8a8cadaa"
+          },
+          {
+            "type": "player",
+            "id": "account.d52000b961094daaa33c6f0feea76b99"
+          },
+          {
+            "type": "player",
+            "id": "account.b60917c38cee40beab6c8c7570f4a0e6"
+          },
+          {
+            "type": "player",
+            "id": "account.1a219e30c1984440a799a2db30de921b"
+          },
+          {
+            "type": "player",
+            "id": "account.0728aafe05ec454db2aa0c4d6e8dcbb5"
+          },
+          {
+            "type": "player",
+            "id": "account.02976fe838ba478587342a19f911907d"
+          },
+          {
+            "type": "player",
+            "id": "account.24c55894f3fd44deafa7d16e4ba58f7c"
+          },
+          {
+            "type": "player",
+            "id": "account.e5ed0ad84d5c414bb77d85a5b194d488"
+          },
+          {
+            "type": "player",
+            "id": "account.dcac741bf17b46b6be3e86d5bd186af4"
+          },
+          {
+            "type": "player",
+            "id": "account.b4c723290380493f8b8aa4b23700e8d6"
+          },
+          {
+            "type": "player",
+            "id": "account.114dde9b5c864b88b844563e59439542"
+          },
+          {
+            "type": "player",
+            "id": "account.4ac0eaddc1094195a854589e337e92e6"
+          },
+          {
+            "type": "player",
+            "id": "account.9bd80476cf8d4caaa84885e551247270"
+          },
+          {
+            "type": "player",
+            "id": "account.a3d4331423b248069a88cabef1ee75d6"
+          },
+          {
+            "type": "player",
+            "id": "account.b672bb9e772c4da581e07db45df80a6f"
+          },
+          {
+            "type": "player",
+            "id": "account.1089ae44995e4c7ba3dee07389ca1e17"
+          },
+          {
+            "type": "player",
+            "id": "account.70b821b119514a45a0071e1a38c7a1fc"
+          },
+          {
+            "type": "player",
+            "id": "account.cfd5ed1273f140be98b9300b5c31dd8b"
+          },
+          {
+            "type": "player",
+            "id": "account.bdc453faaba446b297d406ac750e1b79"
+          },
+          {
+            "type": "player",
+            "id": "account.b075336d81e04bc0a0693f75a74fc4cd"
+          },
+          {
+            "type": "player",
+            "id": "account.aa6e5d65d37b4322b0d60143f3bd990f"
+          },
+          {
+            "type": "player",
+            "id": "account.d8e0c837f108421d89585e17bb38af05"
+          },
+          {
+            "type": "player",
+            "id": "account.9e9980710a7c4d3ca96cd00b2c8c2ff3"
+          },
+          {
+            "type": "player",
+            "id": "account.b618ca3153954e88b5582319cb508359"
+          },
+          {
+            "type": "player",
+            "id": "account.baf4266d1d714b07bf23836d11750026"
+          },
+          {
+            "type": "player",
+            "id": "account.2e75f5f73c30476c9d4fef1f6bf84e4b"
+          },
+          {
+            "type": "player",
+            "id": "account.4c1e59a2ee4545f58c6f86855ccd147c"
+          },
+          {
+            "type": "player",
+            "id": "account.175e7555f61643749b68e1ffb3d80ce0"
+          },
+          {
+            "type": "player",
+            "id": "account.e8261a62b5654eaca11cd578e15495ba"
+          },
+          {
+            "type": "player",
+            "id": "account.1668e78b4e4746088653009dbb27f24a"
+          },
+          {
+            "type": "player",
+            "id": "account.d45ccc5b469b4796b67c403e8e26e90f"
+          },
+          {
+            "type": "player",
+            "id": "account.a971cfe3a032475b872aa4ff6d4e7e09"
+          },
+          {
+            "type": "player",
+            "id": "account.99da7ed38c014914a5b35bb8707f71bf"
+          },
+          {
+            "type": "player",
+            "id": "account.33b346d8999b42f983df70d66e694390"
+          },
+          {
+            "type": "player",
+            "id": "account.76ccb0dc0cb84e809d6d17f93151f28d"
+          },
+          {
+            "type": "player",
+            "id": "account.cbf72649275f48adaac43a7b76de6e20"
+          },
+          {
+            "type": "player",
+            "id": "account.4f993c4b7ba24cc9900b7e224b1d240e"
+          },
+          {
+            "type": "player",
+            "id": "account.6eca0ed3fb934ebdaffacba58f4fc925"
+          },
+          {
+            "type": "player",
+            "id": "account.0cd9cd27f98d4e95b08f4184fdc05c9c"
+          },
+          {
+            "type": "player",
+            "id": "account.fb1b89cdba1d4e76b0c96c518168c0a1"
+          },
+          {
+            "type": "player",
+            "id": "account.6d6a1999432e4fd6bfc9df9ecc2cb843"
+          },
+          {
+            "type": "player",
+            "id": "account.67f9e2c4187b4917905fa8053aededa0"
+          },
+          {
+            "type": "player",
+            "id": "account.61b532ccebeb44779203ae5365f3ac95"
+          },
+          {
+            "type": "player",
+            "id": "account.d92e544a0cfd4a6cb68a09b7b5088bb7"
+          },
+          {
+            "type": "player",
+            "id": "account.e6bc0943d83a4e35948e74ee79005c71"
+          },
+          {
+            "type": "player",
+            "id": "account.996b7248c67e4312b60aec4d6c7176ef"
+          },
+          {
+            "type": "player",
+            "id": "account.7b91b8ec93bf463daecbfb24c18d5677"
+          },
+          {
+            "type": "player",
+            "id": "account.d20b055a41ce48d4a415aaa4dd916682"
+          },
+          {
+            "type": "player",
+            "id": "account.d46e07ac25b24a4a8d33c30634dfb62a"
+          },
+          {
+            "type": "player",
+            "id": "account.d444557714654be1be33a4eb940adf14"
+          },
+          {
+            "type": "player",
+            "id": "account.eab988fc5b5c48fba3507f6e020e4724"
+          },
+          {
+            "type": "player",
+            "id": "account.d4df6cb162b1470fbcc7158e192ae405"
+          },
+          {
+            "type": "player",
+            "id": "account.c3fa7bf0276e48e3b02bc66385833acf"
+          },
+          {
+            "type": "player",
+            "id": "account.4bba775682234719bc19ed0679d97c96"
+          },
+          {
+            "type": "player",
+            "id": "account.0563aa37a3c14d24ac7db6428d20aa6a"
+          },
+          {
+            "type": "player",
+            "id": "account.3e3d47b84df24c7fa0205df003c7f1cd"
+          },
+          {
+            "type": "player",
+            "id": "account.166e0c9e82f4453fa902d43a8bd18f0a"
+          },
+          {
+            "type": "player",
+            "id": "account.df0bddbc07c245cfaeb5442d086524a9"
+          },
+          {
+            "type": "player",
+            "id": "account.3e201dd3a8a14e4ea3c9ac252450729c"
+          },
+          {
+            "type": "player",
+            "id": "account.4b0c0ba263e3407e8b8535ab309eb0c4"
+          },
+          {
+            "type": "player",
+            "id": "account.70edd29acf7746da95818d9f5426c9f6"
+          },
+          {
+            "type": "player",
+            "id": "account.d9a1efe9053344b9bc19eac831a7e29e"
+          },
+          {
+            "type": "player",
+            "id": "account.3a5c80fd0b5847f6a7224a110f1403e2"
+          },
+          {
+            "type": "player",
+            "id": "account.56b4714ab64144308f2afe192453aa3f"
+          },
+          {
+            "type": "player",
+            "id": "account.6b8ee6bcc22e4d28801bbf52b75b0145"
+          },
+          {
+            "type": "player",
+            "id": "account.278bb8c2ace94cc5b2d06eae6c6ec25c"
+          },
+          {
+            "type": "player",
+            "id": "account.4299c4b455614bb497acdc290593aa5e"
+          },
+          {
+            "type": "player",
+            "id": "account.f2755b9f3b6a4b0aa0399346509306d0"
+          },
+          {
+            "type": "player",
+            "id": "account.f1c62a8b25014039999d3bebe3a3e47b"
+          },
+          {
+            "type": "player",
+            "id": "account.c0166ff23e1a4cf292a4ef491b50433c"
+          },
+          {
+            "type": "player",
+            "id": "account.2ed5b0f8405945d5880db0186746376c"
+          },
+          {
+            "type": "player",
+            "id": "account.fed6c61383c0485aabe9c021feafd0a5"
+          },
+          {
+            "type": "player",
+            "id": "account.a4726d51505b4aa7bf7a4156d86c4f4f"
+          },
+          {
+            "type": "player",
+            "id": "account.12cf44c1fafa4bada611c66ae0ed90dc"
+          },
+          {
+            "type": "player",
+            "id": "account.2881cbbc144e4292b50be7db48a0e592"
+          },
+          {
+            "type": "player",
+            "id": "account.6492b92e6fee43e1aa3f52dce9807f30"
+          },
+          {
+            "type": "player",
+            "id": "account.d1fe08424d344496a453ebca00dade83"
+          },
+          {
+            "type": "player",
+            "id": "account.4608055ed6124b8b9867b6ec3bfc2ce8"
+          },
+          {
+            "type": "player",
+            "id": "account.86cfb5261a4e4072b98a85809cc3eaae"
+          },
+          {
+            "type": "player",
+            "id": "account.71b19f0486554eb88886f872a778583d"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "player",
+      "id": "account.b672bb9e772c4da581e07db45df80a6f",
+      "attributes": {
+        "stats": {
+          "rankPoints": 4627,
+          "wins": 92,
+          "games": 265,
+          "winRatio": 0.347169816,
+          "averageDamage": 541,
+          "kills": 1199,
+          "killDeathRatio": 6.774011,
+          "averageRank": 10.3547173
+        },
+        "name": "TL1000R",
+        "rank": 35
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.b075336d81e04bc0a0693f75a74fc4cd",
+      "attributes": {
+        "name": "DarlingSound",
+        "rank": 40,
+        "stats": {
+          "rankPoints": 4500,
+          "wins": 57,
+          "games": 479,
+          "winRatio": 0.118997909,
+          "averageDamage": 447,
+          "kills": 1693,
+          "killDeathRatio": 3.99292445,
+          "averageRank": 16.9144058
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d8e0c837f108421d89585e17bb38af05",
+      "attributes": {
+        "rank": 42,
+        "stats": {
+          "rankPoints": 4488,
+          "wins": 66,
+          "games": 453,
+          "winRatio": 0.145695359,
+          "averageDamage": 355,
+          "kills": 1446,
+          "killDeathRatio": 3.726804,
+          "averageRank": 12.6136866
+        },
+        "name": "Copzilla"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.b488a7def5a54350a122d1ffceaa8087",
+      "attributes": {
+        "name": "D3adPh03niX",
+        "rank": 6,
+        "stats": {
+          "rankPoints": 6786,
+          "wins": 143,
+          "games": 535,
+          "winRatio": 0.267289728,
+          "averageDamage": 526,
+          "kills": 2561,
+          "killDeathRatio": 6.1710844,
+          "averageRank": 14.6299067
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.53435ca1d5694e65ac543c577a3c1eba",
+      "attributes": {
+        "name": "zqtv-kunge",
+        "rank": 13,
+        "stats": {
+          "rankPoints": 6330,
+          "wins": 114,
+          "games": 711,
+          "winRatio": 0.160337552,
+          "averageDamage": 333,
+          "kills": 1837,
+          "killDeathRatio": 3.01147532,
+          "averageRank": 10.0506325
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.84b23a43501b40118b2c6ef089a253d6",
+      "attributes": {
+        "name": "FantasyDuc",
+        "rank": 14,
+        "stats": {
+          "rankPoints": 6254,
+          "wins": 86,
+          "games": 1234,
+          "winRatio": 0.06969206,
+          "averageDamage": 300,
+          "kills": 3176,
+          "killDeathRatio": 2.761739,
+          "averageRank": 18.6094
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.0728aafe05ec454db2aa0c4d6e8dcbb5",
+      "attributes": {
+        "name": "HuYa_11145321",
+        "rank": 25,
+        "stats": {
+          "rankPoints": 5229,
+          "wins": 112,
+          "games": 660,
+          "winRatio": 0.169696972,
+          "averageDamage": 379,
+          "kills": 2133,
+          "killDeathRatio": 3.703125,
+          "averageRank": 16.5196972
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.dcac741bf17b46b6be3e86d5bd186af4",
+      "attributes": {
+        "stats": {
+          "rankPoints": 5148,
+          "wins": 107,
+          "games": 419,
+          "winRatio": 0.255369931,
+          "averageDamage": 414,
+          "kills": 1467,
+          "killDeathRatio": 4.584375,
+          "averageRank": 9.90930748
+        },
+        "name": "Disa-ppointed",
+        "rank": 29
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.4f993c4b7ba24cc9900b7e224b1d240e",
+      "attributes": {
+        "name": "G0AT_AriGold",
+        "rank": 57,
+        "stats": {
+          "rankPoints": 4069,
+          "wins": 41,
+          "games": 637,
+          "winRatio": 0.06436421,
+          "averageDamage": 336,
+          "kills": 1865,
+          "killDeathRatio": 3.10316133,
+          "averageRank": 21.54788
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.278bb8c2ace94cc5b2d06eae6c6ec25c",
+      "attributes": {
+        "name": "VVMylife",
+        "rank": 86,
+        "stats": {
+          "rankPoints": 3826,
+          "wins": 44,
+          "games": 348,
+          "winRatio": 0.126436785,
+          "averageDamage": 441,
+          "kills": 1216,
+          "killDeathRatio": 3.98688531,
+          "averageRank": 17.951149
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.fed6c61383c0485aabe9c021feafd0a5",
+      "attributes": {
+        "rank": 92,
+        "stats": {
+          "rankPoints": 3766,
+          "wins": 65,
+          "games": 235,
+          "winRatio": 0.276595742,
+          "averageDamage": 458,
+          "kills": 947,
+          "killDeathRatio": 5.44252872,
+          "averageRank": 11.6680851
+        },
+        "name": "DeadISoldiers"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.2e75f5f73c30476c9d4fef1f6bf84e4b",
+      "attributes": {
+        "stats": {
+          "rankPoints": 4323,
+          "wins": 111,
+          "games": 192,
+          "winRatio": 0.578125,
+          "averageDamage": 658,
+          "kills": 996,
+          "killDeathRatio": 10.375,
+          "averageRank": 7.18229151
+        },
+        "name": "Anonyme-king",
+        "rank": 46
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.6d6a1999432e4fd6bfc9df9ecc2cb843",
+      "attributes": {
+        "name": "Rothchilds1sS",
+        "rank": 61,
+        "stats": {
+          "rankPoints": 4031,
+          "wins": 84,
+          "games": 456,
+          "winRatio": 0.184210524,
+          "averageDamage": 353,
+          "kills": 1408,
+          "killDeathRatio": 3.61953735,
+          "averageRank": 18.5942974
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.c3fa7bf0276e48e3b02bc66385833acf",
+      "attributes": {
+        "name": "LIYIXU",
+        "rank": 73,
+        "stats": {
+          "rankPoints": 3873,
+          "wins": 70,
+          "games": 154,
+          "winRatio": 0.454545468,
+          "averageDamage": 642,
+          "kills": 866,
+          "killDeathRatio": 10.1882353,
+          "averageRank": 10.4025974
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.520fa6ec698b4c5198e8b68085c14047",
+      "attributes": {
+        "name": "JJJJJQQQQQ",
+        "rank": 7,
+        "stats": {
+          "rankPoints": 6629,
+          "wins": 76,
+          "games": 807,
+          "winRatio": 0.09417596,
+          "averageDamage": 460,
+          "kills": 3121,
+          "killDeathRatio": 4.26366138,
+          "averageRank": 17.7174721
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d52000b961094daaa33c6f0feea76b99",
+      "attributes": {
+        "name": "ZQTV_152661051",
+        "rank": 22,
+        "stats": {
+          "rankPoints": 5653,
+          "wins": 152,
+          "games": 617,
+          "winRatio": 0.246353328,
+          "averageDamage": 276,
+          "kills": 1386,
+          "killDeathRatio": 2.78313255,
+          "averageRank": 6.94813633
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.70b821b119514a45a0071e1a38c7a1fc",
+      "attributes": {
+        "rank": 37,
+        "stats": {
+          "rankPoints": 4601,
+          "wins": 58,
+          "games": 314,
+          "winRatio": 0.184713379,
+          "averageDamage": 490,
+          "kills": 1366,
+          "killDeathRatio": 5.19391632,
+          "averageRank": 10.5573244
+        },
+        "name": "ZhuNaizi"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.cfd5ed1273f140be98b9300b5c31dd8b",
+      "attributes": {
+        "name": "DonVICO",
+        "rank": 38,
+        "stats": {
+          "rankPoints": 4587,
+          "wins": 65,
+          "games": 838,
+          "winRatio": 0.07756563,
+          "averageDamage": 386,
+          "kills": 2667,
+          "killDeathRatio": 3.37168145,
+          "averageRank": 23.4236279
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.baf4266d1d714b07bf23836d11750026",
+      "attributes": {
+        "stats": {
+          "rankPoints": 4331,
+          "wins": 57,
+          "games": 539,
+          "winRatio": 0.105751388,
+          "averageDamage": 427,
+          "kills": 1974,
+          "killDeathRatio": 4.053388,
+          "averageRank": 20.5918369
+        },
+        "name": "QIN2MAO",
+        "rank": 45
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.f2755b9f3b6a4b0aa0399346509306d0",
+      "attributes": {
+        "name": "xiao-dudou",
+        "rank": 88,
+        "stats": {
+          "rankPoints": 3812,
+          "wins": 39,
+          "games": 817,
+          "winRatio": 0.0477356166,
+          "averageDamage": 297,
+          "kills": 1825,
+          "killDeathRatio": 2.330779,
+          "averageRank": 21.8359852
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.6492b92e6fee43e1aa3f52dce9807f30",
+      "attributes": {
+        "name": "KamoraGT",
+        "rank": 96,
+        "stats": {
+          "rankPoints": 3726,
+          "wins": 55,
+          "games": 631,
+          "winRatio": 0.08716323,
+          "averageDamage": 300,
+          "kills": 1551,
+          "killDeathRatio": 2.67875648,
+          "averageRank": 20.10301
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.4299c4b455614bb497acdc290593aa5e",
+      "attributes": {
+        "name": "Lseoungchan",
+        "rank": 87,
+        "stats": {
+          "rankPoints": 3826,
+          "wins": 51,
+          "games": 374,
+          "winRatio": 0.13636364,
+          "averageDamage": 463,
+          "kills": 1371,
+          "killDeathRatio": 4.16717339,
+          "averageRank": 18.8288765
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.a4726d51505b4aa7bf7a4156d86c4f4f",
+      "attributes": {
+        "name": "DouYu-sToNeOnz",
+        "rank": 93,
+        "stats": {
+          "rankPoints": 3752,
+          "wins": 59,
+          "games": 229,
+          "winRatio": 0.2576419,
+          "averageDamage": 544,
+          "kills": 1118,
+          "killDeathRatio": 6.280899,
+          "averageRank": 14.427948
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.02976fe838ba478587342a19f911907d",
+      "attributes": {
+        "name": "JiggyWiggy",
+        "rank": 26,
+        "stats": {
+          "rankPoints": 5216,
+          "wins": 76,
+          "games": 481,
+          "winRatio": 0.158004165,
+          "averageDamage": 526,
+          "kills": 2186,
+          "killDeathRatio": 5.33170748,
+          "averageRank": 18.6548862
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.1089ae44995e4c7ba3dee07389ca1e17",
+      "attributes": {
+        "name": "VIP-LBQ",
+        "rank": 36,
+        "stats": {
+          "rankPoints": 4602,
+          "wins": 70,
+          "games": 676,
+          "winRatio": 0.103550293,
+          "averageDamage": 295,
+          "kills": 1558,
+          "killDeathRatio": 2.5415988,
+          "averageRank": 16.1227818
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d45ccc5b469b4796b67c403e8e26e90f",
+      "attributes": {
+        "name": "VCVTOR_QS_SILING",
+        "rank": 51,
+        "stats": {
+          "rankPoints": 4239,
+          "wins": 59,
+          "games": 186,
+          "winRatio": 0.3172043,
+          "averageDamage": 719,
+          "kills": 1130,
+          "killDeathRatio": 8.75969,
+          "averageRank": 7.74193525
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.e6bc0943d83a4e35948e74ee79005c71",
+      "attributes": {
+        "name": "UcANtWiNBaBY",
+        "rank": 65,
+        "stats": {
+          "rankPoints": 3980,
+          "wins": 67,
+          "games": 291,
+          "winRatio": 0.230240554,
+          "averageDamage": 510,
+          "kills": 1116,
+          "killDeathRatio": 4.894737,
+          "averageRank": 12.4501715
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.70edd29acf7746da95818d9f5426c9f6",
+      "attributes": {
+        "name": "HUYA_LIU_liujun",
+        "rank": 81,
+        "stats": {
+          "rankPoints": 3846,
+          "wins": 51,
+          "games": 355,
+          "winRatio": 0.143661976,
+          "averageDamage": 431,
+          "kills": 1306,
+          "killDeathRatio": 4.25407171,
+          "averageRank": 20.5661964
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.3e201dd3a8a14e4ea3c9ac252450729c",
+      "attributes": {
+        "name": "jiqing007",
+        "rank": 79,
+        "stats": {
+          "rankPoints": 3857,
+          "wins": 85,
+          "games": 326,
+          "winRatio": 0.2607362,
+          "averageDamage": 417,
+          "kills": 1218,
+          "killDeathRatio": 4.7393,
+          "averageRank": 19.34049
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.4608055ed6124b8b9867b6ec3bfc2ce8",
+      "attributes": {
+        "name": "Huya-zouritian",
+        "rank": 98,
+        "stats": {
+          "rankPoints": 3707,
+          "wins": 70,
+          "games": 493,
+          "winRatio": 0.14198783,
+          "averageDamage": 259,
+          "kills": 1015,
+          "killDeathRatio": 2.37704921,
+          "averageRank": 15.4097366
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.526011d13b474e9199bfe47b488a5a78",
+      "attributes": {
+        "name": "Huya-Tv-lao7",
+        "rank": 3,
+        "stats": {
+          "rankPoints": 9581,
+          "wins": 170,
+          "games": 904,
+          "winRatio": 0.1880531,
+          "averageDamage": 508,
+          "kills": 4069,
+          "killDeathRatio": 5.43257666,
+          "averageRank": 14.2555313
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.002bc56cdcc747eeb3f7c8c0b2d93fac",
+      "attributes": {
+        "name": "Manelekate",
+        "rank": 20,
+        "stats": {
+          "rankPoints": 5853,
+          "wins": 54,
+          "games": 1022,
+          "winRatio": 0.052837573,
+          "averageDamage": 317,
+          "kills": 2610,
+          "killDeathRatio": 2.69349837,
+          "averageRank": 17.9843445
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.114dde9b5c864b88b844563e59439542",
+      "attributes": {
+        "name": "TheFlet_YOUTUBE",
+        "rank": 31,
+        "stats": {
+          "rankPoints": 4906,
+          "wins": 71,
+          "games": 553,
+          "winRatio": 0.1283906,
+          "averageDamage": 452,
+          "kills": 2061,
+          "killDeathRatio": 4.267081,
+          "averageRank": 19.1754074
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.175e7555f61643749b68e1ffb3d80ce0",
+      "attributes": {
+        "rank": 48,
+        "stats": {
+          "rankPoints": 4303,
+          "wins": 94,
+          "games": 436,
+          "winRatio": 0.215596333,
+          "averageDamage": 264,
+          "kills": 1016,
+          "killDeathRatio": 2.7608695,
+          "averageRank": 9.082569
+        },
+        "name": "ZhanQi_873050001"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.a971cfe3a032475b872aa4ff6d4e7e09",
+      "attributes": {
+        "stats": {
+          "rankPoints": 4207,
+          "wins": 52,
+          "games": 619,
+          "winRatio": 0.08400646,
+          "averageDamage": 300,
+          "kills": 1509,
+          "killDeathRatio": 2.633508,
+          "averageRank": 16.5121155
+        },
+        "name": "QieTV_211274856",
+        "rank": 52
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.46e6a0f3b810450aa4cf0e2d6629a4ea",
+      "attributes": {
+        "name": "Huya-muren1",
+        "rank": 5,
+        "stats": {
+          "rankPoints": 6955,
+          "wins": 174,
+          "games": 1128,
+          "winRatio": 0.154255316,
+          "averageDamage": 305,
+          "kills": 2836,
+          "killDeathRatio": 2.87335348,
+          "averageRank": 16.5718079
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.6b8ee6bcc22e4d28801bbf52b75b0145",
+      "attributes": {
+        "name": "ForyouLf",
+        "rank": 85,
+        "stats": {
+          "rankPoints": 3832,
+          "wins": 69,
+          "games": 299,
+          "winRatio": 0.230769232,
+          "averageDamage": 502,
+          "kills": 1167,
+          "killDeathRatio": 4.924051,
+          "averageRank": 17.6989975
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.f1c62a8b25014039999d3bebe3a3e47b",
+      "attributes": {
+        "name": "terrorman_",
+        "rank": 89,
+        "stats": {
+          "rankPoints": 3809,
+          "wins": 71,
+          "games": 278,
+          "winRatio": 0.255395681,
+          "averageDamage": 421,
+          "kills": 901,
+          "killDeathRatio": 4.25,
+          "averageRank": 9.417266
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.996b7248c67e4312b60aec4d6c7176ef",
+      "attributes": {
+        "name": "SN0N",
+        "rank": 66,
+        "stats": {
+          "rankPoints": 3965,
+          "wins": 56,
+          "games": 390,
+          "winRatio": 0.14358975,
+          "averageDamage": 417,
+          "kills": 1377,
+          "killDeathRatio": 4.061947,
+          "averageRank": 17.2769222
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.eab988fc5b5c48fba3507f6e020e4724",
+      "attributes": {
+        "name": "Ivan_liushuishui",
+        "rank": 71,
+        "stats": {
+          "rankPoints": 3891,
+          "wins": 156,
+          "games": 309,
+          "winRatio": 0.5048544,
+          "averageDamage": 365,
+          "kills": 879,
+          "killDeathRatio": 5.327273,
+          "averageRank": 9.045307
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.166e0c9e82f4453fa902d43a8bd18f0a",
+      "attributes": {
+        "name": "LevenRaissy",
+        "rank": 77,
+        "stats": {
+          "rankPoints": 3861,
+          "wins": 68,
+          "games": 177,
+          "winRatio": 0.384180784,
+          "averageDamage": 718,
+          "kills": 1069,
+          "killDeathRatio": 9.460177,
+          "averageRank": 13.5762711
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.de551384f81e494e94c62c7b3bdabaa7",
+      "attributes": {
+        "rank": 15,
+        "stats": {
+          "rankPoints": 6170,
+          "wins": 125,
+          "games": 522,
+          "winRatio": 0.2394636,
+          "averageDamage": 497,
+          "kills": 2022,
+          "killDeathRatio": 4.848921,
+          "averageRank": 12.2873564
+        },
+        "name": "Elanxue"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.bdc453faaba446b297d406ac750e1b79",
+      "attributes": {
+        "stats": {
+          "rankPoints": 4503,
+          "wins": 60,
+          "games": 640,
+          "winRatio": 0.09375,
+          "averageDamage": 409,
+          "kills": 2462,
+          "killDeathRatio": 4.179966,
+          "averageRank": 23.45
+        },
+        "name": "fonsequinha",
+        "rank": 39
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.b618ca3153954e88b5582319cb508359",
+      "attributes": {
+        "name": "mei1en",
+        "rank": 44,
+        "stats": {
+          "rankPoints": 4354,
+          "wins": 84,
+          "games": 306,
+          "winRatio": 0.274509817,
+          "averageDamage": 370,
+          "kills": 1221,
+          "killDeathRatio": 5.130252,
+          "averageRank": 13.846405
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.4c1e59a2ee4545f58c6f86855ccd147c",
+      "attributes": {
+        "name": "ZanendithasTR",
+        "rank": 47,
+        "stats": {
+          "rankPoints": 4309,
+          "wins": 65,
+          "games": 725,
+          "winRatio": 0.0896551758,
+          "averageDamage": 335,
+          "kills": 2212,
+          "killDeathRatio": 3.30642748,
+          "averageRank": 22.40276
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.61b532ccebeb44779203ae5365f3ac95",
+      "attributes": {
+        "name": "MAVERKKK",
+        "rank": 63,
+        "stats": {
+          "rankPoints": 4009,
+          "wins": 55,
+          "games": 674,
+          "winRatio": 0.08160237,
+          "averageDamage": 277,
+          "kills": 1625,
+          "killDeathRatio": 2.6083467,
+          "averageRank": 20.9287834
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.56b4714ab64144308f2afe192453aa3f",
+      "attributes": {
+        "name": "suntouch",
+        "rank": 84,
+        "stats": {
+          "rankPoints": 3834,
+          "wins": 49,
+          "games": 226,
+          "winRatio": 0.21681416,
+          "averageDamage": 600,
+          "kills": 1126,
+          "killDeathRatio": 6.1530056,
+          "averageRank": 14.4911509
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d4df6cb162b1470fbcc7158e192ae405",
+      "attributes": {
+        "name": "PUBG-TANK",
+        "rank": 72,
+        "stats": {
+          "rankPoints": 3875,
+          "wins": 49,
+          "games": 438,
+          "winRatio": 0.111872144,
+          "averageDamage": 360,
+          "kills": 1161,
+          "killDeathRatio": 2.96930957,
+          "averageRank": 15.0182648
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.4bba775682234719bc19ed0679d97c96",
+      "attributes": {
+        "rank": 74,
+        "stats": {
+          "rankPoints": 3870,
+          "wins": 58,
+          "games": 377,
+          "winRatio": 0.15384616,
+          "averageDamage": 371,
+          "kills": 1309,
+          "killDeathRatio": 3.9427712,
+          "averageRank": 17.5119362
+        },
+        "name": "A_aXxing"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.118abecf49e5479b90b78a6ec27c1582",
+      "attributes": {
+        "name": "HuYa_9ze",
+        "rank": 2,
+        "stats": {
+          "rankPoints": 11958,
+          "wins": 233,
+          "games": 1485,
+          "winRatio": 0.156902358,
+          "averageDamage": 428,
+          "kills": 5464,
+          "killDeathRatio": 4.27877855,
+          "averageRank": 16.8228951
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.35858b33a87e4ec5b889d992afed2cf8",
+      "attributes": {
+        "stats": {
+          "rankPoints": 6539,
+          "wins": 130,
+          "games": 776,
+          "winRatio": 0.167525768,
+          "averageDamage": 341,
+          "kills": 2242,
+          "killDeathRatio": 3.39183044,
+          "averageRank": 13.6958761
+        },
+        "name": "huya_ss15673121",
+        "rank": 9
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d294e84f1bd84e8fabeb3f693ec63b1b",
+      "attributes": {
+        "name": "Symek-",
+        "rank": 16,
+        "stats": {
+          "rankPoints": 6169,
+          "wins": 174,
+          "games": 527,
+          "winRatio": 0.33017078,
+          "averageDamage": 480,
+          "kills": 2084,
+          "killDeathRatio": 5.6476965,
+          "averageRank": 15.7703981
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.b4c723290380493f8b8aa4b23700e8d6",
+      "attributes": {
+        "rank": 30,
+        "stats": {
+          "rankPoints": 5099,
+          "wins": 67,
+          "games": 681,
+          "winRatio": 0.09838473,
+          "averageDamage": 393,
+          "kills": 2099,
+          "killDeathRatio": 3.4074676,
+          "averageRank": 15.7900143
+        },
+        "name": "XiGuaZB_98Kai"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.cbf72649275f48adaac43a7b76de6e20",
+      "attributes": {
+        "name": "Playernbr1",
+        "rank": 56,
+        "stats": {
+          "rankPoints": 4088,
+          "wins": 61,
+          "games": 1049,
+          "winRatio": 0.05815062,
+          "averageDamage": 283,
+          "kills": 2532,
+          "killDeathRatio": 2.5575757,
+          "averageRank": 25.8150616
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.e8261a62b5654eaca11cd578e15495ba",
+      "attributes": {
+        "stats": {
+          "rankPoints": 4291,
+          "wins": 86,
+          "games": 434,
+          "winRatio": 0.198156685,
+          "averageDamage": 446,
+          "kills": 1605,
+          "killDeathRatio": 4.559659,
+          "averageRank": 16.8917046
+        },
+        "name": "wm19991217",
+        "rank": 49
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.76ccb0dc0cb84e809d6d17f93151f28d",
+      "attributes": {
+        "name": "DouYouTv_2320450",
+        "rank": 55,
+        "stats": {
+          "rankPoints": 4095,
+          "wins": 71,
+          "games": 579,
+          "winRatio": 0.122625217,
+          "averageDamage": 344,
+          "kills": 1788,
+          "killDeathRatio": 3.47859931,
+          "averageRank": 20.7702942
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.6eca0ed3fb934ebdaffacba58f4fc925",
+      "attributes": {
+        "rank": 58,
+        "stats": {
+          "rankPoints": 4067,
+          "wins": 46,
+          "games": 435,
+          "winRatio": 0.105747126,
+          "averageDamage": 417,
+          "kills": 1607,
+          "killDeathRatio": 4.05808067,
+          "averageRank": 19.8252869
+        },
+        "name": "TwisLove"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.3e3d47b84df24c7fa0205df003c7f1cd",
+      "attributes": {
+        "name": "XiGuaZB_XMin",
+        "rank": 76,
+        "stats": {
+          "rankPoints": 3864,
+          "wins": 47,
+          "games": 442,
+          "winRatio": 0.106334843,
+          "averageDamage": 319,
+          "kills": 1147,
+          "killDeathRatio": 2.88190961,
+          "averageRank": 14.1334839
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d1fe08424d344496a453ebca00dade83",
+      "attributes": {
+        "stats": {
+          "rankPoints": 3725,
+          "wins": 66,
+          "games": 602,
+          "winRatio": 0.109634548,
+          "averageDamage": 301,
+          "kills": 1393,
+          "killDeathRatio": 2.5701108,
+          "averageRank": 18.5863781
+        },
+        "name": "IamXiaoSen",
+        "rank": 97
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.29b4d9eff014414c962f6ab894dd2a2c",
+      "attributes": {
+        "name": "zhanqiTV__pangzi",
+        "rank": 8,
+        "stats": {
+          "rankPoints": 6584,
+          "wins": 137,
+          "games": 928,
+          "winRatio": 0.1476293,
+          "averageDamage": 213,
+          "kills": 1653,
+          "killDeathRatio": 1.99879086,
+          "averageRank": 9.026939
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.31c46e0e70b64e0f80a63fe6be583cd8",
+      "attributes": {
+        "name": "Xyu122",
+        "rank": 12,
+        "stats": {
+          "rankPoints": 6487,
+          "wins": 161,
+          "games": 459,
+          "winRatio": 0.350762516,
+          "averageDamage": 532,
+          "kills": 2157,
+          "killDeathRatio": 6.825949,
+          "averageRank": 12.4596949
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.b60917c38cee40beab6c8c7570f4a0e6",
+      "attributes": {
+        "name": "DouyuTV-5588263",
+        "rank": 23,
+        "stats": {
+          "rankPoints": 5403,
+          "wins": 76,
+          "games": 620,
+          "winRatio": 0.122580647,
+          "averageDamage": 455,
+          "kills": 2538,
+          "killDeathRatio": 4.622951,
+          "averageRank": 20.9822578
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.0cd9cd27f98d4e95b08f4184fdc05c9c",
+      "attributes": {
+        "name": "momo_papig",
+        "rank": 59,
+        "stats": {
+          "rankPoints": 4063,
+          "wins": 65,
+          "games": 361,
+          "winRatio": 0.1800554,
+          "averageDamage": 347,
+          "kills": 1056,
+          "killDeathRatio": 3.48514843,
+          "averageRank": 10.2880888
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d9a1efe9053344b9bc19eac831a7e29e",
+      "attributes": {
+        "name": "deviatek",
+        "rank": 82,
+        "stats": {
+          "rankPoints": 3843,
+          "wins": 59,
+          "games": 347,
+          "winRatio": 0.170028821,
+          "averageDamage": 377,
+          "kills": 993,
+          "killDeathRatio": 3.35472965,
+          "averageRank": 10.2247839
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.71b19f0486554eb88886f872a778583d",
+      "attributes": {
+        "name": "x_xiaoooo",
+        "rank": 100,
+        "stats": {
+          "rankPoints": 3697,
+          "wins": 46,
+          "games": 305,
+          "winRatio": 0.150819674,
+          "averageDamage": 495,
+          "kills": 1126,
+          "killDeathRatio": 4.34749031,
+          "averageRank": 17.9344254
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.f99630bb983641e1b298a591a0008003",
+      "attributes": {
+        "name": "zhongguoklmyPLA",
+        "rank": 11,
+        "stats": {
+          "rankPoints": 6492,
+          "wins": 150,
+          "games": 690,
+          "winRatio": 0.2173913,
+          "averageDamage": 365,
+          "kills": 2092,
+          "killDeathRatio": 3.76936936,
+          "averageRank": 12.4478264
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.a3ca149382064a9eb7855daa3275ea99",
+      "attributes": {
+        "name": "HuYa_GouZei",
+        "rank": 17,
+        "stats": {
+          "rankPoints": 6070,
+          "wins": 131,
+          "games": 805,
+          "winRatio": 0.162732914,
+          "averageDamage": 319,
+          "kills": 2136,
+          "killDeathRatio": 3.04707551,
+          "averageRank": 13.699379
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.33b346d8999b42f983df70d66e694390",
+      "attributes": {
+        "rank": 54,
+        "stats": {
+          "rankPoints": 4131,
+          "wins": 53,
+          "games": 650,
+          "winRatio": 0.08153846,
+          "averageDamage": 231,
+          "kills": 1212,
+          "killDeathRatio": 2.013289,
+          "averageRank": 14.1
+        },
+        "name": "TsoD_V1CTIM"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.0563aa37a3c14d24ac7db6428d20aa6a",
+      "attributes": {
+        "stats": {
+          "rankPoints": 3869,
+          "wins": 55,
+          "games": 300,
+          "winRatio": 0.183333337,
+          "averageDamage": 445,
+          "kills": 1125,
+          "killDeathRatio": 4.482072,
+          "averageRank": 15.31
+        },
+        "name": "zeyuanbaba",
+        "rank": 75
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.4b0c0ba263e3407e8b8535ab309eb0c4",
+      "attributes": {
+        "name": "xineagle_",
+        "rank": 80,
+        "stats": {
+          "rankPoints": 3847,
+          "wins": 49,
+          "games": 233,
+          "winRatio": 0.210300431,
+          "averageDamage": 516,
+          "kills": 1048,
+          "killDeathRatio": 5.574468,
+          "averageRank": 15.0300426
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.e5ed0ad84d5c414bb77d85a5b194d488",
+      "attributes": {
+        "name": "Redliner",
+        "rank": 28,
+        "stats": {
+          "rankPoints": 5161,
+          "wins": 87,
+          "games": 268,
+          "winRatio": 0.324626863,
+          "averageDamage": 654,
+          "kills": 1642,
+          "killDeathRatio": 8.687831,
+          "averageRank": 11.1828356
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.aa6e5d65d37b4322b0d60143f3bd990f",
+      "attributes": {
+        "name": "HuYaTV_12800921",
+        "rank": 41,
+        "stats": {
+          "rankPoints": 4495,
+          "wins": 99,
+          "games": 530,
+          "winRatio": 0.186792448,
+          "averageDamage": 271,
+          "kills": 1205,
+          "killDeathRatio": 2.67184043,
+          "averageRank": 10.5641508
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.67f9e2c4187b4917905fa8053aededa0",
+      "attributes": {
+        "rank": 62,
+        "stats": {
+          "rankPoints": 4022,
+          "wins": 56,
+          "games": 397,
+          "winRatio": 0.141057938,
+          "averageDamage": 466,
+          "kills": 1626,
+          "killDeathRatio": 4.699422,
+          "averageRank": 20.168766
+        },
+        "name": "Sawyerhg"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d20b055a41ce48d4a415aaa4dd916682",
+      "attributes": {
+        "name": "Santiago_FC",
+        "rank": 68,
+        "stats": {
+          "rankPoints": 3929,
+          "wins": 43,
+          "games": 228,
+          "winRatio": 0.188596487,
+          "averageDamage": 512,
+          "kills": 970,
+          "killDeathRatio": 5.132275,
+          "averageRank": 9.758772
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d444557714654be1be33a4eb940adf14",
+      "attributes": {
+        "stats": {
+          "rankPoints": 3916,
+          "wins": 53,
+          "games": 288,
+          "winRatio": 0.184027776,
+          "averageDamage": 492,
+          "kills": 1296,
+          "killDeathRatio": 5.225806,
+          "averageRank": 16.0694447
+        },
+        "name": "PandaTV-888759",
+        "rank": 70
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.7b91b8ec93bf463daecbfb24c18d5677",
+      "attributes": {
+        "name": "4AM_Scott_kk",
+        "rank": 67,
+        "stats": {
+          "rankPoints": 3934,
+          "wins": 47,
+          "games": 269,
+          "winRatio": 0.1747212,
+          "averageDamage": 646,
+          "kills": 1499,
+          "killDeathRatio": 6.603524,
+          "averageRank": 17.1524162
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.3a5c80fd0b5847f6a7224a110f1403e2",
+      "attributes": {
+        "name": "HuYaTv__15591988",
+        "rank": 83,
+        "stats": {
+          "rankPoints": 3839,
+          "wins": 111,
+          "games": 380,
+          "winRatio": 0.292105258,
+          "averageDamage": 238,
+          "kills": 699,
+          "killDeathRatio": 2.551095,
+          "averageRank": 7.09736824
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.12cf44c1fafa4bada611c66ae0ed90dc",
+      "attributes": {
+        "name": "Ne2PY",
+        "rank": 94,
+        "stats": {
+          "rankPoints": 3746,
+          "wins": 43,
+          "games": 443,
+          "winRatio": 0.09706546,
+          "averageDamage": 336,
+          "kills": 1202,
+          "killDeathRatio": 2.99750614,
+          "averageRank": 15.4898424
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.ef67682103ab405cbc1dece21fbdb622",
+      "attributes": {
+        "name": "HuYa_TVYanYi",
+        "rank": 4,
+        "stats": {
+          "rankPoints": 7497,
+          "wins": 132,
+          "games": 660,
+          "winRatio": 0.2,
+          "averageDamage": 505,
+          "kills": 2951,
+          "killDeathRatio": 5.505597,
+          "averageRank": 14.3242426
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.9943036675aa4a3b9e6e402c8a8cadaa",
+      "attributes": {
+        "name": "BA0BElHAN-",
+        "rank": 21,
+        "stats": {
+          "rankPoints": 5822,
+          "wins": 116,
+          "games": 419,
+          "winRatio": 0.276849627,
+          "averageDamage": 504,
+          "kills": 1722,
+          "killDeathRatio": 5.66447353,
+          "averageRank": 10.8806686
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.4ac0eaddc1094195a854589e337e92e6",
+      "attributes": {
+        "name": "An-ZJP",
+        "rank": 32,
+        "stats": {
+          "rankPoints": 4831,
+          "wins": 98,
+          "games": 510,
+          "winRatio": 0.192156866,
+          "averageDamage": 400,
+          "kills": 1470,
+          "killDeathRatio": 3.442623,
+          "averageRank": 16.5470581
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.9bd80476cf8d4caaa84885e551247270",
+      "attributes": {
+        "rank": 33,
+        "stats": {
+          "rankPoints": 4826,
+          "wins": 109,
+          "games": 564,
+          "winRatio": 0.193262413,
+          "averageDamage": 270,
+          "kills": 1415,
+          "killDeathRatio": 2.83567142,
+          "averageRank": 13.7606382
+        },
+        "name": "HYTV15658110"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.a3d4331423b248069a88cabef1ee75d6",
+      "attributes": {
+        "name": "LyyyL",
+        "rank": 34,
+        "stats": {
+          "rankPoints": 4663,
+          "wins": 45,
+          "games": 534,
+          "winRatio": 0.0842696652,
+          "averageDamage": 413,
+          "kills": 1992,
+          "killDeathRatio": 4.03238869,
+          "averageRank": 20.0149822
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.26db97f21b1a4551bd43a8a0ed4d6857",
+      "attributes": {
+        "name": "HuYaTv_15713595",
+        "rank": 1,
+        "stats": {
+          "rankPoints": 12027,
+          "wins": 208,
+          "games": 1573,
+          "winRatio": 0.1322314,
+          "averageDamage": 493,
+          "kills": 6660,
+          "killDeathRatio": 4.81213856,
+          "averageRank": 20.5384617
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.aeedac74fef84c37bb0248922174f9f3",
+      "attributes": {
+        "stats": {
+          "rankPoints": 6522,
+          "wins": 179,
+          "games": 862,
+          "winRatio": 0.2076566,
+          "averageDamage": 235,
+          "kills": 1618,
+          "killDeathRatio": 2.29178476,
+          "averageRank": 7.89559174
+        },
+        "name": "zhanqiTV_TAO",
+        "rank": 10
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.a215a1a027a845be8443eede2e2e65b3",
+      "attributes": {
+        "name": "huya-bokai",
+        "rank": 19,
+        "stats": {
+          "rankPoints": 5866,
+          "wins": 120,
+          "games": 366,
+          "winRatio": 0.327868849,
+          "averageDamage": 546,
+          "kills": 1666,
+          "killDeathRatio": 6.55905533,
+          "averageRank": 8.696721
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d46e07ac25b24a4a8d33c30634dfb62a",
+      "attributes": {
+        "name": "XiGuaTV-J1aDi",
+        "rank": 69,
+        "stats": {
+          "rankPoints": 3924,
+          "wins": 74,
+          "games": 363,
+          "winRatio": 0.203856751,
+          "averageDamage": 361,
+          "kills": 1077,
+          "killDeathRatio": 3.59,
+          "averageRank": 11.424242
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.fb1b89cdba1d4e76b0c96c518168c0a1",
+      "attributes": {
+        "name": "7b_2019",
+        "rank": 60,
+        "stats": {
+          "rankPoints": 4040,
+          "wins": 61,
+          "games": 512,
+          "winRatio": 0.119140625,
+          "averageDamage": 395,
+          "kills": 1490,
+          "killDeathRatio": 3.25327516,
+          "averageRank": 18.7949219
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.df0bddbc07c245cfaeb5442d086524a9",
+      "attributes": {
+        "rank": 78,
+        "stats": {
+          "rankPoints": 3858,
+          "wins": 59,
+          "games": 497,
+          "winRatio": 0.118712276,
+          "averageDamage": 144,
+          "kills": 528,
+          "killDeathRatio": 1.16299558,
+          "averageRank": 8.247485
+        },
+        "name": "ZhanqiTV_NaNasky"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.2ed5b0f8405945d5880db0186746376c",
+      "attributes": {
+        "stats": {
+          "rankPoints": 3804,
+          "wins": 33,
+          "games": 898,
+          "winRatio": 0.03674833,
+          "averageDamage": 345,
+          "kills": 2483,
+          "killDeathRatio": 2.86389852,
+          "averageRank": 26.939867
+        },
+        "name": "Huya-15878424",
+        "rank": 91
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.75c1ae2d1e534e5f90e0e8aa5bafc230",
+      "attributes": {
+        "name": "jack-9",
+        "rank": 18,
+        "stats": {
+          "rankPoints": 5883,
+          "wins": 84,
+          "games": 626,
+          "winRatio": 0.1341853,
+          "averageDamage": 461,
+          "kills": 2412,
+          "killDeathRatio": 4.441989,
+          "averageRank": 16.1022358
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.1a219e30c1984440a799a2db30de921b",
+      "attributes": {
+        "name": "P4wnyhof",
+        "rank": 24,
+        "stats": {
+          "rankPoints": 5313,
+          "wins": 84,
+          "games": 416,
+          "winRatio": 0.201923072,
+          "averageDamage": 515,
+          "kills": 1856,
+          "killDeathRatio": 5.411079,
+          "averageRank": 15.0408649
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.9e9980710a7c4d3ca96cd00b2c8c2ff3",
+      "attributes": {
+        "name": "Beibei_ybb",
+        "rank": 43,
+        "stats": {
+          "rankPoints": 4359,
+          "wins": 44,
+          "games": 510,
+          "winRatio": 0.08627451,
+          "averageDamage": 399,
+          "kills": 1753,
+          "killDeathRatio": 3.74572659,
+          "averageRank": 19.3901958
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.1668e78b4e4746088653009dbb27f24a",
+      "attributes": {
+        "name": "mxsrs",
+        "rank": 50,
+        "stats": {
+          "rankPoints": 4264,
+          "wins": 85,
+          "games": 374,
+          "winRatio": 0.227272734,
+          "averageDamage": 382,
+          "kills": 1150,
+          "killDeathRatio": 3.75817,
+          "averageRank": 11.4251337
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.99da7ed38c014914a5b35bb8707f71bf",
+      "attributes": {
+        "name": "ZhanqiTV_QingSy",
+        "rank": 53,
+        "stats": {
+          "rankPoints": 4205,
+          "wins": 109,
+          "games": 352,
+          "winRatio": 0.3096591,
+          "averageDamage": 289,
+          "kills": 857,
+          "killDeathRatio": 3.441767,
+          "averageRank": 5.19602251
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.24c55894f3fd44deafa7d16e4ba58f7c",
+      "attributes": {
+        "name": "HuyATV_16525822",
+        "rank": 27,
+        "stats": {
+          "rankPoints": 5181,
+          "wins": 111,
+          "games": 458,
+          "winRatio": 0.242358074,
+          "averageDamage": 386,
+          "kills": 1648,
+          "killDeathRatio": 4.577778,
+          "averageRank": 12.80786
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.d92e544a0cfd4a6cb68a09b7b5088bb7",
+      "attributes": {
+        "rank": 64,
+        "stats": {
+          "rankPoints": 3989,
+          "wins": 175,
+          "games": 328,
+          "winRatio": 0.5335366,
+          "averageDamage": 313,
+          "kills": 870,
+          "killDeathRatio": 4.86033535,
+          "averageRank": 8.314024
+        },
+        "name": "XL-560000"
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.c0166ff23e1a4cf292a4ef491b50433c",
+      "attributes": {
+        "stats": {
+          "rankPoints": 3806,
+          "wins": 44,
+          "games": 273,
+          "winRatio": 0.161172166,
+          "averageDamage": 472,
+          "kills": 1098,
+          "killDeathRatio": 4.773913,
+          "averageRank": 15.666667
+        },
+        "name": "M249-M24-",
+        "rank": 90
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.2881cbbc144e4292b50be7db48a0e592",
+      "attributes": {
+        "name": "HuYa-10092787",
+        "rank": 95,
+        "stats": {
+          "rankPoints": 3740,
+          "wins": 70,
+          "games": 422,
+          "winRatio": 0.165876776,
+          "averageDamage": 227,
+          "kills": 785,
+          "killDeathRatio": 2.14480877,
+          "averageRank": 12.0995264
+        }
+      }
+    },
+    {
+      "type": "player",
+      "id": "account.86cfb5261a4e4072b98a85809cc3eaae",
+      "attributes": {
+        "name": "tangbaoQAQ",
+        "rank": 99,
+        "stats": {
+          "rankPoints": 3701,
+          "wins": 66,
+          "games": 239,
+          "winRatio": 0.2761506,
+          "averageDamage": 594,
+          "kills": 1220,
+          "killDeathRatio": 7.011494,
+          "averageRank": 13.7615061
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "https://api.playbattlegrounds.com/shards/steam/leaderboards/duo"
+  },
+  "meta": {}
+}
