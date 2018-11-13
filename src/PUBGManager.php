@@ -20,9 +20,8 @@ use Psr\Http\Message\ResponseInterface;
  * @package Lifeformwp\PHPPUBG
  * @since   1.0.0
  */
-class PUBGManager
+final class PUBGManager
 {
-    private const BASE_URL          = 'https://api.playbattlegrounds.com/';
     public const  HYDRATE_MATCH     = MatchDTOProvider::class;
     public const  HYDRATE_PLAYERS   = PlayersDTOProvider::class;
     public const  HYDRATE_PLAYER    = PlayerDTOProvider::class;
@@ -38,47 +37,26 @@ class PUBGManager
      * @var string
      */
     private $token;
+    /**
+     * @var string
+     */
+    private $baseURL;
 
     /**
      * PUBGManager constructor.
      *
      * @param ClientInterface $client
      * @param string          $token
+     * @param null|string     $baseURL
      */
-    public function __construct(ClientInterface $client, string $token)
-    {
-        $this->client = $client;
-        $this->token  = $token;
-    }
-
-    /**
-     * @param ClientInterface $client
-     *
-     * @return PUBGManager
-     * @since      1.1.0
-     *
-     * @deprecated The setClient method is deprecated and will be removed in version 1.8.0 of lifeformwp/php-pubg.
-     */
-    public function setClient(ClientInterface $client): self
-    {
-        $this->client = $client;
-
-        return $this;
-    }
-
-    /**
-     * @param string $token
-     *
-     * @return PUBGManager
-     * @since      1.1.0
-     *
-     * @deprecated The setToken method is deprecated and will be removed in version 1.8.0 of lifeformwp/php-pubg.
-     */
-    public function setToken(string $token): self
-    {
-        $this->token = $token;
-
-        return $this;
+    public function __construct(
+        ClientInterface $client,
+        string $token,
+        ?string $baseURL = 'https://api.playbattlegrounds.com/'
+    ) {
+        $this->client  = $client;
+        $this->token   = $token;
+        $this->baseURL = $baseURL;
     }
 
     /**
@@ -91,7 +69,7 @@ class PUBGManager
      */
     public function getMatch(string $shard, string $matchId): array
     {
-        $url = self::BASE_URL . 'shards/' . $shard . '/matches/' . $matchId;
+        $url = $this->baseURL . 'shards/' . $shard . '/matches/' . $matchId;
 
         try {
             return $this->request('get', $url);
@@ -166,7 +144,7 @@ class PUBGManager
     {
         $names = '';
         $ids   = '';
-        $url   = self::BASE_URL . 'shards/' . $shard . '/players';
+        $url   = $this->baseURL . 'shards/' . $shard . '/players';
 
         if (!empty($playerNames)) {
             $names = \implode(',', $playerNames);
@@ -206,7 +184,7 @@ class PUBGManager
      */
     public function getPlayer(string $shard, string $player): array
     {
-        $url = self::BASE_URL . 'shards/' . $shard . '/players/' . $player;
+        $url = $this->baseURL . 'shards/' . $shard . '/players/' . $player;
 
         try {
             return $this->request('get', $url);
@@ -238,7 +216,7 @@ class PUBGManager
      */
     public function getStatus(): array
     {
-        $url = self::BASE_URL . 'status';
+        $url = $this->baseURL . 'status';
 
         try {
             return $this->request('get', $url);
@@ -256,7 +234,7 @@ class PUBGManager
      */
     public function getSamples(string $shard): array
     {
-        $url = self::BASE_URL . 'shards/' . $shard . '/samples';
+        $url = $this->baseURL . 'shards/' . $shard . '/samples';
 
         try {
             return $this->request('get', $url);
@@ -274,7 +252,7 @@ class PUBGManager
      */
     public function getSeasons(string $shard): array
     {
-        $url = self::BASE_URL . 'shards/' . $shard . '/seasons';
+        $url = $this->baseURL . 'shards/' . $shard . '/seasons';
 
         try {
             return $this->request('get', $url);
@@ -294,7 +272,7 @@ class PUBGManager
      */
     public function getSeasonDataForPlayer(string $shard, string $playerId, string $seasonId): array
     {
-        $url = self::BASE_URL . 'shards/' . $shard . '/players/' . $playerId . '/seasons/' . $seasonId;
+        $url = $this->baseURL . 'shards/' . $shard . '/players/' . $playerId . '/seasons/' . $seasonId;
 
         try {
             return $this->request('get', $url);
@@ -310,7 +288,7 @@ class PUBGManager
      */
     public function getTournaments(): array
     {
-        $url = self::BASE_URL . 'tournaments';
+        $url = $this->baseURL . 'tournaments';
         try {
             return $this->request('get', $url);
         } catch (\Throwable $throwable) {
@@ -327,7 +305,26 @@ class PUBGManager
      */
     public function getTournament(string $tournamentId): array
     {
-        $url = self::BASE_URL . 'tournaments/' . $tournamentId;
+        $url = $this->baseURL . 'tournaments/' . $tournamentId;
+        try {
+            return $this->request('get', $url);
+        } catch (\Throwable $throwable) {
+            throw new PUBGManagerException($throwable->getMessage(), $throwable->getCode());
+        }
+    }
+
+    /**
+     * @param string $shard
+     * @param string $gameMode
+     *
+     * @return array
+     * @throws PUBGManagerException
+     * @since 1.8.0
+     */
+    public function getLeaderboard(string $shard, string $gameMode): array
+    {
+        $url = $this->baseURL . 'shards/' . $shard . '/leaderboards/' . $gameMode;
+
         try {
             return $this->request('get', $url);
         } catch (\Throwable $throwable) {

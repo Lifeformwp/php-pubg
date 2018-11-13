@@ -171,6 +171,7 @@ class PUBGManagerTest extends TestCase
         $match   = $manager->getTournaments();
         $this->assertEquals($this->jsonDecodeToArray($data), $match);
     }
+
     public function testGetTournament(): void
     {
         $token = 'token';
@@ -178,6 +179,16 @@ class PUBGManagerTest extends TestCase
         $client  = $this->mockClient($data, 200);
         $manager = new PUBGManager($client, $token);
         $match   = $manager->getTournament('cis-pgiq18');
+        $this->assertEquals($this->jsonDecodeToArray($data), $match);
+    }
+
+    public function testGetLeaderboard(): void
+    {
+        $token = 'token';
+        $data  = $this->getTestData('tests/example/leaderboards.json');
+        $client  = $this->mockClient($data, 200);
+        $manager = new PUBGManager($client, $token);
+        $match   = $manager->getLeaderboard('steam', 'duo');
         $this->assertEquals($this->jsonDecodeToArray($data), $match);
     }
 
