@@ -1,5 +1,6 @@
 PHPPUBG - wrapper for PUBG Developer API
 =======================
+[![Total Downloads](https://poser.pugx.org/lifeformwp/php-pubg/downloads)](https://packagist.org/packages/lifeformwp/php-pubg)
 
 Wrapper for PUBG API with DTO (Matches, Player/Players, Status, Telemetry, Samples), full test coverage, PHP 7.1, etc.
 
